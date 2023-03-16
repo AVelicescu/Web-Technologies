@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav id="navHome">
+        <img src="Images/Logo/Logo.png" id="logo" onclick="openContainer(0);">
+        <button id="Create_Button_Nav" onclick="openContainer(3);">
+            <img src="Images/Icons/create.png" class="icon">
+            <label for="Create_Button_Nav" id="labelCreate">SIGN UP</label>
+        </button>
+        <button id="Login_Button_Nav" onclick="openContainer(2);">
+            <img src="Images/Icons/login.png" class="icon">
+            <label for="Login_Button_Nav" id="labelLogin">LOGIN</label>
+        </button>
+        <button id="About_Button_Nav" onclick="openContainer(1);">
+            <img src="Images/Icons/info.png" class="icon">
+            <label for="About_Button_Nav" id="labelAbout">ABOUT</label>
+        </button>
+    </nav>
+</header>
+<section id="containerHome">
+
+</section>
+<section id="containerAbout" style="display: none">
+
+</section>
+
+<section id="containerCreate" style="display: none">
+    <h2>CREATE A NEW ACCOUNT</h2>
+    <form action="x.php" method="post">
+        <input type="text" name="FirstName" placeholder="FIRST NAME" class="CreateInput"> <br>
+        <input type="text" name="LastName" placeholder="LAST NAME" class="CreateInput"> <br>
+        <input type="text" name="Username" placeholder="USERNAME" class="CreateInput"> <br>
+        <input type="text" name="Email" placeholder="EMAIL" class="CreateInput">  <br>
+        <input type="password" name="Password" placeholder="PASSWORD" class="CreateInput"> <br>
+        <input type="password" name="Password" placeholder="REPEAT PASSWORD" class="CreateInput"> <br>
+        <input type="text" name="Birth" placeholder="DATE OF BIRTH (DD/MM/YYYY)" class="CreateInput"> <br>
+        <input type="submit" value="CREATE NEW ACCOUNT" class="Create_Button"> <br>
+        <input type="reset" value="CLEAR" id="Clear_Button">
+        <input type="button" value="LOGIN" onclick="openContainer(2);" class="Login_Button">
+    </form>
+</section>
+<section id="containerLogin" style="display: none">
+    <h2>LOGIN TO AN EXISTING ACCOUNT</h2>
+    <form action="x.php" method="post">
+        <input type="text" name="Username-Email" placeholder="USERNAME / EMAIL" class="LoginInput"> <br>
+        <input type="password" name="Password" placeholder="PASSWORD" class="LoginInput"> <br>
+        <input type="submit" value="LOGIN" class="Login_Button"> <br>
+        <input type="button" value="FORGOT MY PASSWORD" onclick="openContainer(4);" id="Forgot_Button">
+        <input type="button" value="CREATE NEW ACCOUNT" onclick="openContainer(3);" class="Create_Button">
+    </form>
+</section>
+<section id="containerForgot" style="display: none">
+    <h2>FORGOT MY PASSWORD</h2>
+    <form action="x.php" method="post">
+        <input type="text" name="Username-Email" placeholder="USERNAME / EMAIL" class="ForgotInput"> <br>
+        <input type="submit" value="SEND CODE TO EMAIL" class="Create_Button"> <br>
+    </form>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
