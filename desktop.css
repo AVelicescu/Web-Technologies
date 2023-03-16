@@ -154,7 +154,7 @@ h2
     padding: 10px;
     font-size: 17px;
 }
-.CreateInput:focus, .LoginInput:focus, .ForgotInput:focus, .fill:focus
+.CreateInput:focus, .LoginInput:focus, .ForgotInput:focus
 {
     outline-color: #e38459;
 }
