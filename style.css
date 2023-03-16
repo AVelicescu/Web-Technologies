@@ -5,7 +5,7 @@
 }
 ::-webkit-scrollbar-track
 {
-    background-color: #BE4B16;
+    background-color: #e6733e;
 }
 ::-webkit-scrollbar-thumb
 {
@@ -32,6 +32,10 @@ h2
 {
     font-size: 30px;
 }
+p
+{
+    font-size: 25px;
+}
 #logo
 {
     height: 60px;
@@ -47,7 +51,7 @@ h2
 }
 /* -------------------------------------------------------------------------------------- */
 /* --------------------------------------Containers-------------------------------------- */
-#containerLogin, #containerCreate, #containerAbout, #containerForgot
+#containerLogin, #containerCreate, #containerForgot
 {
     background-color: rgba(255, 255, 255, 0.6);
     color: black;
@@ -64,9 +68,31 @@ h2
 }
 #containerAbout
 {
+    color: black;
+    margin: auto;
+    position: relative;
     min-width: 1000px;
     width: 80%;
     font-size: 17px;
+}
+.left-side, .right-side
+{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    padding: 40px;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.left-side
+{
+    margin-left: 5%;
+    margin-right: auto;
+}
+.right-side
+{
+    margin-right: 5%;
+    margin-left: auto;
 }
 /* -------------------------------------------------------------------------------------- */
 
@@ -154,7 +180,7 @@ h2
     padding: 10px;
     font-size: 17px;
 }
-.CreateInput:focus, .LoginInput:focus, .ForgotInput:focus, .fill:focus
+.CreateInput:focus, .LoginInput:focus, .ForgotInput:focus
 {
     outline-color: #e38459;
 }
