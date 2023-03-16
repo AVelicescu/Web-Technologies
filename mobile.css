@@ -1,0 +1,148 @@
+
+/* -------------------------------------------------------------------------------------- */
+body
+{
+    background-image: url("Images/Wallpaper/WallpaperMobile.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-y: scroll;
+}
+h1
+{
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+h2
+{
+    font-size: 15px;
+}
+#logo
+{
+    height: 30px;
+}
+
+/* --------------------------------------Navigation-------------------------------------- */
+#navHome
+{
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+/* -------------------------------------------------------------------------------------- */
+/* --------------------------------------Containers-------------------------------------- */
+#containerLogin, #containerCreate, #containerAbout, #containerForgot
+{
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    height: fit-content;
+    margin: auto;
+    padding: 30px;
+    border-radius: 30px;
+    position: relative;
+}
+#containerLogin , #containerCreate, #containerForgot
+{
+    max-width: 250px;
+    text-align: center;
+}
+#containerAbout
+{
+    min-width: 200px;
+    width: 80%;
+    font-size: 12px;
+}
+/* -------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------Buttons---------------------------------------  */
+/* -----------------------------Nav buttons-----------------------------*/
+#Login_Button_Nav, #Create_Button_Nav, #About_Button_Nav
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    float: right;
+    white-space: nowrap;
+    font-size: 12px;
+}
+.icon
+{
+    width: 0;
+    transition: 0.3s;
+}
+#labelCreate, #labelAbout, #labelLogin
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+/* ------------Login page & Create new account page buttons------------*/
+.Login_Button, .Create_Button, #Forgot_Button, #Clear_Button
+{
+    padding: 6px;
+    font-size: 12px;
+}
+.Login_Button, #Clear_Button
+{
+    width: 100px;
+    margin: 8px auto;
+}
+.Create_Button, #Forgot_Button
+{
+    width: 220px;
+    margin: 8px auto;
+}
+
+/* ----------------------------Button color----------------------------*/
+#Login_Button_Nav, #Create_Button_Nav, #About_Button_Nav, .Login_Button, .Create_Button,
+#Forgot_Button, #Clear_Button, .CreateInput, .LoginInput, .ForgotInput
+{
+    background-color: #e6733e;
+    border: 2px solid #e6733e;
+    border-radius: 35px;
+    text-align: center;
+    color: black;
+    overflow: hidden;
+    transition: 0.3s;
+    font-family: 'Anonymous Pro', monospace;
+}
+/* ----------------------------Button hover----------------------------*/
+#Login_Button_Nav:hover, #Create_Button_Nav:hover, #About_Button_Nav:hover,
+.Login_Button:hover, .Create_Button:hover, #Forgot_Button:hover, #Clear_Button:hover
+
+{
+    background-color: #e38459;
+    border: 2px solid #e38459;
+}
+#Login_Button_Nav:hover, #Create_Button_Nav:hover, #About_Button_Nav:hover
+{
+    width: 94px;
+}
+#Login_Button_Nav:hover .icon, #Create_Button_Nav:hover .icon, #About_Button_Nav:hover .icon
+{
+    width: 24px;
+}
+#Login_Button_Nav:hover #labelLogin, #Create_Button_Nav:hover #labelCreate, #About_Button_Nav:hover #labelAbout
+{
+    margin-left: 12px;
+}
+/* ----------------------------Input hover----------------------------*/
+.CreateInput, .LoginInput, .ForgotInput
+{
+    background-color: #e6733e;
+    width: auto;
+    margin: 5px;
+    padding: 5px;
+    font-size: 12px;
+}
+.CreateInput:focus, .LoginInput:focus, .ForgotInput:focus, .fill:focus
+{
+    outline-color: #e38459;
+}
+/* -------------------------------------------------------------------------------------  */
