@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" media="screen and (min-width: 1024px)" href="desktopHome.css">
+  <link rel="stylesheet" media="screen and (min-width: 501px) and (max-width: 1023px)" href="tabletHome.css">
+  <link rel="stylesheet" media="screen and (min-width: 1px) and (max-width: 500px)" href="mobileHome.css">
+</head>
+<body>
+<header>
+  <nav id="Home_Nav">
+    <img src="Images/Logo/Logo.png" id="logo" onclick="openContainer(0);">
+    <button class="Button_Nav" id="logout" onclick="openContainer(0);">
+      <img src="Images/Icons/Logout.png" class="icon">
+      <label for="logout" class="Label_Nav">Logout</label>
+    </button>
+    <button class="Button_Nav" id="settings" onclick="settings();">
+      <img src="Images/Icons/Settings.png" class="icon">
+      <label for="settings" class="Label_Nav">Settings</label>
+    </button>
+    <button class="Button_Nav" id="menu" onclick="menu();">
+      <img src="Images/Icons/Menu.png" class="icon">
+      <label for="menu" class="Label_Nav">Menu</label>
+    </button>
+  </nav>
+  <nav id="Menu_Nav" style="visibility: hidden;">
+    <button class="Button_Menu_Nav" id="animals" onclick="openContainer(0);">
+      <label for="animals" class="Label_Nav">Animal Collection</label>
+    </button>
+    <button class="Button_Menu_Nav" id="services" onclick="openContainer(0);">
+      <label for="services" class="Label_Nav">Services</label>
+    </button>
+    <button class="Button_Menu_Nav" id="tickets" onclick="openContainer(0);">
+      <label for="tickets" class="Label_Nav">Tickets</label>
+    </button>
+    <button class="Button_Menu_Nav" id="news" onclick="openContainer(0);">
+      <label for="news" class="Label_Nav">News</label>
+    </button>
+  </nav>
+  <nav id="Settings_Nav" style="visibility: hidden;">
+    <button class="Button_Settings_Nav" id="profile" onclick="openContainer(0);">
+      <label for="profile" class="Label_Nav">Profile</label>
+    </button>
+    <button class="Button_Settings_Nav" id="theme" onclick="openContainer(0);">
+      <label for="theme" class="Label_Nav">Theme</label>
+    </button>
+    <button class="Button_Settings_Nav" id="about" onclick="openContainer(0);">
+      <label for="about" class="Label_Nav">About</label>
+    </button>
+    <button class="Button_Settings_Nav" id="contact" onclick="openContainer(0);">
+      <label for="contact" class="Label_Nav">Contact</label>
+    </button>
+  </nav>
+</header>
+<div id="content">
+  <section id="containerHome">
+
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

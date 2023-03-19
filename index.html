@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link rel="stylesheet" media="screen and (min-width: 1024px)" href="desktop.css">
     <link rel="stylesheet" media="screen and (min-width: 501px) and (max-width: 1023px)" href="tablet.css">
-    <link rel="stylesheet" media="screen and (max-width: 500px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 1px) and (max-width: 500px)" href="mobile.css">
 </head>
 <body>
 <header>
     <nav id="navHome">
         <img src="Images/Logo/Logo.png" id="logo" onclick="openContainer(0);">
-        <button id="Create_Button_Nav" onclick="openContainer(3);">
-            <img src="Images/Icons/create.png" class="icon">
-            <label for="Create_Button_Nav" id="labelCreate">SIGN UP</label>
+        <button class="Button_Nav" id="create" onclick="openContainer(3);">
+            <img src="Images/Icons/SignUp.png" class="icon">
+            <label for="create" class="Label_Nav">SIGN UP</label>
         </button>
-        <button id="Login_Button_Nav" onclick="openContainer(2);">
-            <img src="Images/Icons/login.png" class="icon">
-            <label for="Login_Button_Nav" id="labelLogin">LOGIN</label>
+        <button class="Button_Nav" id="login" onclick="openContainer(2);">
+            <img src="Images/Icons/LogIn.png" class="icon">
+            <label for="login" class="Label_Nav">LOGIN</label>
         </button>
-        <button id="About_Button_Nav" onclick="openContainer(1);">
-            <img src="Images/Icons/info.png" class="icon">
-            <label for="About_Button_Nav" id="labelAbout">ABOUT</label>
+        <button class="Button_Nav" id="about" onclick="openContainer(1);">
+            <img src="Images/Icons/About.png" class="icon">
+            <label for="about" class="Label_Nav">ABOUT</label>
         </button>
     </nav>
 </header>
@@ -71,9 +72,9 @@
         <input type="password" name="Password" placeholder="PASSWORD" class="CreateInput"> <br>
         <input type="password" name="Password" placeholder="REPEAT PASSWORD" class="CreateInput"> <br>
         <input type="text" name="Birth" placeholder="DATE OF BIRTH (DD/MM/YYYY)" class="CreateInput"> <br>
-        <input type="submit" value="CREATE NEW ACCOUNT" class="Create_Button"> <br>
-        <input type="reset" value="CLEAR" id="Clear_Button">
-        <input type="button" value="LOGIN" onclick="openContainer(2);" class="Login_Button">
+        <input type="submit" value="CREATE NEW ACCOUNT" class="Create_Button Button_Form"> <br>
+        <input type="reset" value="CLEAR" class="Clear_Button Button_Form">
+        <input type="button" value="LOGIN" onclick="openContainer(2);" class="Login_Button Button_Form">
     </form>
 </section>
 <section id="containerLogin" style="display: none">
@@ -81,16 +82,16 @@
     <form action="x.php" method="post">
         <input type="text" name="Username-Email" placeholder="USERNAME / EMAIL" class="LoginInput"> <br>
         <input type="password" name="Password" placeholder="PASSWORD" class="LoginInput"> <br>
-        <input type="submit" value="LOGIN" class="Login_Button"> <br>
-        <input type="button" value="FORGOT MY PASSWORD" onclick="openContainer(4);" id="Forgot_Button">
-        <input type="button" value="CREATE NEW ACCOUNT" onclick="openContainer(3);" class="Create_Button">
+        <input type="submit" value="LOGIN" class="Login_Button Button_Form"> <br>
+        <input type="button" value="FORGOT MY PASSWORD" onclick="openContainer(4);" class="Forgot_Button Button_Form">
+        <input type="button" value="CREATE NEW ACCOUNT" onclick="openContainer(3);" class="Create_Button Button_Form">
     </form>
 </section>
 <section id="containerForgot" style="display: none">
     <h2>FORGOT MY PASSWORD</h2>
     <form action="x.php" method="post">
         <input type="text" name="Username-Email" placeholder="USERNAME / EMAIL" class="ForgotInput"> <br>
-        <input type="submit" value="SEND CODE TO EMAIL" class="Create_Button"> <br>
+        <input type="submit" value="SEND CODE TO EMAIL" class="Create_Button Button_Form"> <br>
     </form>
 </section>
 <script src="script.js"></script>

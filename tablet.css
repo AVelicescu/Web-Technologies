@@ -15,10 +15,11 @@
 /* -------------------------------------------------------------------------------------- */
 body
 {
-    background-image: url("Images/Wallpaper/WallpaperTablet.jpg");
+    background-image: url("Images/Wallpaper/WallpaperTablet.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     overflow-y: scroll;
 }
 h1
@@ -42,7 +43,7 @@ p
 }
 
 /* --------------------------------------Navigation-------------------------------------- */
-#navHome
+#Home_Nav
 {
     width: 100%;
     height: 50px;
@@ -98,7 +99,7 @@ p
 
 /* ---------------------------------------Buttons---------------------------------------  */
 /* -----------------------------Nav buttons-----------------------------*/
-#Login_Button_Nav, #Create_Button_Nav, #About_Button_Nav
+.Button_Nav
 {
     position: relative;
     display: flex;
@@ -114,7 +115,7 @@ p
     width: 0;
     transition: 0.3s;
 }
-#labelCreate, #labelAbout, #labelLogin
+.Label_Nav
 {
     position: absolute;
     left: 50%;
@@ -122,25 +123,24 @@ p
     transition: 0.3s;
 }
 /* ------------Login page & Create new account page buttons------------*/
-.Login_Button, .Create_Button, #Forgot_Button, #Clear_Button
+.Button_Form
 {
     padding: 6px;
     font-size: 15px;
 }
-.Login_Button, #Clear_Button
+.Login_Button, .Clear_Button
 {
     width: 100px;
     margin: 12px 85px;
 }
-.Create_Button, #Forgot_Button
+.Create_Button, .Forgot_Button
 {
     width: 220px;
     margin: 12px;
 }
 
 /* ----------------------------Button color----------------------------*/
-#Login_Button_Nav, #Create_Button_Nav, #About_Button_Nav, .Login_Button, .Create_Button,
-#Forgot_Button, #Clear_Button, .CreateInput, .LoginInput, .ForgotInput
+.Button_Nav, .Button_Form, .CreateInput, .LoginInput, .ForgotInput
 {
     background-color: #e6733e;
     border: 2px solid #e6733e;
@@ -152,22 +152,21 @@ p
     font-family: 'Anonymous Pro', monospace;
 }
 /* ----------------------------Button hover----------------------------*/
-#Login_Button_Nav:hover, #Create_Button_Nav:hover, #About_Button_Nav:hover,
-.Login_Button:hover, .Create_Button:hover, #Forgot_Button:hover, #Clear_Button:hover
+.Button_Nav:hover, .Button_Form:hover
 
 {
     background-color: #e38459;
     border: 2px solid #e38459;
 }
-#Login_Button_Nav:hover, #Create_Button_Nav:hover, #About_Button_Nav:hover
+.Button_Nav:hover
 {
     width: 150px;
 }
-#Login_Button_Nav:hover .icon, #Create_Button_Nav:hover .icon, #About_Button_Nav:hover .icon
+.Button_Nav:hover .icon
 {
     width: 30px;
 }
-#Login_Button_Nav:hover #labelLogin, #Create_Button_Nav:hover #labelCreate, #About_Button_Nav:hover #labelAbout
+.Button_Nav:hover .Label_Nav
 {
     margin-left: 15px;
 }
