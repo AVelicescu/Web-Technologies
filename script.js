@@ -29,7 +29,6 @@ function menu()
         menuNav.style.animationName = "CloseMenu";
         menuNav.style.visibility = "hidden";
     }
-
 }
 
 function settings()
@@ -44,5 +43,4 @@ function settings()
         settingsNav.style.animationName = "CloseMenu";
         settingsNav.style.visibility = "hidden";
     }
-
 }
