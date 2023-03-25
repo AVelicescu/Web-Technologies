@@ -8,6 +8,9 @@ let containers = [home, about, login, create, forgot];
 
 let menuNav = document.getElementById("Menu_Nav");
 let settingsNav = document.getElementById("Settings_Nav");
+let menuContainer = document.getElementById("Menu_Container");
+let settingsContainer = document.getElementById("Settings_Container");
+
 
 function openContainer(container)
 {
@@ -45,4 +48,31 @@ function settings()
         settingsNav.style.visibility = "hidden";
     }
 
+}
+
+function menuMobile()
+{
+    if(settingsContainer.style.visibility === "visible")
+        settingsMobile();
+    if(menuContainer.style.visibility === "hidden"){
+        menuContainer.style.animationName = "OpenMenu";
+        menuContainer.style.visibility = "visible";
+    }
+    else if(menuContainer.style.visibility === "visible"){
+        menuContainer.style.animationName = "CloseMenu";
+        menuContainer.style.visibility = "hidden";
+    }
+
+}
+
+function settingsMobile() {
+    if (menuContainer.style.visibility === "visible")
+        menuMobile();
+    if (settingsContainer.style.visibility === "hidden") {
+        settingsContainer.style.animationName = "OpenMenu";
+        settingsContainer.style.visibility = "visible";
+    } else if (settingsContainer.style.visibility === "visible") {
+        settingsContainer.style.animationName = "CloseMenu";
+        settingsContainer.style.visibility = "hidden";
+    }
 }
