@@ -1,0 +1,494 @@
+/* ------------------------- Universal -----------------------------------------------------*/
+
+#containerHome {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.icon {
+    width: 0;
+    transition: 0.2s;
+}
+
+.Label_Nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.2s;
+}
+
+/* ----------------------------- Pentru mobil -----------------------------------------------------*/
+
+@media (max-width: 500px) {
+
+    .mobile_hidden {
+        display: none !important;
+    }
+
+    body {
+        background-image: url("Images/Wallpaper/TigerMobile.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 13px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    #logo {
+        height: 30px;
+    }
+    #Home_Nav {
+        width: 100%;
+        height: 30px;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin: -8px -8px 0 -8px;
+        padding: 8px;
+    }
+
+    #Menu_Container, #Settings_Container {
+        overflow: hidden;
+        position: absolute;
+        top: 46px;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        animation-duration: 600ms;
+        animation-fill-mode: forwards;
+        transform: translateX(100%);
+    }
+
+    .Button_Menu_Container, .Button_Settings_Container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        white-space: nowrap;
+        font-size: 13px;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid black;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+        transition: 0.2s;
+        font-family: 'Anonymous Pro', monospace;
+    }
+
+    .Button_Menu_Container:hover, .Button_Settings_Container:hover {
+        background-color: #e6733e;
+        border: 2px solid #e6733e;
+    }
+
+    .Button_Nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 76px;
+        height: 30px;
+        float: right;
+        white-space: nowrap;
+        font-size: 13px;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: 35px;
+        text-align: center;
+        color: black;
+        overflow: hidden;
+        transition: 0.2s;
+        font-family: 'Anonymous Pro', monospace;
+    }
+
+    .Button_Nav:hover {
+        background-color: #e6733e;
+        border: 2px solid #e6733e;
+        width: 100px;
+    }
+
+    .Button_Nav:hover .icon {
+        width: 24px;
+    }
+
+    .Button_Nav:hover .Label_Nav {
+        margin-left: 12px;
+    }
+
+    @keyframes OpenMenu {
+        0% {
+            transform: translateX(100%);
+            visibility: hidden;
+        }
+        1% {
+            visibility: visible
+        }
+        100% {
+            transform: translateX(0%);
+            visibility: visible;
+        }
+    }
+
+    @keyframes CloseMenu {
+        0% {
+            transform: translateX(0%);
+            visibility: visible;
+        }
+        99% {
+            visibility: visible
+        }
+        100% {
+            transform: translateX(100%);
+            visibility: hidden;
+        }
+    }
+}
+
+/* ------------------------------- Pentru tableta -----------------------------------------------------*/
+
+@media (max-width: 1023px) and (min-width: 501px) {
+
+    .tablet_hidden {
+        display: none !important;
+    }
+
+    body {
+        background-image: url("Images/Wallpaper/TigerTablet.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    #logo {
+        height: 50px;
+    }
+
+    #Home_Nav {
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin: -8px -8px 0 -8px;
+        padding: 8px;
+    }
+
+
+    #Menu_Container, #Settings_Container {
+        overflow: hidden;
+        position: absolute;
+        top: 66px;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        animation-duration: 600ms;
+        animation-fill-mode: forwards;
+        transform: translateX(100%);
+    }
+
+    .Button_Menu_Container, .Button_Settings_Container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        white-space: nowrap;
+        font-size: 13px;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid black;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+        transition: 0.2s;
+        font-family: 'Anonymous Pro', monospace;
+    }
+
+    .Button_Menu_Container:hover, .Button_Settings_Container:hover {
+        background-color: #e6733e;
+        border: 2px solid #e6733e;
+    }
+
+    .Button_Nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 50px;
+        float: right;
+        white-space: nowrap;
+        font-size: 15px;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: 35px;
+        text-align: center;
+        color: black;
+        overflow: hidden;
+        transition: 0.2s;
+        font-family: 'Anonymous Pro', monospace;
+    }
+
+    .Button_Nav:hover
+    {
+        background-color: #e6733e;
+        border: 2px solid #e6733e;
+        width: 130px;
+    }
+
+    .Button_Menu_Container:hover, .Button_Settings_Container:hover{
+        background-color: #e6733e;
+        border: 2px solid #e6733e;
+    }
+
+    .Button_Nav:hover .icon{
+        width: 30px;
+    }
+
+    .Button_Nav:hover .Label_Nav{
+        margin-left: 15px;
+    }
+
+    @keyframes OpenMenu {
+        0% {
+            transform: translateX(100%);
+            visibility: hidden;
+        }
+        1% {
+            visibility: visible
+        }
+        100% {
+            transform: translateX(0%);
+            visibility: visible;
+        }
+    }
+
+    @keyframes CloseMenu {
+        0% {
+            transform: translateX(0%);
+            visibility: visible;
+        }
+        99% {
+            visibility: visible
+        }
+        100% {
+            transform: translateX(100%);
+            visibility: hidden;
+        }
+    }
+}
+
+/* ---------------------------------------- Pentru desktop -----------------------------------------------------*/
+
+@media (min-width: 1024px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #e6733e;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #BE4B16;
+    }
+
+    .desktop_hidden{
+        display: none !important;
+    }
+
+    body {
+        background-image: url("Images/Wallpaper/Tiger2.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-color: black;
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    #logo {
+        height: 60px;
+    }
+
+    #Home_Nav {
+        width: 100%;
+        height: 60px;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin: -8px -8px 0 -8px;
+        padding: 8px;
+    }
+    #Menu_Container, #Settings_Container {
+        overflow: hidden;
+        justify-content: space-evenly;
+        display: flex;
+        width: 100%;
+        height: 35px;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin: 0 -8px 8px -8px;
+        padding: 0;
+        animation-duration: 600ms;
+        animation-fill-mode: forwards;
+    }
+
+    .Button_Menu_Container, .Button_Settings_Container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 25%;
+        height: 35px;
+        white-space: nowrap;
+        font-size: 18px;
+        background-color: white;
+        border: 0 solid darkgray;
+        border-radius: 18px;
+        text-align: center;
+        color: black;
+        overflow: hidden;
+        transition: 0.2s;
+        font-family: 'Anonymous Pro', monospace;
+    }
+
+    .Button_Menu_Container:hover, .Button_Settings_Container:hover {
+        background-color: #e6733e;
+        border: 2px solid #e6733e;
+        margin-top: 6px;
+    }
+
+    .Button_Nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 200px;
+        height: 60px;
+        float: right;
+        white-space: nowrap;
+        font-size: 18px;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: 35px;
+        text-align: center;
+        color: black;
+        overflow: hidden;
+        transition: 0.2s;
+        font-family: 'Anonymous Pro', monospace;
+    }
+
+    .Button_Nav:hover
+    {
+        background-color: #e6733e;
+        border: 2px solid #e6733e;
+        width: 250px;
+    }
+
+    .Button_Menu_Nav:hover, .Button_Settings_Nav:hover{
+        background-color: #e6733e;
+        border: 2px solid #e6733e;
+        margin-top: 6px;
+    }
+
+    .Button_Nav:hover .icon{
+        width: 50px;
+    }
+
+    .Button_Nav:hover .Label_Nav{
+        margin-left: 25px;
+    }
+
+    @keyframes OpenMenu {
+        0% {
+            opacity: 0;
+            width: 0;
+            padding: 0;
+            float: left;
+            visibility: hidden
+        }
+        1% {
+            padding: 0 8px 8px 8px;
+            visibility: visible
+        }
+        99% {
+            float: left
+        }
+        100% {
+            opacity: 1;
+            width: 100%;
+            padding: 0 8px 8px 8px;
+            float: right;
+            visibility: visible
+        }
+    }
+
+    @keyframes CloseMenu {
+        0% {
+            opacity: 1;
+            width: 100%;
+            padding: 0 8px 8px 8px;
+            float: right;
+            visibility: visible
+        }
+        99% {
+            padding: 0 8px 8px 8px;
+            float: right;
+            visibility: visible
+        }
+        100% {
+            opacity: 0;
+            width: 0;
+            padding: 0;
+            float: left;
+            visibility: hidden
+        }
+    }
+}
+
