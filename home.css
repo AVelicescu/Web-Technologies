@@ -1,17 +1,5 @@
 /* ------------------------- Universal -----------------------------------------------------*/
 
-#containerHome {
-    background-color: rgba(255, 255, 255, 0.5);
-    min-width: 200px;
-    width: 80%;
-    font-size: 12px;
-    margin: auto;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    height: 5%;
-
-}
 .displayFlex {
     display: flex;
 }
@@ -54,7 +42,13 @@
     }
 
     h2 {
-        font-size: 13px;
+        font-weight: normal;
+        font-size: 20px;
+    }
+
+    h3 {
+        font-weight: normal;
+        font-size: 15px;
     }
 
     p {
@@ -117,11 +111,11 @@
         float: right;
         white-space: nowrap;
         font-size: 13px;
-        background-color: white;
+        background-color:  rgba(0, 0, 0, 0.3);
         border: 2px solid white;
         border-radius: 35px;
         text-align: center;
-        color: black;
+        color: white;
         overflow: hidden;
         transition: 0.2s;
         font-family: 'Anonymous Pro', monospace;
@@ -168,6 +162,21 @@
             visibility: hidden;
         }
     }
+    #containerHome {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        max-width: 400px;
+        max-height: 200px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 30px;
+        border: 1px solid rgb(255, 255, 255);
+        padding: 20px;
+        text-align: center;
+        font-family: Georgia, serif;
+    }
 }
 
 /* ------------------------------- For tablet -----------------------------------------------------*/
@@ -196,8 +205,15 @@
     }
 
     h2 {
-        font-size: 15px;
+        font-weight: normal;
+        font-size: 25px;
     }
+
+    h3 {
+        font-weight: normal;
+        font-size: 17px;
+    }
+
 
     p {
         font-size: 15px;
@@ -261,11 +277,11 @@
         float: right;
         white-space: nowrap;
         font-size: 15px;
-        background-color: white;
-        border: 2px solid white;
+        background-color: rgba(0, 0, 0, 0.3);
+        border: 2px solid white;;
         border-radius: 35px;
         text-align: center;
-        color: black;
+        color: white;
         overflow: hidden;
         transition: 0.2s;
         font-family: 'Anonymous Pro', monospace;
@@ -318,6 +334,21 @@
             visibility: hidden;
         }
     }
+    #containerHome {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        max-width: 600px;
+        max-height: 300px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 30px;
+        border: 1px solid rgb(255, 255, 255);
+        padding: 20px;
+        text-align: center;
+        font-family: Georgia, serif;
+    }
 }
 
 /* ---------------------------------------- For desktop -----------------------------------------------------*/
@@ -357,9 +388,14 @@
     }
 
     h2 {
-        font-size: 30px;
+        font-weight: normal;
+        font-size: 45px;
     }
 
+    h3 {
+        font-weight: normal;
+        font-size: 30px;
+    }
     p {
         font-size: 25px;
     }
@@ -397,11 +433,11 @@
         height: 35px;
         white-space: nowrap;
         font-size: 18px;
-        background-color: white;
-        border: 0 solid darkgray;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 2px solid white;;
         border-radius: 18px;
         text-align: center;
-        color: black;
+        color: white;
         overflow: hidden;
         transition: 0.2s;
         font-family: 'Anonymous Pro', monospace;
@@ -422,11 +458,11 @@
         float: right;
         white-space: nowrap;
         font-size: 18px;
-        background-color: white;
+        background-color:  rgba(0, 0, 0, 0.5);
         border: 2px solid white;
         border-radius: 35px;
         text-align: center;
-        color: black;
+        color: white;
         overflow: hidden;
         transition: 0.2s;
         font-family: 'Anonymous Pro', monospace;
@@ -497,6 +533,21 @@
             float: left;
             visibility: hidden
         }
+    }
+    #containerHome {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        max-width: 1000px;
+        max-height: 500px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 30px;
+        border: 1px solid rgb(255, 255, 255);
+        padding: 20px;
+        text-align: center;
+        font-family: Georgia, serif;
     }
 }
 
