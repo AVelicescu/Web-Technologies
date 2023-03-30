@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<header>
+    <nav id="Profile_Nav">
+        <button class="Button_Nav" id="back" onclick="openIndexContainer(0);">
+            <img src="Images/Icons/Back.png" class="icon">
+        </button>
+        <img src="Images/Logo/Logo.png" id="logo" onclick="openIndexContainer(0);">
+    </nav>
+</header>
+<section id="Profile_Container">
+    <div class="info">
+        <img id="Profile_Image" src="Images/Icons/LogIn.png">
+        <label class="info_type_label">USERNAME</label>
+    </div> <br>
+    <div class="info">
+        <label class="info_type_label">FIRST NAME: </label>
+        <label class="info_label">FIRST NAME</label>
+    </div> <br>
+    <div class="info">
+        <label class="info_type_label">LAST NAME: </label>
+        <label class="info_label">LAST NAME</label>
+    </div> <br>
+    <div class="info">
+        <label class="info_type_label">EMAIL: </label>
+        <label class="info_label">EMAIL</label>
+    </div> <br>
+    <div class="info">
+        <label class="info_type_label">DATE OF BIRTH: </label>
+        <label class="info_label">DATE OF BIRTH</label>
+    </div> <br>
+    <div class="info">
+        <label class="info_type_label">PHONE NUMBER: </label>
+        <label class="info_label">PHONE NUMBER</label>
+    </div> <br>
+    <button id="edit" onclick="openProfileContainer(1);">
+        <img src="Images/Icons/Edit.png" id="edit_icon" class="icon">
+        <label for="edit">EDIT PROFILE</label>
+    </button>
+</section>
+
+<section id="EditProfile_Container" style="display: none">
+    <div class="editInfo">
+        <input type="text" name="FirstName" placeholder="FIRST NAME" class="EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="text" name="LastName" placeholder="LAST NAME" class="EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="text" name="Email" placeholder="EMAIL" class="EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="text" name="DateOfBirth" placeholder="DATE OF BIRTH" class="EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="text" name="PhoneNumber" placeholder="PHONE NUMBER" class="EditInput"> <br>
+    </div>
+    <div>
+        <input type="submit" value="CONFIRM CHANGES" class="Confirm_Button Button_Edit"> <br>
+    </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>

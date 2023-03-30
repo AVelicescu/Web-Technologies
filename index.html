@@ -9,16 +9,16 @@
 <body>
 <header>
     <nav id="navHome">
-        <img src="Images/Logo/Logo.png" id="logo" onclick="openContainer(0);">
-        <button class="Button_Nav" id="create" onclick="openContainer(3);">
+        <img src="Images/Logo/Logo.png" id="logo" onclick="openIndexContainer(0);">
+        <button class="Button_Nav" id="create" onclick="openIndexContainer(3);">
             <img src="Images/Icons/SignUp.png" class="icon">
             <label for="create" class="Label_Nav">SIGN UP</label>
         </button>
-        <button class="Button_Nav" id="login" onclick="openContainer(2);">
+        <button class="Button_Nav" id="login" onclick="openIndexContainer(2);">
             <img src="Images/Icons/LogIn.png" class="icon">
             <label for="login" class="Label_Nav">LOGIN</label>
         </button>
-        <button class="Button_Nav" id="about" onclick="openContainer(1);">
+        <button class="Button_Nav" id="about" onclick="openIndexContainer(1);">
             <img src="Images/Icons/About.png" class="icon">
             <label for="about" class="Label_Nav">ABOUT</label>
         </button>
@@ -72,7 +72,7 @@
         <input type="text" name="Birth" placeholder="DATE OF BIRTH (DD/MM/YYYY)" class="CreateInput"> <br>
         <input type="submit" value="CREATE NEW ACCOUNT" class="Create_Button Button_Form"> <br>
         <input type="reset" value="CLEAR" class="Clear_Button Button_Form">
-        <input type="button" value="LOGIN" onclick="openContainer(2);" class="Login_Button Button_Form">
+        <input type="button" value="LOGIN" onclick="openIndexContainer(2);" class="Login_Button Button_Form">
     </form>
 </section>
 <section id="containerLogin" style="display: none">
@@ -81,8 +81,8 @@
         <input type="text" name="Username-Email" placeholder="USERNAME / EMAIL" class="LoginInput"> <br>
         <input type="password" name="Password" placeholder="PASSWORD" class="LoginInput"> <br>
         <input type="submit" value="LOGIN" class="Login_Button Button_Form"> <br>
-        <input type="button" value="FORGOT MY PASSWORD" onclick="openContainer(4);" class="Forgot_Button Button_Form">
-        <input type="button" value="CREATE NEW ACCOUNT" onclick="openContainer(3);" class="Create_Button Button_Form">
+        <input type="button" value="FORGOT MY PASSWORD" onclick="openIndexContainer(4);" class="Forgot_Button Button_Form">
+        <input type="button" value="CREATE NEW ACCOUNT" onclick="openIndexContainer(3);" class="Create_Button Button_Form">
     </form>
 </section>
 <section id="containerForgot" style="display: none">

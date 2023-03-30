@@ -3,18 +3,28 @@ let about = document.getElementById("containerAbout");
 let login = document.getElementById("containerLogin");
 let create = document.getElementById("containerCreate");
 let forgot = document.getElementById("containerForgot");
-let containers = [home, about, login, create, forgot];
+let edit = document.getElementById("EditProfile_Container");
+let profile = document.getElementById("Profile_Container");
+let indexContainers = [home, about, login, create, forgot];
+let profileContainers = [profile, edit];
 
 let menuContainer = document.getElementById("Menu_Container");
 let settingsContainer = document.getElementById("Settings_Container");
 
 
-function openContainer(container)
+function openIndexContainer(container)
 {
     for(let i = 0; i < 5; i++)
         if(i !== container)
-            containers[i].style.display = "none";
-    containers[container].style.display = "block";
+            indexContainers[i].style.display = "none";
+    indexContainers[container].style.display = "block";
+}
+
+function openProfileContainer(container) {
+    for (let i = 0; i < 2; i++)
+        if (i !== container)
+            profileContainers[i].style.display = "none";
+    profileContainers[container].style.display = "block";
 }
 
 
