@@ -3,9 +3,15 @@ let about = document.getElementById("containerAbout");
 let login = document.getElementById("containerLogin");
 let create = document.getElementById("containerCreate");
 let forgot = document.getElementById("containerForgot");
+let tickets = document.getElementById("containerTickets");
+let services = document.getElementById("containerServices");
+let contact = document.getElementById("containerContact");
+let news = document.getElementById("containerNews");
+let animals = document.getElementById("containerAnimals");
 let edit = document.getElementById("EditProfile_Container");
 let profile = document.getElementById("Profile_Container");
 let indexContainers = [home, about, login, create, forgot];
+let homeContainers = [home, services, tickets, news, contact, about, animals];
 let profileContainers = [profile, edit];
 
 let menuContainer = document.getElementById("Menu_Container");
@@ -18,6 +24,14 @@ function openIndexContainer(container)
         if(i !== container)
             indexContainers[i].style.display = "none";
     indexContainers[container].style.display = "block";
+}
+
+function openHomeContainer(container)
+{
+    for(let i = 0; i < 5; i++)
+        if(i !== container)
+            homeContainers[i].style.display = "none";
+    homeContainers[container].style.display = "block";
 }
 
 function openProfileContainer(container) {
