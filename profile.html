@@ -9,10 +9,10 @@
 <body>
 <header>
     <nav id="Profile_Nav">
-        <button class="Button_Nav" id="back" onclick="openIndexContainer(0);">
+        <button class="Button_Nav" id="back" onclick="openProfileContainer(0);">
             <img src="Images/Icons/Back.png" class="icon">
         </button>
-        <img src="Images/Logo/Logo.png" id="logo" onclick="openIndexContainer(0);">
+        <img src="Images/Logo/Logo.png" id="logo">
     </nav>
 </header>
 <section id="Profile_Container">
@@ -47,6 +47,10 @@
 </section>
 
 <section id="EditProfile_Container" style="display: none">
+    <h1>EDIT YOUR PROFILE</h1>
+    <div class="editInfo">
+        <input type="text" name="PhotoURL" placeholder="PHOTO URL" class="EditInput"> <br>
+    </div>
     <div class="editInfo">
         <input type="text" name="FirstName" placeholder="FIRST NAME" class="EditInput"> <br>
     </div>
@@ -62,8 +66,8 @@
     <div class="editInfo">
         <input type="text" name="PhoneNumber" placeholder="PHONE NUMBER" class="EditInput"> <br>
     </div>
-    <div>
-        <input type="submit" value="CONFIRM CHANGES" class="Confirm_Button Button_Edit"> <br>
+    <div onclick="openProfileContainer(0);">
+        <input type="submit" value="CONFIRM" class="Confirm_Button Button_Edit"> <br>
     </div>
 </section>
 <script src="script.js"></script>
