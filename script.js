@@ -28,7 +28,7 @@ function openIndexContainer(container)
 
 function openHomeContainer(container)
 {
-    for(let i = 0; i < 5; i++)
+    for(let i = 0; i < 7; i++)
         if(i !== container)
             homeContainers[i].style.display = "none";
     homeContainers[container].style.display = "block";
