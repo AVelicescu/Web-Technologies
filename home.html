@@ -27,8 +27,8 @@
       <label for="contactNav" class="Label_Nav">Contact</label>
     </button>
   </nav>
-  <div id="Menu_Container" style="visibility: hidden;">
-    <button class="Button_Menu_Container" id="animals" onclick="openHomeContainer(5);">
+  <div id="Menu_Container" style="visibility: visible;">
+    <button class="Button_Menu_Container" id="animals" onclick="openHomeContainer(6);openAnimalContainer();">
       <label for="animals" class="Label_Nav">Animal Collection</label>
     </button>
     <button class="Button_Menu_Container" id="services" onclick="openHomeContainer(1);">
@@ -44,14 +44,14 @@
       <label for="logoutContainer" class="Label_Nav">Logout</label>
     </button>
   </div>
-  <div id="Settings_Container" style="visibility: hidden;">
+  <div id="Settings_Container" style="visibility: visible;">
     <button class="Button_Settings_Container" id="profile">
       <label for="profile" class="Label_Nav">Profile</label>
     </button>
     <button class="Button_Settings_Container" id="theme">
       <label for="theme" class="Label_Nav">Theme</label>
     </button>
-    <button class="Button_Settings_Container" id="about" onclick="openHomeContainer(6);">
+    <button class="Button_Settings_Container" id="about" onclick="openHomeContainer(5);">
       <label for="about" class="Label_Nav">About</label>
     </button>
     <button class="Button_Settings_Container tablet_hidden" id="contactContainer" onclick="openHomeContainer(4);">
@@ -65,7 +65,21 @@
     <h3> DISCOVER THE BEAUTIFUL WORLD OF WILD NATURE </h3>
   </section>
   <section id="containerAnimals" style="display: none">
-
+      <div id="containerAnimalList"></div>
+      <div id="containerAnimalDetails" style="display: none;">
+        <img id="photo">
+        <button id="close" onclick="closeAnimalDescription()"><img src="Images/Icons/Close.png"></button>
+        <p class="animalDetail" id="popularName"></p>
+        <p class="animalDetail" id="scientificName"></p>
+        <p class="animalDetail" id="type"></p>
+        <p class="animalDetail" id="diet"></p>
+        <p class="animalDetail" id="origin"></p>
+        <p class="animalDetail" id="description"></p>
+        <p class="animalDetail" id="status"></p>
+        <p class="animalDetail" id="relatedSpecies"></p>
+        <p class="animalDetail" id="naturalEnemies"></p>
+        <p class="animalDetail" id="characteristic"></p>
+      </div>
   </section>
   <section id="containerAbout" style="display: none">
 
@@ -194,6 +208,7 @@
     </div>
   </section>
 </div>
+<script src="animals.json"></script>
 <script src="script.js"></script>
 </body>
 </html>

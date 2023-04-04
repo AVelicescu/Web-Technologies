@@ -9,13 +9,13 @@
 <body>
 <header>
     <nav id="Profile_Nav">
-        <button class="Button_Nav" id="back" onclick="openIndexContainer(0);">
+        <button class="Button_Nav" id="back" onclick="openProfileContainer(0);">
             <img src="Images/Icons/Back.png" class="icon">
         </button>
-        <img src="Images/Logo/Logo.png" id="logo" onclick="openIndexContainer(0);">
+        <img src="Images/Logo/Logo.png" id="logo">
     </nav>
 </header>
-<section id="Profile_Container">
+<section id="containerProfile">
     <div class="info">
         <img id="Profile_Image" src="Images/Icons/LogIn.png">
         <label class="info_type_label">USERNAME</label>
@@ -46,7 +46,7 @@
     </button>
 </section>
 
-<section id="EditProfile_Container" style="display: none">
+<section id="containerProfileEdit" style="display: none">
     <div class="editInfo">
         <input type="text" name="FirstName" placeholder="FIRST NAME" class="EditInput"> <br>
     </div>

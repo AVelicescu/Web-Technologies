@@ -56,7 +56,7 @@
         border: 2px solid #e6733e;
     }
 
-    #Profile_Container, #EditProfile_Container{
+    #containerProfile, #containerProfileEdit{
         background-color: rgba(0, 0, 0, 0.6);
         color: black;
         height: fit-content;

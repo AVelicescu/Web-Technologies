@@ -498,16 +498,25 @@
         padding: 8px;
     }
     #Menu_Container, #Settings_Container {
+        pposition: absolute;
         overflow: hidden;
         justify-content: space-evenly;
         display: flex;
         width: 100%;
-        height: 0;
+        height: 35px;
         background-color: rgba(0, 0, 0, 0.6);
-        margin: 0 -8px 8px -8px;
-        padding: 0;
+        margin: 0 -8px 0 -8px;
+        padding: 0 8px 8px 8px;
         animation-duration: 600ms;
         animation-fill-mode: forwards;
+    }
+
+    @keyframes OpenMenu {
+
+    }
+
+    @keyframes CloseMenu {
+
     }
 
     .Button_Menu_Container, .Button_Settings_Container {
@@ -573,58 +582,6 @@
     .Button_Nav:hover .Label_Nav{
         margin-left: 25px;
     }
-
-    @keyframes OpenMenu {
-        0% {
-            height: 0;
-            opacity: 0;
-            width: 0;
-            padding: 0;
-            float: left;
-            visibility: hidden
-        }
-        1% {
-            padding: 0 8px 8px 8px;
-            height: 35px;
-            visibility: visible
-        }
-        99% {
-            float: left
-        }
-        100% {
-            height: 35px;
-            opacity: 1;
-            width: 100%;
-            padding: 0 8px 8px 8px;
-            float: right;
-            visibility: visible
-        }
-    }
-
-    @keyframes CloseMenu {
-        0% {
-            height: 35px;
-            opacity: 1;
-            width: 100%;
-            padding: 0 8px 8px 8px;
-            float: right;
-            visibility: visible
-        }
-        99% {
-            padding: 0 8px 8px 8px;
-            float: right;
-            visibility: visible;
-            height: 35px;
-        }
-        100% {
-            height: 0;
-            opacity: 0;
-            width: 0;
-            padding: 0;
-            float: left;
-            visibility: hidden
-        }
-    }
     #containerHome {
         position: absolute;
         margin-top: 50px;
@@ -650,7 +607,6 @@
         width: 90%;
         font-size: 17px;
     }
-
     .left-side, .right-side
     {
         background-color: rgba(255, 255, 255, 0.8);
@@ -681,6 +637,78 @@
         margin: auto;
 
     }
+    #containerAnimals{
+        position: relative;
 
+    }
+    #containerAnimalList{
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+
+    }
+    .containerAnimal {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        width: 15%;
+        min-height: 20%;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .containerAnimal img {
+        width: 100%;
+    }
+
+    .containerAnimal h2 {
+        font-weight: bold;
+        font-size: 20px !important;
+    }
+
+    .containerAnimal button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #containerAnimalDetails {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        text-align: center;
+        width: 60%;
+        min-height: 80%;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #close{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    #close img{
+
+    }
 }
 
