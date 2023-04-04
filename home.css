@@ -405,18 +405,16 @@
         margin: auto;
         position: relative;
         min-width: 500px;
-        width: 90%;
+        width: 95%;
         font-size: 17px;
     }
 
     .left-side, .right-side
     {
-        background-color: rgba(255, 170, 137, 0.8);
-        border-radius: 30px;
-        padding: 20px;
-        width: 70%;
-        text-align: left;
-        margin-top: 20px ;
+        padding: 25px;
+        width: 60%;
+        text-align: center;
+        margin-top: 15px ;
     }
     .left-side
     {
@@ -430,15 +428,53 @@
     }
     .center-side
     {
-        background-color: rgba(255, 170, 137, 0.8);
-        border-radius: 30px;
-        padding: 10px;
+        padding: 20px;
         width: 70%;
         text-align: center;
         font-size: 20px;
         margin-top: 40px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .stripedTemplate {
+
+        width: 60%;
+    }
+    .primaryBox {
+        background-color: #e38459;
+        border: 20px solid  #e38459;
+        text-align: center;
+    }
+    .top{
+        background-color: black;
+        padding: 3px;
+        border-left: 20px solid black;
+        border-right: 20px solid black;
+        width: 100%;
+        margin-left: -7%;
+        transform: translateY(300%);
+        border-radius: 50%;
+    }
+
+    .bottom{
+        background-color: black;
+        padding: 3px;
+        border-left: 20px solid black;
+        border-right: 20px solid black;
+        width: 100%;
+        margin-left: 7%;
+        transform: translateY(-300%);
+        border-radius: 50%;
+    }
+
+    .upperMiddle {
+        transform: translateY(500%);
+        margin-left: 7%;
+    }
+
+    .lowerMiddle {
+        transform: translateY(-500%);
+        margin-left: -7%;
     }
 
 }
@@ -665,34 +701,69 @@
 
     .left-side, .right-side
     {
-        background-color: rgba(255, 170, 137, 0.8);
-        border-radius: 30px;
         padding: 40px;
         width: 70%;
         text-align: left;
-        margin-top: 30px ;
     }
     .left-side
     {
-        margin-left: 5%;
+        margin-left: 10%;
         margin-right: auto;
     }
     .right-side
     {
-        margin-right: 5%;
+        margin-right: 10%;
         margin-left: auto;
     }
     .center-side
     {
-        background-color: rgba(255, 170, 137, 0.8);
-        border-radius: 30px;
-        padding: 10px;
-        width: 30%;
+        padding: 40px;
+        width: 70%;
         text-align: center;
-        font-size: 30px;
+        font-size: 40px;
         margin-top: 60px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .stripedTemplate {
+
+        width: 60%;
+    }
+    .primaryBox {
+        background-color: #e38459;
+        border: 20px solid  #e38459;
+        text-align: center;
+    }
+    .top{
+        background-color: black;
+        padding: 3px;
+        border-left: 20px solid black;
+        border-right: 20px solid black;
+        width: 100%;
+        margin-left: -7%;
+        transform: translateY(300%);
+        border-radius: 50%;
+    }
+
+    .bottom{
+        background-color: black;
+        padding: 3px;
+        border-left: 20px solid black;
+        border-right: 20px solid black;
+        width: 100%;
+        margin-left: 7%;
+        transform: translateY(-300%);
+        border-radius: 50%;
+    }
+
+    .upperMiddle {
+        transform: translateY(500%);
+        margin-left: 7%;
+    }
+
+    .lowerMiddle {
+        transform: translateY(-500%);
+        margin-left: -7%;
     }
 
 }
