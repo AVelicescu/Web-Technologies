@@ -1,3 +1,7 @@
+::placeholder
+{
+    color: white;
+}
 @media (max-width: 500px) {
     body {
         background-image: url("Images/Wallpaper/WallpaperMobile.jpg");

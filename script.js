@@ -17,6 +17,7 @@ let profileContainers = [profile, edit];
 let menuContainer = document.getElementById("Menu_Container");
 let settingsContainer = document.getElementById("Settings_Container");
 
+document.getElementById("profile").addEventListener("click", function() {window.location.href = "profile.html";} );
 
 function openIndexContainer(container)
 {
