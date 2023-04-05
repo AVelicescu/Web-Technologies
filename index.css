@@ -55,7 +55,9 @@
         min-width: 200px;
         width: 80%;
         font-size: 12px;
+        margin-top: 20px;
     }
+
     /* -------------------------------------------------------------------------------------- */
 
     /* ---------------------------------------Buttons---------------------------------------  */
@@ -229,12 +231,10 @@
     }
     .left-side, .right-side
     {
-        background-color: rgba(255, 255, 255, 0.6);
-        border-radius: 30px;
-        padding: 25px;
+        padding: 5px;
         width: 60%;
         text-align: center;
-        margin-bottom: 15px;
+        margin-top: 15px;
     }
     .left-side
     {
@@ -245,6 +245,46 @@
     {
         margin-right: 5%;
         margin-left: auto;
+    }
+    .stripedTemplate {
+
+        width: 60%;
+    }
+    .primaryBox {
+        background-color: #e38459;
+        border: 20px solid  #e38459;
+        text-align: center;
+    }
+    .top{
+        background-color: black;
+        padding: 3px;
+        border-left: 20px solid black;
+        border-right: 20px solid black;
+        width: 100%;
+        margin-left: -7%;
+        transform: translateY(300%);
+        border-radius: 50%;
+    }
+
+    .bottom{
+        background-color: black;
+        padding: 3px;
+        border-left: 20px solid black;
+        border-right: 20px solid black;
+        width: 100%;
+        margin-left: 7%;
+        transform: translateY(-300%);
+        border-radius: 50%;
+    }
+
+    .upperMiddle {
+        transform: translateY(500%);
+        margin-left: 7%;
+    }
+
+    .lowerMiddle {
+        transform: translateY(-500%);
+        margin-left: -7%;
     }
     /* -------------------------------------------------------------------------------------- */
 
@@ -413,27 +453,63 @@
         margin: auto;
         position: relative;
         min-width: 1000px;
-        width: 80%;
         font-size: 17px;
     }
     .left-side, .right-side
     {
-        background-color: rgba(255, 255, 255, 0.6);
-        border-radius: 30px;
-        padding: 40px;
+        padding: 15px;
         width: 60%;
-        text-align: center;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
     .left-side
     {
-        margin-left: 5%;
+        margin-left: 10%;
         margin-right: auto;
     }
     .right-side
     {
-        margin-right: 5%;
+        margin-right: 10%;
         margin-left: auto;
+    }
+    .stripedTemplate {
+
+        width: 60%;
+    }
+    .primaryBox {
+        background-color: #e38459;
+        border: 20px solid  #e38459;
+        text-align: center;
+    }
+    .top{
+        background-color: black;
+        padding: 3px;
+        border-left: 20px solid black;
+        border-right: 20px solid black;
+        width: 100%;
+        margin-left: -7%;
+        transform: translateY(300%);
+        border-radius: 50%;
+    }
+
+    .bottom{
+        background-color: black;
+        padding: 3px;
+        border-left: 20px solid black;
+        border-right: 20px solid black;
+        width: 100%;
+        margin-left: 7%;
+        transform: translateY(-300%);
+        border-radius: 50%;
+    }
+
+    .upperMiddle {
+        transform: translateY(500%);
+        margin-left: 7%;
+    }
+
+    .lowerMiddle {
+        transform: translateY(-500%);
+        margin-left: -7%;
     }
     /* -------------------------------------------------------------------------------------- */
 

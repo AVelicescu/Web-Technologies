@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML</title>
+    <link rel="stylesheet" href="Scholarly.css">
+    <!-- <script src="js/scholarly.min.js"></script>-->
+</head>
+<body>
+<header style="text-align: center;">
+    <h1>Descrierea proiectului Zoo Manager</h1>
+    <h2 style="border-bottom: none">Leonte Razvan, Roibu Ioana si Velicescu Andrei </h2>
+    <span typeof="schema:author">
+        <meta property="schema:givenName" content="Roibu">
+        <meta property="schema:familyName" content="Ioana">
+    </span>
+    <span typeof="schema:author">
+        <meta property="schema:givenName" content="Velicescu">
+        <meta property="schema:familyName" content="Andrei">
+    </span>
+    <span typeof="schema:author">
+        <meta property="schema:givenName" content="Leonte">
+        <meta property="schema:familyName" content="Razvan">
+    </span>
+    <time datetime="2023-04-10">April 10, 2023</time>
+</header>
+<main>
+    <h2>Continut: </h2>
+    <ol>
+        <li><a href="#introduction">Introducere</a>
+            <ol start="1">
+                <li><a href="#purpose">Scop</a></li>
+                <li><a href="#documentConventions">Convenții ale documentului </a></li>
+                <li><a href="#intendedAudience">Publicul țintă </a></li>
+                <li><a href="#scope">Domeniul de aplicare al produsului</a></li>
+                <li><a href="#references">Referințe</a></li>
+            </ol>
+        </li>
+        <li><a href="#overallDescription">Descriere generală</a>
+            <ol start="1">
+                <li><a href="#productFunctions">Funcțiile produsului</a></li>
+                <li><a href="#userClasses"> Clasele și caracteristicile utilizatorilor </a></li>
+                <li><a href="#operatingEnvironment"> Mediu de operare </a></li>
+                <li><a href="#userDocumentation">Documentația utilizatorului </a></li>
+            </ol>
+        </li>
+        <li><a href="#interface">Interfață</a>
+            <ol start="1">
+                <li><a href="#userInterfaces">Interfata cu utilizatorul</a></li>
+                <li><a href="#hardwareInterfaces"> Interfețe hardware</a></li>
+                <li><a href="#softwareInterfaces">Interfețe software </a></li>
+            </ol>
+        </li>
+        <li><a href="#systemFeatures">Caracteristici ale programului </a></li>
+        <li><a href="#nonfunctionalRequirements">Alte cerințe non-funcționale</a>
+            <ol start="1">
+                <li><a href="#performance">Cerințe de performanță </a></li>
+                <li><a href="#security "> Cerințe de securitate </a></li>
+                <li><a href="#softwareAttributes">Atribute de calitate a software-ului </a></li>
+            </ol>
+        </li>
+    </ol>
+    <!-- ------------------------------  Introducere ------------------------------------------------------------------------------>
+    <section id="introduction" role="doc-introduction">
+        <h2>1. Introducere</h2>
+        <section id="purpose">
+            <h3>1.1 Scop:</h3>
+            <p>
+                Scopul acestui proiect este de a dezvolta o site web care să permită gestionarea informațiilor legate de
+                animalele găzduite într-o grădină zoologică.
+                Această aplicație trebuie să ofere utilizatorilor o interfață intuitivă pentru a gestiona datele despre
+                animale, inclusiv informații precum denumire populară și științifică, descriere, origine, statut,
+                caracteristici, specii înrudite, dusmani naturali, imagini de interes, regim alimentar, mod de înmulțire
+                și altele.
+            </p>
+            <p>
+                De asemenea, aplicația trebuie să ofere mecanisme de căutare, filtrare și prezentare multi-criterială
+                pentru a permite utilizatorilor să găsească informații specifice despre animale.
+                Aceste funcționalități ar putea include afișarea tuturor mamiferelor cu blană de origine europeană ce
+                pot fi dresate sau generarea unei liste de păsări/tărătoare capabile să supraviețuiască în condiții
+                desertice.
+            </p>
+            <p>
+                În concluzie, scopul acestui proiect este de a crea un site web eficient și ușor de utilizat, care să
+                “simuleze” site-ul unei gradini zoologice, sa permită gestionarea informațiilor legate de animalele și
+                să ofere funcționalități avansate de căutare și filtrare pentru a ajuta utilizatorii să găsească
+                informațiile de care au nevoie.
+            </p>
+        </section>
+        <section id="documentConventions">
+            <h3>1.2 Convenții ale documentului: </h3>
+            <p>
+                Culorile utilizate in document vor fi consistente cu identitatea vizuala a paginii web si cu paleta de
+                culori stabilita.
+                In cazul utilizarii de nuante, acestea trebuie sa fie in concordanta cu culorile principale si sa fie
+                folosite cu moderatie pentru a evita crearea unui aspect haotic.
+            </p>
+            <p>
+                Textul din document va fi de culoare neagra (in general), iar fontul utilizat va fi usor de citit si va respecta
+                specificatiile propuse.
+                Pentru elementele interactive, cum ar fi butoanele sau linkurile, se va folosi o culoare distincta
+                pentru a le evidenția.
+            </p>
+            <p>
+                In cazul utilizarii de imagini, acestea vor fi de inalta calitate, vor fi dimensionate corespunzator si
+                vor fi integrate armonios in designul general al documentului.
+            </p>
+            <p>
+                Conventiile privind culorile si nuantele vor fi aplicate consistent pe intregul document, pentru a
+                mentine un aspect coerent si profesional.
+            </p>
+        </section>
+        <section id="intendedAudience">
+            <h3>1.3 Publicul țintă:</h3>
+            <p>
+                Site-ul dezvoltat pentru gestionarea informațiilor dintr-o grădină zoologică ar putea fi utilizat de mai
+                multe categorii de utilizatori, inclusiv:
+            </p>
+            <ol>
+                <li>
+                    Vizitatorii grădinii zoologice - aceștia ar putea utiliza site-ul pentru a afla mai multe informații
+                    despre animalele din grădină, cum ar fi originea, statutul, regimul alimentar și alte caracteristici
+                    ale
+                    acestora.
+                </li>
+                <li>
+                    Angajații grădinii zoologice - aceștia ar putea utiliza site-ul pentru a vedea ce informatii trebuie
+                    actualizate și ce informatii apar despre animale. Astfel, le pot gestiona, in cazul in care trebuie
+                    adăugate noi animale și actualizate datelor existente.
+                </li>
+                <li>
+                    Publicul larg interesat de animale - aceștia ar putea utiliza site-ul pentru a învăța mai multe
+                    despre
+                    animale și pentru a descoperi informații interesante despre acestea.
+                </li>
+            </ol>
+            <p>
+                În general, site-ul ar putea fi utilizat de oricine este interesat de animale și de gestionarea
+                informațiilor despre acestea într-o grădină zoologică.
+            </p>
+        </section>
+        <section id="scope">
+            <h3>1.4 Domeniul de aplicare al produsului: </h3>
+            <p>
+                Domeniul de aplicare a produsului poate fi vast si poate acoperi o gama larga de utilizatori si nevoi.
+                In ceea ce priveste gradinile zoologice, produsul poate fi utilizat de administratorii acestora pentru a
+                gestiona informatiile despre animalele gazduite si pentru a oferi vizitatorilor informatii utile si
+                interesante despre acestea.
+            </p>
+            <p>
+                In general, domeniul de aplicare al produsului poate fi extins la orice organizatie sau institutie care
+                gestioneaza informatii despre animale, oferindu-le o solutie eficienta pentru a tine evidenta acestora
+                si pentru a le comunica cat mai eficient utilizatorilor.
+            </p>
+        </section>
+        <section id="references">
+            <h3>1.5 Referințe: </h3>
+            <p>
+                In alegerea modului in care site-ul nostru va arata au fost implicati mai multi pasi. Am inceput prin a
+                ne gandi cum am vrea noi sa arate si ce functionalitati sa ofere. Ulterior am cautat pe internet
+                site-uri ale multor gradini zoologice pentru a vedea ce informatii ofera si daca exista un mod standard
+                in care acestea arata. Dupa ce ne-am facut o imagine cu modul in care am dori sa arate aplicatia noastra
+                am continuat prin a desena pe foi modul in care dorim sa arate. Dupa ce am fost toti de acord cu
+                aspectul aplicatiei am realizat o schema finala pe care o vom atasa mai jos.
+            </p>
+            <p>
+                O parte dintre paginile zoo pe care le-am analizat sunt:
+            </p>
+            <ul>
+                <li typeof="schema:WebPage"><a href="https://www.chesterzoo.org">Chester Zoo</a></li>
+                <li typeof="schema:WebPage"><a href="https://sandiegozoowildlifealliance.org">San Diego Zoo</a></li>
+                <li typeof="schema:WebPage"><a href="https://www.torontozoo.com">Toronto Zoo</a></li>
+            </ul>
+        </section>
+    </section>
+    <!------------------------------------------Descriere generală -------------------------------------------->
+    <section id="overallDescription">
+        <h2>2. Descriere generală</h2>
+        <section id="productFunctions">
+            <h3>2.1 Funcțiile produsului: </h3>
+            <ul>
+                <li>
+                    Cautare si filtrare - permit utilizatorilor sa caute si sa filtreze animalele in functie de diferite
+                    criterii, cum ar fi originea, statutul, specia, regimul alimentar, dependenta de clima,
+                    periculozitatea, proprietatile speciale si altele.
+                </li>
+                <li>
+                    Prezentare multi-criteriala - permit utilizatorilor sa vizualizeze animalele in functie de mai multe
+                    criterii, cum ar fi: denumirea, descrierea, originea, statutul, caracteristicile, speciile inrudite
+                    si regimul alimentar.
+                </li>
+                <li>
+                    Vizualizare informatii despre animale - utilizatorii pot vizualiza informatii detaliate despre
+                    fiecare animal, inclusiv denumirea populara/stiintifica, descrierea, originea, statutul,
+                    caracteristicile, speciile inrudite, dusmanii naturali, imagini de interes, regimul alimentar si
+                    modul de inmultire.
+                </li>
+                <li>
+                    Vizualizare informatii fictive despre: tichete, news, contact si o rubrica de about us.
+                </li>
+                <li>
+                    Vizualizare si modificare informatii personale - utilizatorii vor putea vedea la rubrica profil
+                    informatiile personale si le vor putea actualiza.
+                </li>
+            </ul>
+        </section>
+        <section id="userClasses">
+            <h3>2.2 Clasele și caracteristicile utilizatorilor: </h3>
+            <p>
+                In aplicatie va fi un singur tip de login/cont. Astfel, toti utilizatorii aplicatiei vor avea acces la
+                toate functiile mentionate mai sus si nu vor exista utilizatori cu alte drepturi/ drepturi speciale.
+            </p>
+        </section>
+        <section id="operatingEnvironment">
+            <h3>2.3 Mediu de operare: </h3>
+            <p>
+                Mediile de operare ale acestui proiect include:
+            </p>
+            <ul>
+                <li>Sisteme de operare: Windows si Linux</li>
+                <li>Pentru serverul web: Node.js</li>
+                <li>Baze de date: H2</li>
+                <li>Limbaje de programare: HTML, CSS, JavaScript</li>
+            </ul>
+        </section>
+        <section id="userDocumentation">
+            <h3>2.4 Documentația utilizatorului: </h3>
+            <p>
+                Site-ul este gandit atractiv si simplu de utilizat. User-ul poate doar sa afle mai multe informatii
+                despre zoo-ul nostru accesand site-ul. Nu pot fi cumparate produse prin intermediul acestui site.
+                Astfel, nu este nevoie de un manual sau on-line help pentru ca userul sa foloseasca aceasta pagina web.
+            </p>
+        </section>
+    </section>
+    <!---------------------------------------------- Interfata ------------------------------------------------------->
+    <section id="interface">
+        <h2>3. Interfață</h2>
+        <section id="userInterfaces">
+            <h3>3.1 Interfata cu utilizatorul</h3>
+            <p>
+                Interfata cu utilizatorul este intuitiva si atractiva si are o gama larga de caracteristici pentru ca
+                utilizatorii sa poata gasi usor informatiile cautate. Initial utilizatorului i se va deschide pagina
+                pentru login/sign up. Pe aceasta pagina se va gasi si o sectiune de about de unde utilizatorul va putra
+                afla mai multe despre site-ul nostru inainte de a se loga. Home-ul (pagina de dupa autentifivare) va
+                avea ca fundal imaginea unui animal si un mesaj de intampinare a utilizatorului. In partea de sus, in
+                functie de device, se vor gasi butoane de meniu, setari si altele pentru a permite utilizatorilor sa
+                exploreze diferite sectiuni ale site-ului.
+            </p>
+            <p>
+                Modul in care acestea arata reiese din schemele de mai jos.
+            </p>
+            <div class="image-container" style="text-align: center;">
+                <figure>
+                    <img src="Images/Scholarly/Login.jpg" alt="Modelul pentru Login" width="600" height="800">
+                    <figcaption>Exemplu de model pentru Login.</figcaption>
+                </figure>
+                <figure>
+                    <img src="Images/Scholarly/SchemaMobil.jpg" alt="Schema pentru mobil" width="600" height="800">
+                    <figcaption>Exemplu de schema pentru mobil.</figcaption>
+                </figure>
+                <figure>
+                    <img src="Images/Scholarly/SchemaTableta.jpg" alt="Schema pentru tableta" width="600" height="800">
+                    <figcaption>Exemplu de schema pentru tableta.</figcaption>
+                </figure>
+                <figure>
+                    <img src="Images/Scholarly/SchemaLaptop.jpg" alt="Schema pentru desktop" width="600" height="800">
+                    <figcaption>Exemplu de schema pentru desktop.</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="hardwareInterfaces">
+            <h3>3.2 Interfețe hardware</h3>
+            <p>
+                Site-ul nostru este responsive. Aspectul de modifica in functie de device, precum reiese si din schemele
+                prezentate la punctul anterior. Acesta poate fi deschis pe tableta, telefon sau laptop si trasaturile au
+                fost gandite pentru a fi atractiv si usor de utilizat pe oricare dintre aceste trei device-uri.
+            </p>
+        </section>
+        <section id="softwareInterfaces">
+            <h3>3.3 Interfețe software </h3>
+            <p>
+                Vom folosi o baza de date pentru a retine informatiile despre utilizatori. Aceasta va fi folosita la:
+            </p>
+            <ul>
+                <li> Sign up - cand se adauga un user nou in baza de date</li>
+                <li> Login - cand se va cauta utilizatorul in baza de date pentru a se verifica faptul ca exista</li>
+                <li> Logout - pentru a stii ca utilizatorul nu mai este logat.</li>
+            </ul>
+            <p>
+                Pentru animale vom folosi un fisier de tip JSON.
+            </p>
+        </section>
+    </section>
+    <!--------------------------------------------------- Caracteristici ale sistemului ----------------------------------------------------------->
+    <section id="systemFeatures">
+        <h2>4. Caracteristici ale programului </h2>
+        <p>
+            Utilizatorul va intra pe o pagina principala unde se va putea loga/ isi va putea face cont si va putea citi
+            cateva informatii despre ce va gasi pe pagina noastra web.
+            Dupa ce autentificarea se realizeaza cu succes se va deschide home page-ul. In partea de sus se vor gasi
+            butoane ce vor trimite la diferite sectiuni.
+        </p>
+        <p>
+            La setarile de pe desktop si telefon gasim butoane catre:
+        <ul>
+            <li>Profil</li>
+            <li>Teme</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        Setarile pentru tableta au butoane catre:
+        <ul>
+            <li>Profil</li>
+            <li>Teme</li>
+            <li>About</li>
+        </ul>
+        </p>
+        <p>
+            Meniul de pe desktop contine butoane catre:
+        <ul>
+            <li>Colectia de animale</li>
+            <li>Servicii</li>
+            <li>Tichete</li>
+            <li>News</li>
+        </ul>
+        Meniul pentru tableta si telefon are butoane catre:
+        <ul>
+            <li>Colectie de animale</li>
+            <li>Servicii</li>
+            <li>Tichete</li>
+            <li>News</li>
+            <li>Logout</li>
+        </ul>
+        </p>
+        <p>
+            In plus, pe tableta apare separat butonul de Contact, iar pe desktop cel de Logout.
+        </p>
+        <P>
+            Cand se apasa butonul de profil se deschide o pagina cu datele utilizatorului. Aici fiecare user isi poate
+            modifica datele.
+        </P>
+        <p>
+            Butonul de colectie de animale afiseaza anumite categorii de animale (pentru a avea o filtrare initiala).
+            Pentru a vedea animalele ce fac parte din acea categorie o vom accesa.
+        </p>
+    </section>
+    <!---------------------------------------------- Cerinte non-functionale ------------------------------------------------------------------>
+    <section id="nonfunctionalRequirements">
+        <h2>5. Alte cerințe non-funcționale</h2>
+        <section id="performance">
+            <h3>5.1 Cerințe de performanță </h3>
+            <p>
+                Pagina noastra se va incarca rapid pentru a oferi o experienta cat mai buna utilizatorilor. Trecerea de
+                la o pagina la alta este facuta intr-un mod optim astfel incat durata de transfer de la o pagina la alta
+                sa fie cat mai redusa.
+            </p>
+        </section>
+        <section id="security ">
+            <h3>5.2 Cerințe de securitate </h3>
+            <p>
+                Pentru a asigura o securitate adecvata a datelor utilizatorilor, este esential sa se respecte practicile
+                recomandate de industrie. In acest sens, una dintre cele mai importante practici este aceea de a tine
+                informatiile despre utilizatori exclusiv in backend-ul aplicatiei, si nu in frontend-ul care este expus
+                utilizatorilor.
+            </p>
+            <p>
+                Prin pastrarea datelor de utilizator exclusiv in backend, se poate reduce riscul de acces neautorizat la
+                informatiile utilizatorilor, deoarece acestea nu sunt disponibile publicului larg si nu pot fi accesate
+                direct prin intermediul interfetei utilizatorului.
+            </p>
+            <p>
+                De asemenea, pastrarea datelor in backend permite o mai buna gestiune si control asupra acestora,
+                oferind posibilitatea de a aplica reguli stricte de securitate si de a gestiona accesul la informatii in
+                functie de rolul si permisiunile utilizatorilor.
+            </p>
+        </section>
+        <section id="softwareAttributes">
+            <h3>5.3 Atribute de calitate a software-ului </h3>
+            <ul>
+                <li> Functionalitate:Site-ul are capacitatea de a gestiona informatiile despre animalele gazduite in
+                    gradina zoologica, precum si de a oferi mecanisme de cautare/filtrare/prezentare multi-criteriala.
+                </li>
+                <li> Fiabilitate: Site-ul va functiona fara erori sau defecte.</li>
+                <li> Performanta: Site-ul va raspunde rapid la cererile utilizatorilor si de a oferi o experienta
+                    fluida.
+                </li>
+                <li> Uzabilitate: Site-ul este usor de utilizat si de a fi inteles de catre utilizatori si ofera o
+                    interfata atractiva si intuitiva.
+                </li>
+                <li> Securitate: Site-ul va proteja datele utilizatorilor si va preveni accesul neautorizat la
+                    acestea.
+                </li>
+                <li> Scalabilitate: Capacitatea aplicatiei de a fi utilizata pe o scala larga si de a putea fi extinsa
+                    fara probleme.
+                </li>
+            </ul>
+        </section>
+    </section>
+</main>
+</body>
+</html>
