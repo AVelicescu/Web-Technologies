@@ -19,6 +19,10 @@ let profileContainers = [profile, edit];
 let menuContainer = document.getElementById("Menu_Container");
 let settingsContainer = document.getElementById("Settings_Container");
 
+document.getElementById("profile").addEventListener("click", function () {
+    window.location.href = "profile.html";
+});
+
 
 function openIndexContainer(container) {
     for (let i = 0; i < 5; i++)
@@ -88,7 +92,7 @@ function openAnimalContainer() {
     }
 }
 
-function openAnimalDescription(animal){
+function openAnimalDescription(animal) {
     details.style.display = "flex";
 
     let photo = document.getElementById("photo");
@@ -115,12 +119,12 @@ function openAnimalDescription(animal){
     characteristic.textContent = `Characteristic: ${animal.characteristic.join(", ")}`;
 }
 
-function closeAnimalDescription(){
+function closeAnimalDescription() {
     details.style.display = "none";
 }
 
 
-function getAnimalData(){
+function getAnimalData() {
     return [
         {
             "popularName": "African elephant",
