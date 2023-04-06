@@ -23,6 +23,12 @@ document.getElementById("profile").addEventListener("click", function () {
     window.location.href = "profile.html";
 });
 
+//pentru cand se face theme
+/*const root = document.documentElement;
+root.style.setProperty(  "--background-color", "white");
+root.style.setProperty(  "--border", "black");
+root.style.setProperty(  "--menu", "rgba(255, 255, 255, 0.6)");
+root.style.setProperty(  "--menu-desktop",  "rgba(255, 255, 255, 0)");*/
 
 function openIndexContainer(container) {
     for (let i = 0; i < 5; i++)
@@ -107,6 +113,7 @@ function openAnimalDescription(animal) {
     let naturalEnemies = document.getElementById("naturalEnemies");
     let characteristic = document.getElementById("characteristic");
 
+    photo.src = animal.photo;
     popularName.textContent = `Popular name: ${animal.popularName}`;
     scientificName.textContent = `Scientific name: ${animal.scientificName}`;
     type.textContent = `Type: ${animal.type}`;
