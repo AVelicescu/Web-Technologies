@@ -1,6 +1,6 @@
 @media (max-width: 500px) {
     body {
-        background-image: url("Images/Wallpaper/WallpaperMobile.jpg");
+        background-image: url("Images/Wallpaper/Tiger2.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -151,6 +151,10 @@
 
         margin: 12px 85px;
     }
+    .Cancel_Button {
+        margin: 12px 85px;
+
+    }
     .Button_Edit {
         padding: 10px 20px;
         font-size: larger;
@@ -174,13 +178,36 @@
         border: 0px solid #e6733e;
     }
 
+    .Button_Neg {
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bolder;
+        background-color: Black;
+        border-radius: 35px;
+        border: 0px solid white;
+        text-align: center;
+        color: #BE4B16;
+        overflow: hidden;
+        transition: 0.3s;
+        font-family: 'Anonymous Pro', monospace;
+    }
+
+    .Button_Neg:hover
+
+    {
+        color: black;
+        background-color: #e6733e;
+        font-weight: bolder;
+        border: 0px solid #e6733e;
+    }
+
 
 
 }
 
 @media (max-width: 1023px) and (min-width: 501px) {
     body {
-        background-image: url("Images/Wallpaper/WallpaperTablet.png");
+        background-image: url("Images/Wallpaper/Tiger2.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -331,6 +358,10 @@
 
         margin: 12px 85px;
     }
+    .Cancel_Button {
+        margin: 12px 85px;
+
+    }
     .Button_Edit {
         padding: 10px 20px;
         font-size: larger;
@@ -346,6 +377,28 @@
     }
 
     .Button_Edit:hover
+
+    {
+        color: black;
+        background-color: #e6733e;
+        font-weight: bolder;
+        border: 0px solid #e6733e;
+    }
+    .Button_Neg {
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bolder;
+        background-color: Black;
+        border-radius: 35px;
+        border: 0px solid white;
+        text-align: center;
+        color: #BE4B16;
+        overflow: hidden;
+        transition: 0.3s;
+        font-family: 'Anonymous Pro', monospace;
+    }
+
+    .Button_Neg:hover
 
     {
         color: black;
@@ -525,6 +578,10 @@
         font-family: 'Anonymous Pro', monospace;
     }
 
+    .Cancel_Button {
+        margin: 12px 85px;
+
+    }
     .Button_Edit:hover
 
     {
@@ -534,6 +591,27 @@
         border: 0px solid #e6733e;
     }
 
+    .Button_Neg {
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bolder;
+        background-color: Black;
+        border-radius: 35px;
+        border: 0px solid white;
+        text-align: center;
+        color: #BE4B16;
+        overflow: hidden;
+        transition: 0.3s;
+        font-family: 'Anonymous Pro', monospace;
+    }
 
+    .Button_Neg:hover
+
+    {
+        color: black;
+        background-color: #e6733e;
+        font-weight: bolder;
+        border: 0px solid #e6733e;
+    }
 
 }
