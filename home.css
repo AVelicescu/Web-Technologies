@@ -3,6 +3,7 @@
     --border: black;
     --menu: rgba(255, 255, 255, 0.6);
     --menu-desktop: rgba(255, 255, 255, 0);
+    --main-orange: #e6733e;
 }
 /*.Theme {
     position: relative;
@@ -26,7 +27,21 @@
     padding: 5px;
     display: block;
     font-size: 16px;
-}*/
+}
+*/
+
+.search-bar button {
+    background-color: var(--main-orange);
+    color: white;
+}
+.search-bar button img{
+   width: 20px;
+}
+
+.search-bar button:hover {
+    background-color: #efb889;
+    color: white;
+}
 
 /* ------------------------- Universal -----------------------------------------------------*/
 
@@ -130,8 +145,8 @@
     }
 
     .Button_Menu_Container:hover, .Button_Settings_Container:hover {
-        background-color: #e6733e;
-        border: 2px solid #e6733e;
+        background-color: var(--main-orange);
+        border: 2px solid var(--main-orange);
     }
 
     .Button_Nav {
@@ -154,8 +169,8 @@
     }
 
     .Button_Nav:hover {
-        background-color: #e6733e;
-        border: 2px solid #e6733e;
+        background-color: var(--main-orange);
+        border: 2px solid var(--main-orange);
         width: 100px;
     }
 
@@ -165,6 +180,23 @@
 
     .Button_Nav:hover .Label_Nav {
         margin-left: 12px;
+    }
+
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: -35px auto auto auto;
+    }
+
+    .search-bar input[type="text"], .search-bar button {
+        padding: 3px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 90px;
     }
 
     @keyframes OpenMenu {
@@ -408,8 +440,8 @@
     }
 
     .Button_Menu_Container:hover, .Button_Settings_Container:hover {
-        background-color: #e6733e;
-        border: 2px solid #e6733e;
+        background-color: var(--main-orange);
+        border: 2px solid var(--main-orange);
     }
 
     .Button_Nav {
@@ -432,14 +464,14 @@
     }
 
     .Button_Nav:hover {
-        background-color: #e6733e;
-        border: 2px solid #e6733e;
+        background-color: var(--main-orange);
+        border: 2px solid var(--main-orange);
         width: 130px;
     }
 
     .Button_Menu_Container:hover, .Button_Settings_Container:hover {
-        background-color: #e6733e;
-        border: 2px solid #e6733e;
+        background-color: var(--main-orange);
+        border: 2px solid var(--main-orange);
     }
 
     .Button_Nav:hover .icon {
@@ -448,6 +480,23 @@
 
     .Button_Nav:hover .Label_Nav {
         margin-left: 15px;
+    }
+
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: -45px auto auto auto;
+    }
+
+    .search-bar input[type="text"], .search-bar button {
+        padding: 5px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 150px;
     }
 
     @keyframes OpenMenu {
@@ -463,6 +512,7 @@
             visibility: visible;
         }
     }
+
 
     @keyframes CloseMenu {
         0% {
@@ -674,7 +724,7 @@
     }
 
     ::-webkit-scrollbar-track {
-        background-color: #e6733e;
+        background-color: var(--main-orange);
     }
 
     ::-webkit-scrollbar-thumb {
@@ -767,8 +817,8 @@
     }
 
     .Button_Menu_Container:hover, .Button_Settings_Container:hover {
-        background-color: #e6733e;
-        border: 2px solid #e6733e;
+        background-color: var(--main-orange);
+        border: 2px solid var(--main-orange);
         margin-top: 6px;
     }
 
@@ -792,14 +842,14 @@
     }
 
     .Button_Nav:hover {
-        background-color: #e6733e;
-        border: 2px solid #e6733e;
+        background-color: var(--main-orange);
+        border: 2px solid var(--main-orange);
         width: 250px;
     }
 
     .Button_Menu_Nav:hover, .Button_Settings_Nav:hover {
-        background-color: #e6733e;
-        border: 2px solid #e6733e;
+        background-color: var(--main-orange);
+        border: 2px solid var(--main-orange);
         margin-top: 6px;
     }
 
@@ -810,6 +860,23 @@
     .Button_Nav:hover .Label_Nav {
         margin-left: 25px;
     }
+
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        margin-top: -55px;
+    }
+
+    .search-bar input[type="text"], .search-bar button {
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 300px;
+    }
+
 
     @keyframes OpenMenu {
         0% {
