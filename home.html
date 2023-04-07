@@ -28,7 +28,7 @@
         </button>
     </nav>
     <div id="Menu_Container" style="visibility: hidden;">
-        <button class="Button_Menu_Container" id="animals" onclick="openHomeContainer(6);">
+        <button class="Button_Menu_Container" id="animals" onclick="openHomeContainer(6);openAnimalContainer();">
             <label for="animals" class="Label_Nav">Animal Collection</label>
         </button>
         <button class="Button_Menu_Container" id="services" onclick="openHomeContainer(1);">
@@ -48,6 +48,15 @@
         <button class="Button_Settings_Container" id="profile">
             <label for="profile" class="Label_Nav">Profile</label>
         </button>
+      <!--  <div class="Theme">
+            <button class="Button_Settings_Container" id="theme">
+                <label for="theme" class="Label_Nav">Theme</label>
+            </button>
+            <div class="containerThemeOptions">
+                <button class="Label_Nav">Light</button>
+                <button class="Label_Nav">Dark</button>
+            </div>
+        </div>-->
         <button class="Button_Settings_Container" id="theme">
             <label for="theme" class="Label_Nav">Theme</label>
         </button>
@@ -65,7 +74,21 @@
         <h3> DISCOVER THE BEAUTIFUL WORLD OF WILD NATURE </h3>
     </section>
     <section id="containerAnimals" style="display: none">
-
+        <div id="containerAnimalList"></div>
+        <div id="containerAnimalDetails" style="display: none;">
+            <img id="photo">
+            <button id="close" onclick="closeAnimalDescription()"><img src="Images/Icons/Close2.png"></button>
+            <p class="animalDetail" id="popularName" ></p>
+            <p class="animalDetail" id="scientificName"></p>
+            <p class="animalDetail" id="type"></p>
+            <p class="animalDetail" id="diet"></p>
+            <p class="animalDetail" id="origin"></p>
+            <p class="animalDetail" id="description"></p>
+            <p class="animalDetail" id="status"></p>
+            <p class="animalDetail" id="relatedSpecies"></p>
+            <p class="animalDetail" id="naturalEnemies"></p>
+            <p class="animalDetail" id="characteristic" style="border: none"></p>
+        </div>
     </section>
     <section id="containerAbout" style="display: none">
         <div class="center-side stripedTemplate">
@@ -135,11 +158,13 @@
                     If you are looking to get in touch with us, please find our contact information below. <br><br>
 
                     <b>Phone:</b> <br>
-                    &emsp; You can reach us by phone at (0712) 345-678 during our regular business hours. Our friendly staff
+                    &emsp; You can reach us by phone at (0712) 345-678 during our regular business hours. Our friendly
+                    staff
                     will be happy to assist you with any questions you may have. <br><br>
 
                     <b>Email:</b> <br>
-                    &emsp; If you prefer to reach us via email, you can do so at lrv.zoo.contact@gmail.com. Our team will
+                    &emsp; If you prefer to reach us via email, you can do so at lrv.zoo.contact@gmail.com. Our team
+                    will
                     make sure to respond to your email as soon as possible. <br><br>
 
                     <b>Address:</b> <br>
@@ -155,7 +180,8 @@
             <div class="top"></div>
             <div class="top upperMiddle"></div>
             <div class="primaryBox">
-                <p> Our Zoo is open every day of the week, so feel free to drop by and see all the amazing animals we have
+                <p> Our Zoo is open every day of the week, so feel free to drop by and see all the amazing animals we
+                    have
                     here. <br><br>
 
                     <b>Open hours:</b><br>
@@ -197,7 +223,8 @@
                     Welcome to the Tickets page for our amazing zoo! We're so glad you're considering a visit to our
                     facility. Below, you'll find all the information you need to purchase tickets and plan your visit.
                     <br><br>
-                    Please note that we do not offer online ticket sales at this time. You can purchase your tickets at the
+                    Please note that we do not offer online ticket sales at this time. You can purchase your tickets at
+                    the
                     entrance gate when you arrive. We accept cash and credit cards. <br><br>
 
                     Admission Prices:<br>
@@ -219,10 +246,13 @@
                     &emsp; Military personnel (with valid ID): 10% off<br>
                     &emsp; Students (with valid ID): 10% off<br>
                     &emsp; Groups of 15 or more: 15% off<br><br>
-                    We recommend arriving at least 3 hours before closing in order to have plenty of time for parking and
-                    any necessary security screenings. Also, please note that some animal exhibits may close early, so be
+                    We recommend arriving at least 3 hours before closing in order to have plenty of time for parking
+                    and
+                    any necessary security screenings. Also, please note that some animal exhibits may close early, so
+                    be
                     sure to plan your visit accordingly.<br><br>
-                    If you have any questions or concerns, please don't hesitate to contact us at lrv.zoo.contact@gmail.com.
+                    If you have any questions or concerns, please don't hesitate to contact us at
+                    lrv.zoo.contact@gmail.com.
                     We can't wait to see you at the zoo!
                 </p>
             </div>
@@ -259,9 +289,11 @@
             <div class="primaryBox">
                 <p>
                     <b> 2. Summer Concert Series Announced </b><br><br>
-                    Get ready for a wild summer at the zoo with our annual Summer Concert Series! This year, we are excited
+                    Get ready for a wild summer at the zoo with our annual Summer Concert Series! This year, we are
+                    excited
                     to welcome a lineup of talented musicians and performers to our stage. From indie rock to blues to
-                    children's music, there's something for everyone. Check out our website for the full schedule and ticket
+                    children's music, there's something for everyone. Check out our website for the full schedule and
+                    ticket
                     information.
                 </p>
             </div>
@@ -274,10 +306,12 @@
             <div class="primaryBox">
                 <p>
                     <b> 3. New Conservation Project Launched</b><br><br>
-                    At our zoo, we are dedicated to conservation and protecting wildlife and their habitats. That's why we
+                    At our zoo, we are dedicated to conservation and protecting wildlife and their habitats. That's why
+                    we
                     are thrilled to announce the launch of our latest conservation project: protecting the habitat of
                     endangered species in South America. Our team of experts will be working with local communities to
-                    develop sustainable conservation practices and protect the biodiversity of this important region. Stay
+                    develop sustainable conservation practices and protect the biodiversity of this important region.
+                    Stay
                     tuned for updates on our progress and how you can get involved.
                 </p>
             </div>
@@ -298,7 +332,8 @@
             <div class="top upperMiddle"></div>
             <div class="primaryBox">
                 <p>
-                    We are dedicated to providing you with the best experience possible during your visit to our zoo. Below
+                    We are dedicated to providing you with the best experience possible during your visit to our zoo.
+                    Below
                     are some of the services we offer to make your visit even more enjoyable:
                 </p>
             </div>
@@ -310,8 +345,10 @@
             <div class="top upperMiddle"></div>
             <div class="primaryBox">
                 <p>
-                    1. <b>Animal Feeding Schedule: </b> We provide a feeding schedule for all the animals in the zoo. This
-                    schedule includes the times the animals are fed and what type of food they receive. This will give you
+                    1. <b>Animal Feeding Schedule: </b> We provide a feeding schedule for all the animals in the zoo.
+                    This
+                    schedule includes the times the animals are fed and what type of food they receive. This will give
+                    you
                     an opportunity to see the animals in their natural habitat and learn about their diets.
                 </p>
             </div>
@@ -323,9 +360,12 @@
             <div class="top upperMiddle"></div>
             <div class="primaryBox">
                 <p>
-                    2. <b> Guided Tours: </b> We offer guided tours for visitors who want a more personalized experience.
-                    Our experienced guides will take you through the zoo, showing you all the different animal exhibits and
-                    answering any questions you may have. Our tours can be tailored to meet the specific needs and interests
+                    2. <b> Guided Tours: </b> We offer guided tours for visitors who want a more personalized
+                    experience.
+                    Our experienced guides will take you through the zoo, showing you all the different animal exhibits
+                    and
+                    answering any questions you may have. Our tours can be tailored to meet the specific needs and
+                    interests
                     of your group.
                 </p>
             </div>
@@ -337,8 +377,10 @@
             <div class="top upperMiddle"></div>
             <div class="primaryBox">
                 <p>
-                    3. <b> Animal Encounters: </b> We offer unique and interactive animal encounters for visitors who want a
-                    hands-on experience. These encounters include opportunities to feed and pet certain animals. Our trained
+                    3. <b> Animal Encounters: </b> We offer unique and interactive animal encounters for visitors who
+                    want a
+                    hands-on experience. These encounters include opportunities to feed and pet certain animals. Our
+                    trained
                     animal handlers will guide you through these encounters and ensure your safety. </p>
             </div>
             <div class="bottom lowerMiddle"></div>
@@ -349,7 +391,8 @@
             <div class="top upperMiddle"></div>
             <div class="primaryBox">
                 <p>
-                    4. <b> Educational Programs: </b> We offer educational programs for visitors of all ages. These programs
+                    4. <b> Educational Programs: </b> We offer educational programs for visitors of all ages. These
+                    programs
                     are designed to teach visitors about animal conservation, animal behavior, and animal habitats. Our
                     programs include guided tours, animal encounters, and classroom-style presentations. </p>
             </div>
@@ -375,7 +418,8 @@
             <div class="primaryBox">
                 <p>
                     6. <b> Souvenir Shop: </b> Our souvenir shop offers a variety of gifts and memorabilia to help you
-                    remember your visit to our zoo. We offer a range of products, including clothing, stuffed animals, and
+                    remember your visit to our zoo. We offer a range of products, including clothing, stuffed animals,
+                    and
                     other souvenirs.
                 </p>
             </div>
@@ -384,6 +428,7 @@
         </div>
     </section>
 </div>
+<script src="animals.json"></script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,15 +1,21 @@
+::placeholder {
+    color: white;
+}
+
 @media (max-width: 500px) {
     body {
-        background-image: url("Images/Wallpaper/Tiger2.png");
+        background-image: url("Images/Wallpaper/WallpaperMobile.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
         background-color: black;
     }
+
     h1 {
         color: white;
     }
+
     ::-webkit-scrollbar {
         width: 10px;
     }
@@ -22,6 +28,7 @@
         border-radius: 5px;
         background-color: #BE4B16;
     }
+
     #Profile_Nav {
         width: 100%;
         height: 60px;
@@ -30,12 +37,14 @@
         margin: -8px -8px 0 -8px;
         padding: 8px;
     }
+
     #logo {
         height: 60px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
+
     .Button_Nav {
         position: absolute;
         display: flex;
@@ -53,13 +62,12 @@
         transition: 0.2s;
     }
 
-    .Button_Nav:hover
-    {
+    .Button_Nav:hover {
         background-color: #e6733e;
         border: 2px solid #e6733e;
     }
 
-    #Profile_Container, #EditProfile_Container{
+    #containerProfile, #containerProfileEdit {
         background-color: rgba(0, 0, 0, 0.6);
         color: black;
         height: fit-content;
@@ -74,7 +82,7 @@
 
     }
 
-    .info{
+    .info {
         padding: 5px;
         font-size: 20px;
         margin: 10px;
@@ -82,25 +90,27 @@
         color: white;
     }
 
-    .info_type_label{
+    .info_type_label {
 
     }
 
-    .info_label{
+    .info_label {
         color: #e6733e;
     }
-    #Profile_Image{
+
+    #Profile_Image {
         margin: auto;
         display: block;
         width: 100px;
     }
-    #edit{
+
+    #edit {
         border: 0;
         border-radius: 30px;
         padding: 0 20px;
         height: 50px;
         transition: 0.2s;
-        display:flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         left: 50%;
@@ -112,20 +122,22 @@
 
     }
 
-    #edit_icon{
+    #edit_icon {
         width: 0;
-        transition:0.2s;
+        transition: 0.2s;
     }
 
-    #edit:hover{
+    #edit:hover {
         background-color: #e6733e;
         font-weight: bolder;
         color: black;
     }
-    #edit:hover #edit_icon{
+
+    #edit:hover #edit_icon {
         margin: 0 10px 0 -20px;
         width: 50px;
     }
+
     .editInfo {
         padding: 5px;
         font-size: 30px;
@@ -133,6 +145,7 @@
         border-radius: 20px;
         color: white;
     }
+
     .EditInput {
         background-color: #e38459;
         border: 2px solid #e38459;
@@ -147,14 +160,12 @@
         padding: 10px;
         font-size: 15px;
     }
+
     .Confirm_Button {
 
         margin: 12px 85px;
     }
-    .Cancel_Button {
-        margin: 12px 85px;
 
-    }
     .Button_Edit {
         padding: 10px 20px;
         font-size: larger;
@@ -169,54 +180,28 @@
         font-family: 'Anonymous Pro', monospace;
     }
 
-    .Button_Edit:hover
-
-    {
+    .Button_Edit:hover {
         color: black;
         background-color: #e6733e;
         font-weight: bolder;
         border: 0px solid #e6733e;
     }
-
-    .Button_Neg {
-        padding: 10px 20px;
-        font-size: larger;
-        font-weight: bolder;
-        background-color: Black;
-        border-radius: 35px;
-        border: 0px solid white;
-        text-align: center;
-        color: #BE4B16;
-        overflow: hidden;
-        transition: 0.3s;
-        font-family: 'Anonymous Pro', monospace;
-    }
-
-    .Button_Neg:hover
-
-    {
-        color: black;
-        background-color: #e6733e;
-        font-weight: bolder;
-        border: 0px solid #e6733e;
-    }
-
-
-
 }
 
 @media (max-width: 1023px) and (min-width: 501px) {
     body {
-        background-image: url("Images/Wallpaper/Tiger2.png");
+        background-image: url("Images/Wallpaper/WallpaperTablet.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
         background-color: black;
     }
+
     h1 {
         color: white;
     }
+
     ::-webkit-scrollbar {
         width: 10px;
     }
@@ -229,6 +214,7 @@
         border-radius: 5px;
         background-color: #BE4B16;
     }
+
     #Profile_Nav {
         width: 100%;
         height: 60px;
@@ -237,12 +223,14 @@
         margin: -8px -8px 0 -8px;
         padding: 8px;
     }
+
     #logo {
         height: 60px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
+
     .Button_Nav {
         position: absolute;
         display: flex;
@@ -260,13 +248,12 @@
         transition: 0.2s;
     }
 
-    .Button_Nav:hover
-    {
+    .Button_Nav:hover {
         background-color: #e6733e;
         border: 2px solid #e6733e;
     }
 
-    #Profile_Container, #EditProfile_Container{
+    #containerProfile, #containerProfileEdit {
         background-color: rgba(0, 0, 0, 0.6);
         color: black;
         height: fit-content;
@@ -281,7 +268,7 @@
 
     }
 
-    .info{
+    .info {
         padding: 5px;
         font-size: 25px;
         margin: 10px;
@@ -289,25 +276,27 @@
         color: white;
     }
 
-    .info_type_label{
+    .info_type_label {
 
     }
 
-    .info_label{
+    .info_label {
         color: #e6733e;
     }
-    #Profile_Image{
+
+    #Profile_Image {
         margin: auto;
         display: block;
         width: 100px;
     }
-    #edit{
+
+    #edit {
         border: 0;
         border-radius: 30px;
         padding: 0 20px;
         height: 50px;
         transition: 0.2s;
-        display:flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         left: 50%;
@@ -319,20 +308,22 @@
 
     }
 
-    #edit_icon{
+    #edit_icon {
         width: 0;
-        transition:0.2s;
+        transition: 0.2s;
     }
 
-    #edit:hover{
+    #edit:hover {
         background-color: #e6733e;
         font-weight: bolder;
         color: black;
     }
-    #edit:hover #edit_icon{
+
+    #edit:hover #edit_icon {
         margin: 0 10px 0 -20px;
         width: 50px;
     }
+
     .editInfo {
         padding: 5px;
         font-size: 30px;
@@ -340,6 +331,7 @@
         border-radius: 20px;
         color: white;
     }
+
     .EditInput {
         background-color: #e38459;
         border: 2px solid #e38459;
@@ -354,14 +346,12 @@
         padding: 10px;
         font-size: 15px;
     }
+
     .Confirm_Button {
 
         margin: 12px 85px;
     }
-    .Cancel_Button {
-        margin: 12px 85px;
 
-    }
     .Button_Edit {
         padding: 10px 20px;
         font-size: larger;
@@ -376,37 +366,12 @@
         font-family: 'Anonymous Pro', monospace;
     }
 
-    .Button_Edit:hover
-
-    {
+    .Button_Edit:hover {
         color: black;
         background-color: #e6733e;
         font-weight: bolder;
         border: 0px solid #e6733e;
     }
-    .Button_Neg {
-        padding: 10px 20px;
-        font-size: larger;
-        font-weight: bolder;
-        background-color: Black;
-        border-radius: 35px;
-        border: 0px solid white;
-        text-align: center;
-        color: #BE4B16;
-        overflow: hidden;
-        transition: 0.3s;
-        font-family: 'Anonymous Pro', monospace;
-    }
-
-    .Button_Neg:hover
-
-    {
-        color: black;
-        background-color: #e6733e;
-        font-weight: bolder;
-        border: 0px solid #e6733e;
-    }
-
 
 
 }
@@ -420,9 +385,11 @@
         background-position: center;
         background-color: black;
     }
+
     h1 {
         color: white;
     }
+
     ::-webkit-scrollbar {
         width: 10px;
     }
@@ -435,6 +402,7 @@
         border-radius: 5px;
         background-color: #BE4B16;
     }
+
     #Profile_Nav {
         width: 100%;
         height: 60px;
@@ -443,12 +411,14 @@
         margin: -8px -8px 0 -8px;
         padding: 8px;
     }
+
     #logo {
         height: 60px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
+
     .Button_Nav {
         position: absolute;
         display: flex;
@@ -466,13 +436,12 @@
         transition: 0.2s;
     }
 
-    .Button_Nav:hover
-    {
+    .Button_Nav:hover {
         background-color: #e6733e;
         border: 2px solid #e6733e;
     }
 
-    #Profile_Container, #EditProfile_Container{
+    #containerProfile, #containerProfileEdit {
         background-color: rgba(0, 0, 0, 0.6);
         color: black;
         height: fit-content;
@@ -487,7 +456,7 @@
 
     }
 
-    .info{
+    .info {
         padding: 5px;
         font-size: 30px;
         margin: 15px;
@@ -495,25 +464,27 @@
         color: white;
     }
 
-    .info_type_label{
+    .info_type_label {
 
     }
 
-    .info_label{
+    .info_label {
         color: #e6733e;
     }
-    #Profile_Image{
+
+    #Profile_Image {
         margin: auto;
         display: block;
         width: 100px;
     }
-    #edit{
+
+    #edit {
         border: 0;
         border-radius: 30px;
         padding: 0 20px;
         height: 50px;
         transition: 0.2s;
-        display:flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         left: 50%;
@@ -525,20 +496,22 @@
 
     }
 
-    #edit_icon{
+    #edit_icon {
         width: 0;
-        transition:0.2s;
+        transition: 0.2s;
     }
 
-    #edit:hover{
+    #edit:hover {
         background-color: #e6733e;
         font-weight: bolder;
         color: black;
     }
-    #edit:hover #edit_icon{
+
+    #edit:hover #edit_icon {
         margin: 0 10px 0 -20px;
         width: 50px;
     }
+
     .editInfo {
         padding: 5px;
         font-size: 30px;
@@ -546,6 +519,7 @@
         border-radius: 20px;
         color: white;
     }
+
     .EditInput {
         background-color: #e38459;
         border: 2px solid #e38459;
@@ -560,10 +534,12 @@
         padding: 10px;
         font-size: 15px;
     }
+
     .Confirm_Button {
 
         margin: 12px 85px;
     }
+
     .Button_Edit {
         padding: 10px 20px;
         font-size: larger;
@@ -578,40 +554,12 @@
         font-family: 'Anonymous Pro', monospace;
     }
 
-    .Cancel_Button {
-        margin: 12px 85px;
-
-    }
-    .Button_Edit:hover
-
-    {
+    .Button_Edit:hover {
         color: black;
         background-color: #e6733e;
         font-weight: bolder;
         border: 0px solid #e6733e;
     }
 
-    .Button_Neg {
-        padding: 10px 20px;
-        font-size: larger;
-        font-weight: bolder;
-        background-color: Black;
-        border-radius: 35px;
-        border: 0px solid white;
-        text-align: center;
-        color: #BE4B16;
-        overflow: hidden;
-        transition: 0.3s;
-        font-family: 'Anonymous Pro', monospace;
-    }
-
-    .Button_Neg:hover
-
-    {
-        color: black;
-        background-color: #e6733e;
-        font-weight: bolder;
-        border: 0px solid #e6733e;
-    }
 
 }
