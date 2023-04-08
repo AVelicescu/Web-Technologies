@@ -1,19 +1,24 @@
+:root {
+    --border: black;
+    --background-color: white;
+}
+
 ::placeholder {
-    color: white;
+    color: var(--background-color);
 }
 
 @media (max-width: 500px) {
     body {
-        background-image: url("Images/Wallpaper/Tiger2.png");
+        background-image: url("Images/Wallpaper/TigerMobile.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
-        background-color: black;
+        background-color: var(--border);
     }
 
     h1 {
-        color: white;
+        color: var(--background-color);
     }
 
     ::-webkit-scrollbar {
@@ -53,11 +58,11 @@
         width: 60px;
         height: 60px;
         float: left;
-        background-color: white;
-        border: 2px solid white;
+        background-color: var(--background-color);
+        border: 2px solid var(--background-color);
         border-radius: 35px;
         text-align: center;
-        color: black;
+        color: var(--border);
         overflow: hidden;
         transition: 0.2s;
     }
@@ -69,7 +74,7 @@
 
     #containerProfile, #containerProfileEdit {
         background-color: rgba(0, 0, 0, 0.6);
-        color: black;
+        color: var(--border);
         height: fit-content;
         width: fit-content;
         margin: 15px auto 15px auto;
@@ -87,7 +92,7 @@
         font-size: 20px;
         margin: 10px;
         border-radius: 20px;
-        color: white;
+        color: var(--background-color);
     }
 
     .info_type_label {
@@ -130,7 +135,7 @@
     #edit:hover {
         background-color: #e6733e;
         font-weight: bolder;
-        color: black;
+        color: var(--border);
     }
 
     #edit:hover #edit_icon {
@@ -143,7 +148,7 @@
         font-size: 30px;
         margin: 15px;
         border-radius: 20px;
-        color: white;
+        color: var(--background-color);
     }
 
     .EditInput {
@@ -151,7 +156,7 @@
         border: 2px solid #e38459;
         border-radius: 35px;
         text-align: center;
-        color: black;
+        color: var(--border);
         overflow: hidden;
         transition: 0.3s;
         font-family: 'Anonymous Pro', monospace;
@@ -170,9 +175,9 @@
         padding: 10px 20px;
         font-size: larger;
         font-weight: bolder;
-        background-color: white;
+        background-color: var(--background-color);
         border-radius: 35px;
-        border: 0px solid white;
+        border: 0px solid var(--background-color);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -181,7 +186,7 @@
     }
 
     .Button_Edit:hover {
-        color: black;
+        color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
         border: 0px solid #e6733e;
@@ -196,9 +201,9 @@
         padding: 10px 20px;
         font-size: larger;
         font-weight: bolder;
-        background-color: black;
+        background-color: var(--border);
         border-radius: 35px;
-        border: 0px solid black;
+        border: 0px solid var(--border);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -207,7 +212,7 @@
     }
 
     .Button_Neg:hover {
-        color: black;
+        color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
         border: 0px solid #e6733e;
@@ -216,16 +221,16 @@
 
 @media (max-width: 1023px) and (min-width: 501px) {
     body {
-        background-image: url("Images/Wallpaper/Tiger2.png");
+        background-image: url("Images/Wallpaper/TigerTablet.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
-        background-color: black;
+        background-color: var(--border);
     }
 
     h1 {
-        color: white;
+        color: var(--background-color);
     }
 
     ::-webkit-scrollbar {
@@ -265,11 +270,11 @@
         width: 60px;
         height: 60px;
         float: left;
-        background-color: white;
-        border: 2px solid white;
+        background-color: var(--background-color);
+        border: 2px solid var(--background-color);
         border-radius: 35px;
         text-align: center;
-        color: black;
+        color: var(--border);
         overflow: hidden;
         transition: 0.2s;
     }
@@ -281,7 +286,7 @@
 
     #containerProfile, #containerProfileEdit {
         background-color: rgba(0, 0, 0, 0.6);
-        color: black;
+        color: var(--border);
         height: fit-content;
         width: fit-content;
         margin: 20px auto 20px auto;
@@ -299,7 +304,7 @@
         font-size: 25px;
         margin: 10px;
         border-radius: 20px;
-        color: white;
+        color: var(--background-color);
     }
 
     .info_type_label {
@@ -342,7 +347,7 @@
     #edit:hover {
         background-color: #e6733e;
         font-weight: bolder;
-        color: black;
+        color: var(--border);
     }
 
     #edit:hover #edit_icon {
@@ -355,7 +360,7 @@
         font-size: 30px;
         margin: 15px;
         border-radius: 20px;
-        color: white;
+        color: var(--background-color);
     }
 
     .EditInput {
@@ -363,7 +368,7 @@
         border: 2px solid #e38459;
         border-radius: 35px;
         text-align: center;
-        color: black;
+        color: var(--border);
         overflow: hidden;
         transition: 0.3s;
         font-family: 'Anonymous Pro', monospace;
@@ -382,9 +387,9 @@
         padding: 10px 20px;
         font-size: larger;
         font-weight: bolder;
-        background-color: white;
+        background-color: var(--background-color);
         border-radius: 35px;
-        border: 0px solid white;
+        border: 0px solid var(--background-color);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -393,7 +398,7 @@
     }
 
     .Button_Edit:hover {
-        color: black;
+        color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
         border: 0px solid #e6733e;
@@ -408,9 +413,9 @@
         padding: 10px 20px;
         font-size: larger;
         font-weight: bolder;
-        background-color: black;
+        background-color: var(--border);
         border-radius: 35px;
-        border: 0px solid black;
+        border: 0px solid var(--border);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -419,7 +424,7 @@
     }
 
     .Button_Neg:hover {
-        color: black;
+        color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
         border: 0px solid #e6733e;
@@ -435,11 +440,11 @@
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
-        background-color: black;
+        background-color: var(--border);
     }
 
     h1 {
-        color: white;
+        color: var(--background-color);
     }
 
     ::-webkit-scrollbar {
@@ -479,11 +484,11 @@
         width: 60px;
         height: 60px;
         float: left;
-        background-color: white;
-        border: 2px solid white;
+        background-color: var(--background-color);
+        border: 2px solid var(--background-color);
         border-radius: 35px;
         text-align: center;
-        color: black;
+        color: var(--border);
         overflow: hidden;
         transition: 0.2s;
     }
@@ -495,7 +500,7 @@
 
     #containerProfile, #containerProfileEdit {
         background-color: rgba(0, 0, 0, 0.6);
-        color: black;
+        color: var(--border);
         height: fit-content;
         width: fit-content;
         margin: 35px auto 35px auto;
@@ -513,7 +518,7 @@
         font-size: 30px;
         margin: 15px;
         border-radius: 20px;
-        color: white;
+        color: var(--background-color);
     }
 
     .info_type_label {
@@ -556,7 +561,7 @@
     #edit:hover {
         background-color: #e6733e;
         font-weight: bolder;
-        color: black;
+        color: var(--border);
     }
 
     #edit:hover #edit_icon {
@@ -569,7 +574,7 @@
         font-size: 30px;
         margin: 15px;
         border-radius: 20px;
-        color: white;
+        color: var(--background-color);
     }
 
     .EditInput {
@@ -577,7 +582,7 @@
         border: 2px solid #e38459;
         border-radius: 35px;
         text-align: center;
-        color: black;
+        color: var(--border);
         overflow: hidden;
         transition: 0.3s;
         font-family: 'Anonymous Pro', monospace;
@@ -596,9 +601,9 @@
         padding: 10px 20px;
         font-size: larger;
         font-weight: bolder;
-        background-color: white;
+        background-color: var(--background-color);
         border-radius: 35px;
-        border: 0px solid white;
+        border: 0px solid var(--background-color);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -607,7 +612,7 @@
     }
 
     .Button_Edit:hover {
-        color: black;
+        color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
         border: 0px solid #e6733e;
@@ -621,9 +626,9 @@
         padding: 10px 20px;
         font-size: larger;
         font-weight: bolder;
-        background-color: black;
+        background-color: var(--border);
         border-radius: 35px;
-        border: 0px solid black;
+        border: 0px solid var(--border);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -632,7 +637,7 @@
     }
 
     .Button_Neg:hover {
-        color: black;
+        color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
         border: 0px solid #e6733e;

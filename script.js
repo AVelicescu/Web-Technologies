@@ -25,6 +25,8 @@ document.getElementById("profile").addEventListener("click", function () {
 
 function changeTheme(){
     let theme = document.getElementById("theme");
+    let containerStyle = window.getComputedStyle(home);
+    let logo = document.getElementById("logo");
     if(theme.value === "Light"){
         theme.value = "Dark";
         theme.labels[0].innerHTML = "Dark";
@@ -34,6 +36,15 @@ function changeTheme(){
         root.style.setProperty(  "--border", "white");
         root.style.setProperty(  "--menu", "rgba(0, 0, 0, 0.6)");
         root.style.setProperty(  "--menu-desktop",  "rgba(0, 0, 0, 0)");
+        logo.src = "Images/Logo/lrv_w.png";
+        if (window.innerWidth >= 1024) {
+            document.querySelector('body').style.backgroundColor = "black";
+            if (containerStyle.display !== "none") {
+                document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/Tiger2.png')";
+            } else {
+                document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/DarkTiger.jpg')";
+            }
+        }
     }
     else{
         theme.value = "Light";
@@ -44,6 +55,15 @@ function changeTheme(){
         root.style.setProperty(  "--border", "black");
         root.style.setProperty(  "--menu", "rgba(255, 255, 255, 0.6)");
         root.style.setProperty(  "--menu-desktop",  "rgba(255, 255, 255, 0)");
+        logo.src = "Images/Logo/lrv_b.png";
+        if (window.innerWidth >= 1024) {
+            document.querySelector('body').style.backgroundColor = "white";
+            if (containerStyle.display !== "none") {
+                document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/Tiger2.png')";
+            } else {
+                document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/LightTiger.jpg')";
+            }
+        }
     }
 }
 
@@ -54,9 +74,21 @@ function openIndexContainer(container) {
 }
 
 function openHomeContainer(container) {
-    for (let i = 0; i < 7; i++)
+    let theme = document.getElementById("theme");
+    for (let i = 0; i < 7; i++) {
+        if (window.innerWidth >= 1024) {
+            if (container === 0) {
+                document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/Tiger2.png')";
+            } else {
+                if (theme.value === "Light")
+                    document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/LightTiger.jpg')";
+                else
+                    document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/DarkTiger.jpg')";
+            }
+        }
         homeContainers[i].style.display = "none";
-    homeContainers[container].style.display = "block";
+        homeContainers[container].style.display = "block";
+    }
 }
 
 function openProfileContainer(container) {
