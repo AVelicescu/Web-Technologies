@@ -785,13 +785,12 @@
     }
 
     #Menu_Container, #Settings_Container {
-        overflow: hidden;
         justify-content: space-evenly;
         display: flex;
         width: 100%;
         height: 0;
         background-color: var(--menu-desktop);
-        margin: 0 -8px 8px -8px;
+        margin: 0 -8px 0 -8px;
         padding: 0;
         animation-duration: 600ms;
         animation-fill-mode: forwards;
@@ -888,7 +887,7 @@
             visibility: hidden
         }
         1% {
-            padding: 0 8px 8px 8px;
+            padding: 0 8px 0 8px;
             height: 35px;
             visibility: visible
         }
@@ -899,7 +898,7 @@
             height: 35px;
             opacity: 1;
             width: 100%;
-            padding: 0 8px 8px 8px;
+            padding: 0 8px 0 8px;
             float: right;
             visibility: visible
         }
@@ -1081,7 +1080,7 @@
         text-align: center;
         width: 60%;
         min-height: 80%;
-        background-color: #efb889;
+        background-color: var(--main-orange);
         border: 4px solid black;
         border-radius: 5px;
         padding: 10px;

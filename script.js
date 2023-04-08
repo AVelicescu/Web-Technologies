@@ -23,12 +23,29 @@ document.getElementById("profile").addEventListener("click", function () {
     window.location.href = "profile.html";
 });
 
-//pentru cand se face theme
-/*const root = document.documentElement;
-root.style.setProperty(  "--background-color", "white");
-root.style.setProperty(  "--border", "black");
-root.style.setProperty(  "--menu", "rgba(255, 255, 255, 0.6)");
-root.style.setProperty(  "--menu-desktop",  "rgba(255, 255, 255, 0)");*/
+function changeTheme(){
+    let theme = document.getElementById("theme");
+    if(theme.value === "Light"){
+        theme.value = "Dark";
+        theme.labels[0].innerHTML = "Dark";
+        setTimeout(() => {theme.labels[0].innerHTML = "Theme";}, 2000);
+        let root = document.documentElement;
+        root.style.setProperty(  "--background-color", "black");
+        root.style.setProperty(  "--border", "white");
+        root.style.setProperty(  "--menu", "rgba(0, 0, 0, 0.6)");
+        root.style.setProperty(  "--menu-desktop",  "rgba(0, 0, 0, 0)");
+    }
+    else{
+        theme.value = "Light";
+        theme.labels[0].innerHTML = "Light";
+        setTimeout(() => {theme.labels[0].innerHTML = "Theme";}, 2000);
+        let root = document.documentElement;
+        root.style.setProperty(  "--background-color", "white");
+        root.style.setProperty(  "--border", "black");
+        root.style.setProperty(  "--menu", "rgba(255, 255, 255, 0.6)");
+        root.style.setProperty(  "--menu-desktop",  "rgba(255, 255, 255, 0)");
+    }
+}
 
 function openIndexContainer(container) {
     for (let i = 0; i < 5; i++)
