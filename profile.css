@@ -177,7 +177,7 @@
         font-weight: bolder;
         background-color: var(--background-color);
         border-radius: 35px;
-        border: 0px solid var(--background-color);
+        border: 0 solid var(--background-color);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -189,7 +189,7 @@
         color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
-        border: 0px solid #e6733e;
+        border: 0 solid #e6733e;
     }
 
     .Cancel_Button {
@@ -203,7 +203,7 @@
         font-weight: bolder;
         background-color: var(--border);
         border-radius: 35px;
-        border: 0px solid var(--border);
+        border: 0 solid var(--border);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -215,7 +215,7 @@
         color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
-        border: 0px solid #e6733e;
+        border: 0 solid #e6733e;
     }
 }
 
@@ -389,7 +389,7 @@
         font-weight: bolder;
         background-color: var(--background-color);
         border-radius: 35px;
-        border: 0px solid var(--background-color);
+        border: 0 solid var(--background-color);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -401,7 +401,7 @@
         color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
-        border: 0px solid #e6733e;
+        border: 0 solid #e6733e;
     }
 
     .Cancel_Button {
@@ -415,7 +415,7 @@
         font-weight: bolder;
         background-color: var(--border);
         border-radius: 35px;
-        border: 0px solid var(--border);
+        border: 0 solid var(--border);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -427,7 +427,7 @@
         color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
-        border: 0px solid #e6733e;
+        border: 0 solid #e6733e;
     }
 
 
@@ -603,7 +603,7 @@
         font-weight: bolder;
         background-color: var(--background-color);
         border-radius: 35px;
-        border: 0px solid var(--background-color);
+        border: 0 solid var(--background-color);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -615,7 +615,7 @@
         color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
-        border: 0px solid #e6733e;
+        border: 0 solid #e6733e;
     }
     .Cancel_Button {
 
@@ -628,7 +628,7 @@
         font-weight: bolder;
         background-color: var(--border);
         border-radius: 35px;
-        border: 0px solid var(--border);
+        border: 0 solid var(--border);
         text-align: center;
         color: #BE4B16;
         overflow: hidden;
@@ -640,7 +640,7 @@
         color: var(--border);
         background-color: #e6733e;
         font-weight: bolder;
-        border: 0px solid #e6733e;
+        border: 0 solid #e6733e;
     }
 
 
