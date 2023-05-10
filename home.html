@@ -12,19 +12,19 @@
         <img src="Images/Logo/lrv_b.png" alt="Logo" id="logo" onclick="openHomeContainer(0);">
         <button class="Button_Nav mobile_hidden tablet_hidden" id="logoutNav">
             <img src="Images/Icons/Logout.png" class="icon" alt="Logout">
-            <label for="logoutNav" class="Label_Nav">Logout</label>
+            <span class="Label_Nav">Logout</span>
         </button>
         <button class="Button_Nav" id="settings" onclick="settings();">
             <img src="Images/Icons/Settings.png" class="icon" alt="Settings">
-            <label for="settings" class="Label_Nav">Settings</label>
+            <span class="Label_Nav">Settings</span>
         </button>
         <button class="Button_Nav" id="menu" onclick="menu();">
             <img src="Images/Icons/Menu.png" class="icon" alt="Menu">
-            <label for="menu" class="Label_Nav">Menu</label>
+            <span class="Label_Nav">Menu</span>
         </button>
         <button class="Button_Nav mobile_hidden desktop_hidden" id="contactNav" onclick="openHomeContainer(4);">
             <img src="Images/Icons/Contact.png" class="icon" alt="Contact">
-            <label for="contactNav" class="Label_Nav">Contact</label>
+            <span class="Label_Nav">Contact</span>
         </button>
         <div class="search-bar">
             <input type="text" placeholder="Search...">
@@ -35,33 +35,33 @@
     </nav>
     <div id="Menu_Container" style="visibility: hidden;">
         <button class="Button_Menu_Container" id="animals" onclick="openHomeContainer(6);openAnimalContainer();">
-            <label for="animals" class="Label_Nav">Animal Collection</label>
+            <span class="Label_Nav">Animal Collection</span>
         </button>
         <button class="Button_Menu_Container" id="services" onclick="openHomeContainer(1);">
-            <label for="services" class="Label_Nav">Services</label>
+            <span class="Label_Nav">Services</span>
         </button>
         <button class="Button_Menu_Container" id="tickets" onclick="openHomeContainer(2);">
-            <label for="tickets" class="Label_Nav">Tickets</label>
+            <span class="Label_Nav">Tickets</span>
         </button>
         <button class="Button_Menu_Container" id="news" onclick="openHomeContainer(3);">
-            <label for="news" class="Label_Nav">News</label>
+            <span class="Label_Nav">News</span>
         </button>
         <button class="Button_Menu_Container desktop_hidden" id="logoutContainer">
-            <label for="logoutContainer" class="Label_Nav">Logout</label>
+            <span class="Label_Nav">Logout</span>
         </button>
     </div>
     <div id="Settings_Container" style="visibility: hidden;">
         <button class="Button_Settings_Container" id="profile">
-            <label for="profile" class="Label_Nav">Profile</label>
+            <span class="Label_Nav">Profile</span>
         </button>
         <button class="Button_Settings_Container" id="theme" value="Light" onclick="changeTheme()">
             <label for="theme" class="Label_Nav">Theme</label>
         </button>
         <button class="Button_Settings_Container" id="about" onclick="openHomeContainer(5);">
-            <label for="about" class="Label_Nav">About</label>
+            <span class="Label_Nav">About</span>
         </button>
         <button class="Button_Settings_Container tablet_hidden" id="contactContainer" onclick="openHomeContainer(4);">
-            <label for="contactContainer" class="Label_Nav">Contact</label>
+            <span class="Label_Nav">Contact</span>
         </button>
     </div>
 </header>
@@ -73,8 +73,8 @@
     <section id="containerAnimals" style="display: none">
         <div id="containerAnimalList"></div>
         <div id="containerAnimalDetails" style="display: none;">
-            <img id="photo">
-            <button id="close" onclick="closeAnimalDescription()"><img src="Images/Icons/Close2.png"></button>
+            <img id="photo" alt="imagine_animal">
+            <button id="close" onclick="closeAnimalDescription()"><img src="Images/Icons/Close2.png" alt="close"></button>
             <p class="animalDetail" id="popularName" ></p>
             <p class="animalDetail" id="scientificName"></p>
             <p class="animalDetail" id="type"></p>
