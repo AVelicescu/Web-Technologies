@@ -25,7 +25,8 @@
     </nav>
 </header>
 <section id="containerHome">
-
+    <h2> WELCOME TO LRV ZOO </h2>
+    <h3> DISCOVER THE BEAUTIFUL WORLD OF WILD NATURE </h3>
 </section>
 <section id="containerAbout" style="display: none">
     <div class="left-side stripedTemplate">
@@ -86,14 +87,15 @@
 
 <section id="containerCreate" style="display: none">
     <h2>CREATE A NEW ACCOUNT</h2>
-    <form action="x.php" method="post">
+    <form class="signup" method="post">
         <input type="text" name="FirstName" placeholder="FIRST NAME" class="CreateInput"> <br>
         <input type="text" name="LastName" placeholder="LAST NAME" class="CreateInput"> <br>
         <input type="text" name="Username" placeholder="USERNAME" class="CreateInput"> <br>
         <input type="text" name="Email" placeholder="EMAIL" class="CreateInput"> <br>
-        <input type="password" name="Password" placeholder="PASSWORD" class="CreateInput"> <br>
-        <input type="password" name="Password" placeholder="REPEAT PASSWORD" class="CreateInput"> <br>
+        <input type="password" name="Password1" placeholder="PASSWORD" class="CreateInput"> <br>
+        <input type="password" name="Password2" placeholder="REPEAT PASSWORD" class="CreateInput"> <br>
         <input type="text" name="Birth" placeholder="DATE OF BIRTH (DD/MM/YYYY)" class="CreateInput"> <br>
+        <div class="error" style="display: none;"></div>
         <input type="submit" value="CREATE NEW ACCOUNT" class="Create_Button Button_Form"> <br>
         <input type="reset" value="CLEAR" class="Clear_Button Button_Form">
         <input type="button" value="LOGIN" onclick="openIndexContainer(2);" class="Login_Button Button_Form">
@@ -101,7 +103,7 @@
 </section>
 <section id="containerLogin" style="display: none">
     <h2>LOGIN TO AN EXISTING ACCOUNT</h2>
-    <form action="x.php" method="post">
+    <form class="login" method="post">
         <input type="text" name="Username-Email" placeholder="USERNAME / EMAIL" class="LoginInput"> <br>
         <input type="password" name="Password" placeholder="PASSWORD" class="LoginInput"> <br>
         <input type="submit" value="LOGIN" class="Login_Button Button_Form"> <br>
@@ -111,11 +113,11 @@
 </section>
 <section id="containerForgot" style="display: none">
     <h2>FORGOT MY PASSWORD</h2>
-    <form action="x.php" method="post">
+    <form class="forgotPassword" method="post">
         <input type="text" name="Username-Email" placeholder="USERNAME / EMAIL" class="ForgotInput"> <br>
         <input type="submit" value="SEND CODE TO EMAIL" class="Create_Button Button_Form"> <br>
     </form>
 </section>
-<script src="script.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
