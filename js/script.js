@@ -36,13 +36,13 @@ function changeTheme(){
         root.style.setProperty(  "--border", "white");
         root.style.setProperty(  "--menu", "rgba(0, 0, 0, 0.6)");
         root.style.setProperty(  "--menu-desktop",  "rgba(0, 0, 0, 0)");
-        logo.src = "Images/Logo/lrv_w.png";
+        logo.src = "../Images/Logo/lrv_w.png";
         if (window.innerWidth >= 1024) {
             document.querySelector('body').style.backgroundColor = "black";
             if (containerStyle.display !== "none") {
-                document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/Tiger2.png')";
+                document.querySelector('body').style.backgroundImage = "url('../Images/Wallpaper/Tiger2.png')";
             } else {
-                document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/DarkTiger.jpg')";
+                document.querySelector('body').style.backgroundImage = "url('../Images/Wallpaper/DarkTiger.jpg')";
             }
         }
     }
@@ -55,13 +55,13 @@ function changeTheme(){
         root.style.setProperty(  "--border", "black");
         root.style.setProperty(  "--menu", "rgba(255, 255, 255, 0.6)");
         root.style.setProperty(  "--menu-desktop",  "rgba(255, 255, 255, 0)");
-        logo.src = "Images/Logo/lrv_b.png";
+        logo.src = "../Images/Logo/lrv_b.png";
         if (window.innerWidth >= 1024) {
             document.querySelector('body').style.backgroundColor = "white";
             if (containerStyle.display !== "none") {
-                document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/Tiger2.png')";
+                document.querySelector('body').style.backgroundImage = "url('../Images/Wallpaper/Tiger2.png')";
             } else {
-                document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/LightTiger.jpg')";
+                document.querySelector('body').style.backgroundImage = "url('../Images/Wallpaper/LightTiger.jpg')";
             }
         }
     }
@@ -78,12 +78,12 @@ function openHomeContainer(container) {
     for (let i = 0; i < 7; i++) {
         if (window.innerWidth >= 1024) {
             if (container === 0) {
-                document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/Tiger2.png')";
+                document.querySelector('body').style.backgroundImage = "url('../Images/Wallpaper/Tiger2.png')";
             } else {
                 if (theme.value === "Light")
-                    document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/LightTiger.jpg')";
+                    document.querySelector('body').style.backgroundImage = "url('../Images/Wallpaper/LightTiger.jpg')";
                 else
-                    document.querySelector('body').style.backgroundImage = "url('Images/Wallpaper/DarkTiger.jpg')";
+                    document.querySelector('body').style.backgroundImage = "url('../Images/Wallpaper/DarkTiger.jpg')";
             }
         }
         homeContainers[i].style.display = "none";
@@ -185,7 +185,7 @@ function getAnimalData() {
         {
             "popularName": "African elephant",
             "scientificName": "Loxodonta africana",
-            "photo": "Images/Animals/africanElephant.jpg",
+            "photo": "../Images/Animals/africanElephant.jpg",
             "type": "Mammal",
             "originLocation": "Africa",
             "diet": "Herbivore",
@@ -198,7 +198,7 @@ function getAnimalData() {
         {
             "popularName": "American alligator",
             "scientificName": "Alligator mississippiensis",
-            "photo": "Images/Animals/americanAlligator.jpg",
+            "photo": "../Images/Animals/americanAlligator.jpg",
             "type": "Reptile",
             "originLocation": "North America",
             "diet": "Carnivore",
@@ -211,7 +211,7 @@ function getAnimalData() {
         {
             "popularName": "Bengal tiger",
             "scientificName": "Panthera tigris tigris",
-            "photo": "Images/Animals/bengalTiger.jpg",
+            "photo": "../Images/Animals/bengalTiger.jpg",
             "type": "Mammal",
             "originLocation": "India",
             "diet": "Carnivore",
@@ -224,7 +224,7 @@ function getAnimalData() {
         {
             "popularName": "Chimpanzee",
             "scientificName": "Pan troglodytes",
-            "photo": "Images/Animals/chimpanzee.jpg",
+            "photo": "../Images/Animals/chimpanzee.jpg",
             "type": "Mammal",
             "originLocation": "Africa",
             "diet": "Omnivore",
@@ -237,7 +237,7 @@ function getAnimalData() {
         {
             "popularName": "Common hippo",
             "scientificName": "Hippopotamus amphibius",
-            "photo": "Images/Animals/commonHippopotamus.jpg",
+            "photo": "../Images/Animals/commonHippopotamus.jpg",
             "type": "Mammal",
             "originLocation": "Africa",
             "diet": "Herbivore",
@@ -250,7 +250,7 @@ function getAnimalData() {
         {
             "popularName": "Bald eagle",
             "scientificName": "Haliaeetus leucocephalus",
-            "photo": "Images/Animals/baldEagle.jpg",
+            "photo": "../Images/Animals/baldEagle.jpg",
             "type": "Bird",
             "originLocation": "North America",
             "diet": "Carnivore",
@@ -263,7 +263,7 @@ function getAnimalData() {
         {
             "popularName": "Snow leopard",
             "scientificName": "Panthera uncia",
-            "photo": "Images/Animals/snowLeopard.jpg",
+            "photo": "../Images/Animals/snowLeopard.jpg",
             "type": "Mammal",
             "originLocation": "Central Asia",
             "diet": "Carnivore",
@@ -276,7 +276,7 @@ function getAnimalData() {
         {
             "popularName": "Orangutan",
             "scientificName": "Pongo pygmaeus",
-            "photo": "Images/Animals/orangutan.png",
+            "photo": "../Images/Animals/orangutan.png",
             "type": "Primate",
             "originLocation": "Southeast Asia",
             "diet": "Omnivore",
@@ -289,7 +289,7 @@ function getAnimalData() {
         {
             "popularName": "Red panda",
             "scientificName": "Ailurus fulgens",
-            "photo": "Images/Animals/redPanda.jpg",
+            "photo": "../Images/Animals/redPanda.jpg",
             "type": "Mammal",
             "originLocation": "Himalayas",
             "diet": "Omnivore",
@@ -302,7 +302,7 @@ function getAnimalData() {
         {
             "popularName": "Tasmanian devil",
             "scientificName": "Sarcophilus harrisii",
-            "photo": "Images/Animals/tasmanianDevil.jpg",
+            "photo": "../Images/Animals/tasmanianDevil.jpg",
             "type": "Mammal",
             "originLocation": "Australia",
             "diet": "Carnivore",
@@ -315,7 +315,7 @@ function getAnimalData() {
         {
             "popularName": "Giraffe",
             "scientificName": "Giraffa camelopardalis",
-            "photo": "Images/Animals/giraffe.jpg",
+            "photo": "../Images/Animals/giraffe.jpg",
             "type": "Mammal",
             "originLocation": "Africa",
             "diet": "Herbivore",
@@ -328,7 +328,7 @@ function getAnimalData() {
         {
             "popularName": "Kangaroo",
             "scientificName": "Macropus",
-            "photo": "Images/Animals/kangaroo.jpg",
+            "photo": "../Images/Animals/kangaroo.jpg",
             "type": "Mammal",
             "originLocation": "Australia",
             "diet": "Herbivore",
@@ -341,7 +341,7 @@ function getAnimalData() {
         {
             "popularName": "Koala",
             "scientificName": "Phascolarctos cinereus",
-            "photo": "Images/Animals/koala.jpg",
+            "photo": "../Images/Animals/koala.jpg",
             "type": "Mammal",
             "originLocation": "Australia",
             "diet": "Herbivore",
@@ -354,7 +354,7 @@ function getAnimalData() {
         {
             "popularName": "Lion",
             "scientificName": "Panthera leo",
-            "photo": "Images/Animals/lion.jpg",
+            "photo": "../Images/Animals/lion.jpg",
             "type": "Mammal",
             "originLocation": "Africa",
             "diet": "Carnivore",
@@ -367,7 +367,7 @@ function getAnimalData() {
         {
             "popularName": "Moose",
             "scientificName": "Alces alces",
-            "photo": "Images/Animals/moose.jpg",
+            "photo": "../Images/Animals/moose.jpg",
             "type": "Mammal",
             "originLocation": "North America",
             "diet": "Herbivore",
@@ -380,7 +380,7 @@ function getAnimalData() {
         {
             "popularName": "Giant otter",
             "scientificName": "Pteronura brasiliensis",
-            "photo": "Images/Animals/giantOtter.jpg",
+            "photo": "../Images/Animals/giantOtter.jpg",
             "type": "Mammal",
             "originLocation": "South America",
             "diet": "Carnivore",
@@ -393,7 +393,7 @@ function getAnimalData() {
         {
             "popularName": "Komodo dragon",
             "scientificName": "Varanus komodoensis",
-            "photo": "Images/Animals/komodoDragon.jpg",
+            "photo": "../Images/Animals/komodoDragon.jpg",
             "type": "Reptile",
             "originLocation": "Indonesia",
             "diet": "Carnivore",
@@ -406,7 +406,7 @@ function getAnimalData() {
         {
             "popularName": "Siberian tiger",
             "scientificName": "Panthera tigris altaica",
-            "photo": "Images/Animals/siberianTiger.jpg",
+            "photo": "../Images/Animals/siberianTiger.jpg",
             "type": "Mammal",
             "originLocation": "Russia",
             "diet": "Carnivore",
@@ -419,7 +419,7 @@ function getAnimalData() {
         {
             "popularName": "Reticulated Python",
             "scientificName": "Malayopython reticulatus",
-            "photo": "Images/Animals/reticulatedPython.jpg",
+            "photo": "../Images/Animals/reticulatedPython.jpg",
             "type": "Reptile",
             "originLocation": "Southeast Asia",
             "diet": "Carnivore",
@@ -432,7 +432,7 @@ function getAnimalData() {
         {
             "popularName": "Red fox",
             "scientificName": "Vulpes vulpes",
-            "photo": "Images/Animals/redFox.jpg",
+            "photo": "../Images/Animals/redFox.jpg",
             "type": "Mammal",
             "originLocation": "Global (except Antarctica)",
             "diet": "Omnivore",
@@ -445,7 +445,7 @@ function getAnimalData() {
         {
             "popularName": "Green anaconda",
             "scientificName": "Eunectes murinus",
-            "photo": "Images/Animals/greenAnaconda.jpg",
+            "photo": "../Images/Animals/greenAnaconda.jpg",
             "type": "Reptile",
             "originLocation": "South America",
             "diet": "Carnivore",
@@ -458,7 +458,7 @@ function getAnimalData() {
         {
             "popularName": "Emperor Penguin",
             "scientificName": "Aptenodytes forsteri",
-            "photo": "Images/Animals/emperorPenguin.jpg",
+            "photo": "../Images/Animals/emperorPenguin.jpg",
             "type": "Bird",
             "originLocation": "Antarctica",
             "diet": "Carnivore",
@@ -471,7 +471,7 @@ function getAnimalData() {
         {
             "popularName": "Seal",
             "scientificName": "Pinnipedia",
-            "photo": "Images/Animals/seal.jpg",
+            "photo": "../Images/Animals/seal.jpg",
             "type": "Mammal",
             "originLocation": "Arctic and Antarctic regions",
             "diet": "Carnivore",
@@ -484,7 +484,7 @@ function getAnimalData() {
         {
             "popularName": "Zebra",
             "scientificName": "Equus quagga",
-            "photo": "Images/Animals/zebra.jpg",
+            "photo": "../Images/Animals/zebra.jpg",
             "type": "Mammal",
             "originLocation": "Africa",
             "diet": "Herbivore",
@@ -497,7 +497,7 @@ function getAnimalData() {
         {
             "popularName": "Hawk",
             "scientificName": "Accipitridae",
-            "photo": "Images/Animals/hawk.jpg",
+            "photo": "../Images/Animals/hawk.jpg",
             "type": "Bird",
             "origin": "North America, Europe, Asia, and Africa",
             "diet": "Carnivore",

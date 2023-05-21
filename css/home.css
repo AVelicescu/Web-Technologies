@@ -59,7 +59,7 @@
     }
 
     body {
-        background-image: url("Images/Wallpaper/TigerMobile.jpg");
+        background-image: url("../Images/Wallpaper/TigerMobile.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -355,7 +355,7 @@
     }
 
     body {
-        background-image: url("Images/Wallpaper/TigerTablet.png");
+        background-image: url("../Images/Wallpaper/TigerTablet.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -720,7 +720,7 @@
     }
 
     body {
-        background-image: url("Images/Wallpaper/Tiger2.png");
+        background-image: url("../Images/Wallpaper/Tiger2.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top center;

@@ -10,7 +10,7 @@
     /* -------------------------------------------------------------------------------------- */
     body
     {
-        background-image: url("Images/Wallpaper/WallpaperMobile.jpg");
+        background-image: url("../Images/Wallpaper/WallpaperMobile.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -210,7 +210,7 @@
     /* -------------------------------------------------------------------------------------- */
     body
     {
-        background-image: url("Images/Wallpaper/WallpaperTablet.png");
+        background-image: url("../Images/Wallpaper/WallpaperTablet.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -468,7 +468,7 @@
     /* -------------------------------------------------------------------------------------- */
     body
     {
-        background-image: url("Images/Wallpaper/WallpaperDesktop.png");
+        background-image: url("../Images/Wallpaper/WallpaperDesktop.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;

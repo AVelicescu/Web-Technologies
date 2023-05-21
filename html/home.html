@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
 <header>
     <nav id="Home_Nav">
-        <img src="Images/Logo/lrv_b.png" alt="Logo" id="logo" onclick="openHomeContainer(0);">
+        <img src="../Images/Logo/lrv_b.png" alt="Logo" id="logo" onclick="openHomeContainer(0);">
         <button class="Button_Nav mobile_hidden tablet_hidden" id="logoutNav" onclick="logout();">
-            <img src="Images/Icons/Logout.png" class="icon" alt="Logout">
+            <img src="../Images/Icons/Logout.png" class="icon" alt="Logout">
             <span class="Label_Nav">Logout</span>
         </button>
         <button class="Button_Nav" id="settings" onclick="settings();">
-            <img src="Images/Icons/Settings.png" class="icon" alt="Settings">
+            <img src="../Images/Icons/Settings.png" class="icon" alt="Settings">
             <span class="Label_Nav">Settings</span>
         </button>
         <button class="Button_Nav" id="menu" onclick="menu();">
-            <img src="Images/Icons/Menu.png" class="icon" alt="Menu">
+            <img src="../Images/Icons/Menu.png" class="icon" alt="Menu">
             <span class="Label_Nav">Menu</span>
         </button>
         <button class="Button_Nav mobile_hidden desktop_hidden" id="contactNav" onclick="openHomeContainer(4);">
-            <img src="Images/Icons/Contact.png" class="icon" alt="Contact">
+            <img src="../Images/Icons/Contact.png" class="icon" alt="Contact">
             <span class="Label_Nav">Contact</span>
         </button>
         <div class="search-bar">
             <input type="text" placeholder="Search...">
             <button type="submit" >
-                <img src="Images/Icons/Search.png" alt="Search">
+                <img src="../Images/Icons/Search.png" alt="Search">
             </button>
         </div>
     </nav>
@@ -74,7 +74,7 @@
         <div id="containerAnimalList"></div>
         <div id="containerAnimalDetails" style="display: none;">
             <img id="photo" alt="imagine_animal">
-            <button id="close" onclick="closeAnimalDescription()"><img src="Images/Icons/Close2.png" alt="close"></button>
+            <button id="close" onclick="closeAnimalDescription()"><img src="../Images/Icons/Close2.png" alt="close"></button>
             <p class="animalDetail" id="popularName" ></p>
             <p class="animalDetail" id="scientificName"></p>
             <p class="animalDetail" id="type"></p>
@@ -425,6 +425,6 @@
         </div>
     </section>
 </div>
-<script src="script.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>
