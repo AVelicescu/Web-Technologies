@@ -10,7 +10,7 @@
 <header>
     <nav id="Home_Nav">
         <img src="Images/Logo/lrv_b.png" alt="Logo" id="logo" onclick="openHomeContainer(0);">
-        <button class="Button_Nav mobile_hidden tablet_hidden" id="logoutNav">
+        <button class="Button_Nav mobile_hidden tablet_hidden" id="logoutNav" onclick="logout();">
             <img src="Images/Icons/Logout.png" class="icon" alt="Logout">
             <span class="Label_Nav">Logout</span>
         </button>
@@ -46,7 +46,7 @@
         <button class="Button_Menu_Container" id="news" onclick="openHomeContainer(3);">
             <span class="Label_Nav">News</span>
         </button>
-        <button class="Button_Menu_Container desktop_hidden" id="logoutContainer">
+        <button class="Button_Menu_Container desktop_hidden" id="logoutContainer" onclick="logout();">
             <span class="Label_Nav">Logout</span>
         </button>
     </div>

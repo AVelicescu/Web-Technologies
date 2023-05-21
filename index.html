@@ -104,8 +104,9 @@
 <section id="containerLogin" style="display: none">
     <h2>LOGIN TO AN EXISTING ACCOUNT</h2>
     <form class="login" method="post">
-        <input type="text" name="Username-Email" placeholder="USERNAME / EMAIL" class="LoginInput"> <br>
+        <input type="text" name="UsernameEmail" placeholder="USERNAME / EMAIL" class="LoginInput"> <br>
         <input type="password" name="Password" placeholder="PASSWORD" class="LoginInput"> <br>
+        <div class="error" style="display: none;"></div>
         <input type="submit" value="LOGIN" class="Login_Button Button_Form"> <br>
         <input type="button" value="FORGOT MY PASSWORD" onclick="openIndexContainer(4);" class="Forgot_Button Button_Form">
         <input type="button" value="CREATE NEW ACCOUNT" onclick="openIndexContainer(3);" class="Create_Button Button_Form">
@@ -114,7 +115,7 @@
 <section id="containerForgot" style="display: none">
     <h2>FORGOT MY PASSWORD</h2>
     <form class="forgotPassword" method="post">
-        <input type="text" name="Username-Email" placeholder="USERNAME / EMAIL" class="ForgotInput"> <br>
+        <input type="text" name="UsernameEmail" placeholder="USERNAME / EMAIL" class="ForgotInput"> <br>
         <input type="submit" value="SEND CODE TO EMAIL" class="Create_Button Button_Form"> <br>
     </form>
 </section>

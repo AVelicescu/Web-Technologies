@@ -509,4 +509,8 @@ function getAnimalData() {
         }
     ];
 }
-
+console.log(sessionStorage);
+function logout(){
+    sessionStorage.clear();
+    window.location.href = 'index.html';
+}
