@@ -19,7 +19,6 @@ function parseJwt(token) {
     return JSON.parse(window.atob(base64));
 }
 
-
 // ------------------------------------------- Login ---------------------------------------------------------------------------------------
 
 const loginForm = document.querySelector("form.login");
@@ -62,7 +61,6 @@ loginForm.addEventListener('submit', async (event) => {
         sessionStorage.setItem('token', token);
         if (token != null) {
             window.location.href = 'home.html';
-            console.log(token);
         }
     } catch (error) {
         console.error('An error occurred:', error.message);
@@ -148,7 +146,6 @@ signUpForm.addEventListener('submit', async (event) => {
         sessionStorage.setItem('token', token);
         if (token != null) {
             window.location.href = 'home.html';
-            console.log(token);
         }
     } catch (error) {
         console.error('An error occurred:', error.message);

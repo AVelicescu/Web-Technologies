@@ -9,11 +9,12 @@
 <body>
 <header>
     <nav id="Profile_Nav">
-        <a href="home.html">
-        <button class="Button_Nav" id="backHome">
-            <img src="../Images/Icons/Back.png" class="icon" alt="Back">
+        <button class="Button_Nav" id="home" style="visibility: visible; float: left;">
+            <a href="home.html"><img src="../Images/Icons/homepage-icon.png" style="width: 30px" class="icon"></a>
         </button>
-        </a>
+        <button class="Button_Nav" id="back" style="visibility: hidden; float: left;" onclick="openProfileContainer(0);" >
+            <img src="../Images/Icons/Back.png" class="icon">
+        </button>
         <img src="../Images/Logo/Logo.png" id="logo" alt="Logo">
     </nav>
 </header>
@@ -43,14 +44,13 @@
         <label class="info_label">DATE OF BIRTH</label>
     </div>
     <br>
-    <div class="info">
-        <label class="info_type_label">PHONE NUMBER: </label>
-        <label class="info_label">PHONE NUMBER</label>
-    </div>
-    <br>
     <button id="edit" onclick="openProfileContainer(1);">
         <img src="../Images/Icons/Edit.png" id="edit_icon" class="icon" alt="Edit">
         <span>EDIT PROFILE</span>
+    </button>
+    <button id="editPassword" onclick="openProfileContainer(2);">
+        <img src="../Images/Icons/Edit.png" id="editPassword_icon" class="icon" alt="Edit_Password">
+        <span>EDIT PASSWORD</span>
     </button>
 </section>
 
@@ -71,16 +71,34 @@
     <div class="editInfo">
         <input type="text" name="DateOfBirth" placeholder="DATE OF BIRTH" class="EditInput"> <br>
     </div>
-    <div class="editInfo">
-        <input type="text" name="PhoneNumber" placeholder="PHONE NUMBER" class="EditInput"> <br>
-    </div>
-    <div onclick="openProfileContainer(0);">
+    <div onclick="sendEditProfile();">
         <input type="submit" value="CONFIRM" class="Confirm_Button Button_Edit"> <br>
     </div>
     <div onclick="openProfileContainer(0);">
         <input type="submit" value="CANCEL" class="Cancel_Button Button_Neg"> <br>
     </div>
 </section>
-<script src="../js/script.js"></script>
+
+
+<section id="containerPasswordEdit" style="display: none">
+    <h1>EDIT YOUR PASSWORD</h1>
+    <div class="editInfo">
+        <input type="password" name="OldPassword" placeholder="OLD PASSWORD" class="editInfo EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="password" name="NewPassword" placeholder="NEW PASSWORD" class="editInfo EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="password" name="ConfirmPassword" placeholder="CONFIRM NEW PASSWORD" class="editInfo EditInput"> <br>
+    </div>
+    <div onclick="sendEditPassword();">
+        <input type="submit" value="CONFIRM" class="Confirm_Button Button_Edit"> <br>
+    </div>
+    <div onclick="openProfileContainer(0);">
+        <input type="submit" value="CANCEL" class="Cancel_Button Button_Neg"> <br>
+    </div>
+</section>
+
+<script src="../js/profile.js"></script>
 </body>
 </html>

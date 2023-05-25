@@ -8,13 +8,9 @@ let services = document.getElementById("containerServices");
 let contact = document.getElementById("containerContact");
 let news = document.getElementById("containerNews");
 let animals = document.getElementById("containerAnimals");
-let profile = document.getElementById("containerProfile");
-let edit = document.getElementById("containerProfileEdit");
 let list = document.getElementById("containerAnimalList");
 let details = document.getElementById("containerAnimalDetails");
-let indexContainers = [home, about, login, create, forgot];
 let homeContainers = [home, services, tickets, news, contact, about, animals];
-let profileContainers = [profile, edit];
 
 let menuContainer = document.getElementById("Menu_Container");
 let settingsContainer = document.getElementById("Settings_Container");
@@ -67,12 +63,6 @@ function changeTheme(){
     }
 }
 
-function openIndexContainer(container) {
-    for (let i = 0; i < 5; i++)
-        indexContainers[i].style.display = "none";
-    indexContainers[container].style.display = "block";
-}
-
 function openHomeContainer(container) {
     let theme = document.getElementById("theme");
     for (let i = 0; i < 7; i++) {
@@ -89,12 +79,6 @@ function openHomeContainer(container) {
         homeContainers[i].style.display = "none";
         homeContainers[container].style.display = "block";
     }
-}
-
-function openProfileContainer(container) {
-    for (let i = 0; i < 2; i++)
-        profileContainers[i].style.display = "none";
-    profileContainers[container].style.display = "block";
 }
 
 
@@ -509,7 +493,7 @@ function getAnimalData() {
         }
     ];
 }
-console.log(sessionStorage);
+
 function logout(){
     sessionStorage.clear();
     window.location.href = 'index.html';

@@ -72,12 +72,12 @@
         border: 2px solid #e6733e;
     }
 
-    #containerProfile, #containerProfileEdit {
+    #containerProfile, #containerProfileEdit, #containerPasswordEdit {
         background-color: rgba(0, 0, 0, 0.6);
         color: var(--border);
         height: fit-content;
         width: fit-content;
-        margin: 15px auto 15px auto;
+        margin: 25px auto 15px auto;
         padding: 15px;
         border-radius: 30px;
         position: relative;
@@ -90,7 +90,7 @@
     .info {
         padding: 5px;
         font-size: 20px;
-        margin: 10px;
+        margin: 5px;
         border-radius: 20px;
         color: var(--background-color);
     }
@@ -109,11 +109,11 @@
         width: 100px;
     }
 
-    #edit {
+    #edit, #editPassword {
         border: 0;
         border-radius: 30px;
         padding: 0 20px;
-        height: 50px;
+        height: 40px;
         transition: 0.2s;
         display: flex;
         justify-content: center;
@@ -121,34 +121,42 @@
         left: 50%;
         position: relative;
         transform: translateX(-50%);
-        font-size: large;
+        font-size: 12px;
         font-weight: bolder;
         color: #BE4B16;
-
+        margin: 10px;
     }
 
-    #edit_icon {
+    #edit_icon, #editPassword_icon{
         width: 0;
         transition: 0.2s;
     }
 
-    #edit:hover {
+    #edit:hover, #editPassword:hover{
         background-color: #e6733e;
         font-weight: bolder;
         color: var(--border);
     }
 
-    #edit:hover #edit_icon {
+    #edit:hover #edit_icon , #editPassword:hover #editPassword_icon {
         margin: 0 10px 0 -20px;
-        width: 50px;
+        width: 30px;
     }
 
     .editInfo {
         padding: 5px;
         font-size: 30px;
-        margin: 15px;
+        margin: 5px;
         border-radius: 20px;
         color: var(--background-color);
+    }
+
+    .Button_Nav {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .EditInput {
@@ -161,7 +169,7 @@
         transition: 0.3s;
         font-family: 'Anonymous Pro', monospace;
         width: 300px;
-        margin: 10px;
+        margin: 5px;
         padding: 10px;
         font-size: 15px;
     }
@@ -172,8 +180,8 @@
     }
 
     .Button_Edit {
-        padding: 10px 20px;
-        font-size: larger;
+        padding: 5px 20px;
+        font-size: 17px;
         font-weight: bolder;
         background-color: var(--background-color);
         border-radius: 35px;
@@ -198,8 +206,8 @@
     }
 
     .Button_Neg {
-        padding: 10px 20px;
-        font-size: larger;
+        padding: 5px 20px;
+        font-size: 17px;
         font-weight: bolder;
         background-color: var(--border);
         border-radius: 35px;
@@ -284,7 +292,7 @@
         border: 2px solid #e6733e;
     }
 
-    #containerProfile, #containerProfileEdit {
+    #containerProfile, #containerProfileEdit, #containerPasswordEdit {
         background-color: rgba(0, 0, 0, 0.6);
         color: var(--border);
         height: fit-content;
@@ -295,14 +303,12 @@
         position: relative;
         justify-content: center;
         text-align: center;
-
-
     }
 
     .info {
         padding: 5px;
         font-size: 25px;
-        margin: 10px;
+        margin: 5px;
         border-radius: 20px;
         color: var(--background-color);
     }
@@ -321,7 +327,7 @@
         width: 100px;
     }
 
-    #edit {
+    #edit, #editPassword{
         border: 0;
         border-radius: 30px;
         padding: 0 20px;
@@ -333,24 +339,24 @@
         left: 50%;
         position: relative;
         transform: translateX(-50%);
-        font-size: large;
+        font-size: 15px;
         font-weight: bolder;
         color: #BE4B16;
-
+        margin: 12px;
     }
 
-    #edit_icon {
+    #edit_icon, #editPassword_icon{
         width: 0;
         transition: 0.2s;
     }
 
-    #edit:hover {
+    #edit:hover, #editPassword:hover{
         background-color: #e6733e;
         font-weight: bolder;
         color: var(--border);
     }
 
-    #edit:hover #edit_icon {
+    #edit:hover #edit_icon, #editPassword:hover #editPassword_icon {
         margin: 0 10px 0 -20px;
         width: 50px;
     }
@@ -358,7 +364,7 @@
     .editInfo {
         padding: 5px;
         font-size: 30px;
-        margin: 15px;
+        margin: 10px;
         border-radius: 20px;
         color: var(--background-color);
     }
@@ -498,7 +504,7 @@
         border: 2px solid #e6733e;
     }
 
-    #containerProfile, #containerProfileEdit {
+    #containerProfile, #containerProfileEdit, #containerPasswordEdit {
         background-color: rgba(0, 0, 0, 0.6);
         color: var(--border);
         height: fit-content;
@@ -509,14 +515,12 @@
         position: relative;
         justify-content: center;
         text-align: center;
-
-
     }
 
     .info {
         padding: 5px;
         font-size: 30px;
-        margin: 15px;
+        margin: 10px;
         border-radius: 20px;
         color: var(--background-color);
     }
@@ -535,7 +539,7 @@
         width: 100px;
     }
 
-    #edit {
+    #edit, #editPassword {
         border: 0;
         border-radius: 30px;
         padding: 0 20px;
@@ -550,21 +554,21 @@
         font-size: large;
         font-weight: bolder;
         color: #BE4B16;
-
+        margin: 10px;
     }
 
-    #edit_icon {
+    #edit_icon, #editPassword_icon {
         width: 0;
         transition: 0.2s;
     }
 
-    #edit:hover {
+    #edit:hover, #editPassword:hover {
         background-color: #e6733e;
         font-weight: bolder;
         color: var(--border);
     }
 
-    #edit:hover #edit_icon {
+    #edit:hover #edit_icon, #editPassword:hover #editPassword_icon{
         margin: 0 10px 0 -20px;
         width: 50px;
     }
@@ -642,6 +646,5 @@
         font-weight: bolder;
         border: 0 solid #e6733e;
     }
-
 
 }
