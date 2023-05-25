@@ -127,18 +127,33 @@
         margin: 10px;
     }
 
-    #edit_icon, #editPassword_icon{
+    #deleteAccount {
+        border: 0;
+        border-radius: 30px;
+        padding: 0 20px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        font-size: 10px;
+        font-weight: bolder;
+        color: #BE4B16;
+        margin-top: 7px;
+    }
+
+    #edit_icon, #editPassword_icon, #delete_icon{
         width: 0;
         transition: 0.2s;
     }
 
-    #edit:hover, #editPassword:hover{
+    #edit:hover, #editPassword:hover, #deleteAccount:hover{
         background-color: #e6733e;
         font-weight: bolder;
         color: var(--border);
     }
 
-    #edit:hover #edit_icon , #editPassword:hover #editPassword_icon {
+    #edit:hover #edit_icon , #editPassword:hover #editPassword_icon, #deleteAccount:hover #delete_icon {
         margin: 0 10px 0 -20px;
         width: 30px;
     }
@@ -345,18 +360,33 @@
         margin: 12px;
     }
 
-    #edit_icon, #editPassword_icon{
+    #deleteAccount {
+        border: 0;
+        border-radius: 30px;
+        padding: 0 20px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        font-size: 13px;
+        font-weight: bolder;
+        color: #BE4B16;
+        margin-top: 5px;
+    }
+
+    #edit_icon, #editPassword_icon, #delete_icon{
         width: 0;
         transition: 0.2s;
     }
 
-    #edit:hover, #editPassword:hover{
+    #edit:hover, #editPassword:hover, #deleteAccount:hover{
         background-color: #e6733e;
         font-weight: bolder;
         color: var(--border);
     }
 
-    #edit:hover #edit_icon, #editPassword:hover #editPassword_icon {
+    #edit:hover #edit_icon, #editPassword:hover #editPassword_icon, #deleteAccount:hover #delete_icon {
         margin: 0 10px 0 -20px;
         width: 50px;
     }
@@ -557,18 +587,33 @@
         margin: 10px;
     }
 
-    #edit_icon, #editPassword_icon {
+    #deleteAccount {
+        border: 0;
+        border-radius: 30px;
+        padding: 0 20px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        font-size: large;
+        font-weight: bolder;
+        color: #BE4B16;
+        margin-top: 3px;
+    }
+
+    #edit_icon, #editPassword_icon, #delete_icon {
         width: 0;
         transition: 0.2s;
     }
 
-    #edit:hover, #editPassword:hover {
+    #edit:hover, #editPassword:hover, #deleteAccount:hover {
         background-color: #e6733e;
         font-weight: bolder;
         color: var(--border);
     }
 
-    #edit:hover #edit_icon, #editPassword:hover #editPassword_icon{
+    #edit:hover #edit_icon, #editPassword:hover #editPassword_icon, #deleteAccount:hover #delete_icon{
         margin: 0 10px 0 -20px;
         width: 50px;
     }
