@@ -2,6 +2,14 @@ let profile = document.getElementById("containerProfile");
 let edit = document.getElementById("containerProfileEdit");
 let editPassword= document.getElementById("containerPasswordEdit")
 const backButton = document.querySelector('.Button_Nav#back');
+
+let photo = document.getElementById("Profile_Image");
+let firstName = document.getElementById("firstName");
+let lastName = document.getElementById("lastName");
+let username = document.getElementById("username");
+let email = document.getElementById("email");
+let dateOfBirth = document.getElementById("dateOfBirth");
+
 let profileContainers = [profile, edit, editPassword];
 
 function openProfileContainer(container) {
@@ -33,15 +41,14 @@ function decodeToken(token) {
 
 console.log(token);
 decodedToken= decodeToken(token);
-const email = decodedToken.email;
-console.log(email);
-
-
+const Email = decodedToken.email;
+console.log(Email);
+loadProfile();
 
 async function loadProfile() {
     const token = localStorage.getItem('token');
-    const Email = getEmailFromJWT(token);
-    const response = await fetch("http://16.16.174.129:8080/api/userByEmail/", {
+    console.log(Email);
+    const response = await fetch("http://localhost:8081/profile/", {
         method: "POST",
         headers:{
             'Content-Type': 'text/plain',
@@ -50,56 +57,67 @@ async function loadProfile() {
         body: Email
     });
     const data = await response.json();
-    fullName.innerHTML = "";
-    userName.innerHTML = "";
+    console.log(data);
+    firstName.innerHTML = "";
+    lastName.innerHTML="";
+    username.innerHTML = "";
     email.innerHTML = "";
-    address.innerHTML = "";
+    dateOfBirth.innerHTML = "";
 
-    fullName.innerHTML = data.name;
-    userName.innerHTML = data.username;
+    if (data.photo != null)
+        photo.src = data.photo;
+    else
+        photo.src="../Images/Icons/LogIn.png";
+    firstName.innerHTML = data.firstName;
+    lastName.innerHTML=data.lastName;
+    username.innerHTML = data.username;
     email.innerHTML = data.email;
-    address.innerHTML = data.location;
+    dateOfBirth.innerHTML = data.birth;
 }
 
 
 //needs endpoint
 async function sendEditProfile() {
     const token = localStorage.getItem('token');
-    const Email = getEmailFromJWT(token);
     let data = new FormData(document.getElementById("editForm"));
     const editProfileData = {
+        "photo": data.get('PhotoURL'),
         "email": Email,
-        "name": data.get('FirstName')+' ' + data.get('LastName'),
+        "firstname": data.get('FirstName'),
+        "lastname": data.get('LastName'),
         "username": data.get('Username'),
-        "location": data.get('Address')
+        "birth": data.get('DateOfBirth')
     };
-    console.log(editProfileData)
-    const message = await fetch("http://16.16.174.129:8080/api/user/", {
-        method: "PUT",
-        headers:{
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify(editProfileData)
-    });
-    if (!message.ok) {
-        let errorMessage = '';
-        if (message.status === 401) {
-            errorMessage = 'Username already in use.';
-        } else {
-            errorMessage = `An error occurred: ${message.statusText}`;
+    if ( !editProfileData.firstname || !editProfileData.lastname  || !editProfileData.username || !editProfileData.birth ) {
+        console.log("One or more fields are null.");
+    }
+    else {
+        console.log(editProfileData)
+        const message = await fetch("http://localhost:8081/profileEdit/", {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(editProfileData)
+        });
+        if (!message.ok) {
+            let errorMessage = '';
+            if (message.status === 401) {
+                errorMessage = 'Username already in use.';
+            } else {
+                errorMessage = `An error occurred: ${message.statusText}`;
+            }
+            console.log(errorMessage);
         }
-        console.log(errorMessage);
     }
 }
-
 
 
 //needs endpoint
 async function sendEditPassword() {
     const token = localStorage.getItem('token');
-    const Email = getEmailFromJWT(token);
-    let psw = new FormData(document.getElementById("editPassword"));
+    let psw = new FormData(document.getElementById("editPass"));
     if (psw.get('NewPassword') !== psw.get('ConfirmPassword')) {
         console.log("Passwords do not match.");
     }
@@ -108,7 +126,7 @@ async function sendEditPassword() {
         "oldPass": psw.get('OldPassword'),
         "newPass": psw.get('NewPassword')
     };
-    const response = await fetch("http://16.16.174.129:8080/api/userPass/", {
+    const response = await fetch("http://localhost:8081/profilePassword/", {
         method: "PUT",
         headers:{
             'Content-Type': 'application/json',
@@ -131,8 +149,7 @@ async function sendEditPassword() {
 //needs endpoint
 async function deleteProfile() {
     const token = localStorage.getItem('token');
-    const Email = getEmailFromJWT(token);
-    await fetch("http://16.16.174.129:8080/api/user/", {
+    await fetch("http://localhost:8081/profileDelete/", {
         method: "DELETE",
         headers:{
             'Content-Type': 'text/plain',
@@ -141,5 +158,5 @@ async function deleteProfile() {
         body: Email
     });
     window.location.href = 'index.html';
-
+    sessionStorage.clear();
 }
