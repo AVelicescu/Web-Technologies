@@ -24,14 +24,16 @@
     background-color: var(--main-orange);
     color: white;
 }
-.search-bar button img{
-   width: 20px;
+
+.search-bar button img {
+    width: 20px;
 }
 
 .search-bar button:hover {
     background-color: #efb889;
     color: white;
 }
+
 /* ------------------------- Universal -----------------------------------------------------*/
 
 .displayFlex {
@@ -59,12 +61,12 @@
     }
 
     body {
-        background-image: url("../Images/Wallpaper/TigerMobile.jpg");
+        background-image: url("../Images/Wallpaper/animals_white.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
-        background-color: var(--border);
+        background-color: var(--background-color);
         overflow-x: hidden;
     }
 
@@ -216,39 +218,7 @@
             visibility: hidden;
         }
     }
-    #containerHome {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 85%;
-        max-width: 400px;
-        max-height: 200px;
-        background-color: var(--menu);
-        border-radius: 30px;
-        color: var(--border);
-        border: 1px solid rgb(255, 255, 255);
-        padding: 20px;
-        text-align: center;
-        font-family: Georgia, serif;
-    }
 
-    #containerContact, #containerTickets, #containerNews, #containerServices, #containerAbout {
-        color: var(--border);
-        margin-top: 60px;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        position: absolute;
-        min-width: 200px;
-        width: 70%;
-        font-size: 17px;
-        background-color: var(--menu);
-        border-radius: 30px;
-        padding: 20px;
-        text-align: left;
-    }
 }
 
 /* ------------------------------- For tablet -----------------------------------------------------*/
@@ -260,12 +230,12 @@
     }
 
     body {
-        background-image: url("../Images/Wallpaper/TigerTablet.png");
+        background-image: url("../Images/Wallpaper/animals_white.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
-        background-color: var(--border);
+        background-color: var(--background-color);
         overflow-x: hidden;
     }
 
@@ -425,101 +395,6 @@
             visibility: hidden;
         }
     }
-    #containerHome {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 85%;
-        max-width: 600px;
-        max-height: 300px;
-        background-color: var(--menu);
-        color: var(--border);
-        border-radius: 30px;
-        border: 1px solid rgb(255, 255, 255);
-        padding: 20px;
-        text-align: center;
-        font-family: Georgia, serif;
-    }
-
-    #containerContact, #containerTickets, #containerNews, #containerServices, #containerAbout {
-        color: var(--border);
-        margin: auto;
-        position: relative;
-        min-width: 500px;
-        width: 95%;
-        font-size: 17px;
-    }
-
-    .left-side, .right-side {
-        padding: 10px;
-        width: 60%;
-        text-align: center;
-        margin-top: 5px;
-    }
-
-    .left-side {
-        margin-left: 5%;
-        margin-right: auto;
-    }
-
-    .right-side {
-        margin-right: 5%;
-        margin-left: auto;
-    }
-
-    .center-side {
-        padding: 20px;
-        width: 70%;
-        text-align: center;
-        font-size: 20px;
-        margin-top: 40px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .stripedTemplate {
-
-        width: 60%;
-    }
-
-    .primaryBox {
-        background-color: #e38459;
-        border: 20px solid #e38459;
-        text-align: center;
-    }
-
-    .top {
-        background-color: var(--border);
-        padding: 3px;
-        border-left: 20px solid var(--border);
-        border-right: 20px solid var(--border);
-        width: 100%;
-        margin-left: -7%;
-        transform: translateY(300%);
-        border-radius: 50%;
-    }
-
-    .bottom {
-        background-color: var(--border);
-        padding: 3px;
-        border-left: 20px solid var(--border);
-        border-right: 20px solid var(--border);
-        width: 100%;
-        margin-left: 7%;
-        transform: translateY(-300%);
-        border-radius: 50%;
-    }
-
-    .upperMiddle {
-        transform: translateY(500%);
-        margin-left: 7%;
-    }
-
-    .lowerMiddle {
-        transform: translateY(-500%);
-        margin-left: -7%;
-    }
 
 }
 
@@ -532,10 +407,11 @@
     }
 
     body {
-        background-image: url("../Images/Wallpaper/Tiger2.png");
+        background-image: url("../Images/Wallpaper/animals_white.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top center;
+        background-color: var(--background-color);
         height: 440px;
     }
 
@@ -568,7 +444,7 @@
         width: 100%;
         height: 60px;
         overflow: hidden;
-        background-color:var(--menu);
+        background-color: var(--menu);
         margin: -8px -8px 0 -8px;
         padding: 8px;
     }
@@ -719,102 +595,6 @@
             visibility: hidden
         }
     }
-    #containerHome {
-        position: absolute;
-        margin-top: 50px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 85%;
-        max-width: 1000px;
-        max-height: 500px;
-        color: var(--border);
-        background-color: var(--menu);
-        border-radius: 30px;
-        border: 1px solid rgb(255, 255, 255);
-        padding: 20px;
-        text-align: center;
-        font-family: Georgia, serif;
-    }
-
-    #containerContact, #containerTickets, #containerNews, #containerServices, #containerAbout {
-        color: var(--border);
-        margin: 80px auto auto auto;
-        position: relative;
-        min-width: 1000px;
-        width: 90%;
-        font-size: 17px;
-    }
-
-    .left-side, .right-side {
-        padding: 20px;
-        width: 70%;
-        text-align: left;
-    }
-
-    .left-side {
-        margin-left: 10%;
-        margin-right: auto;
-    }
-
-    .right-side {
-        margin-right: 10%;
-        margin-left: auto;
-    }
-
-    .center-side {
-        padding: 15px;
-        width: 70%;
-        text-align: center;
-        font-size: 40px;
-        margin-top: 60px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .stripedTemplate {
-
-        width: 60%;
-    }
-
-    .primaryBox {
-        background-color: #e38459;
-        border: 20px solid #e38459;
-        text-align: center;
-    }
-
-    .top {
-        background-color: var(--border);
-        padding: 3px;
-        border-left: 20px solid var(--border);
-        border-right: 20px solid var(--border);
-        width: 100%;
-        margin-left: -7%;
-        transform: translateY(300%);
-        border-radius: 50%;
-    }
-
-    .bottom {
-        background-color: var(--border);
-        padding: 3px;
-        border-left: 20px solid var(--border);
-        border-right: 20px solid var(--border);
-        width: 100%;
-        margin-left: 7%;
-        transform: translateY(-300%);
-        border-radius: 50%;
-    }
-
-    .upperMiddle {
-        transform: translateY(500%);
-        margin-left: 7%;
-    }
-
-    .lowerMiddle {
-        transform: translateY(-500%);
-        margin-left: -7%;
-    }
-
 }
 
 
