@@ -139,6 +139,10 @@ async function loadAnimals(){
         let animalName = document.createElement("h2");
         let animalDetailsButton = document.createElement("button");
 
+        animalPhoto.id = "animalPhoto";
+        animalName.id = "animalName";
+        animalDetailsButton.id = "animalDetailsButton";
+
         containerAnimal.classList.add("containerAnimal");
         animalPhoto.src = animal.photo;
         animalName.textContent = animal.name;
