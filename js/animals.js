@@ -121,15 +121,35 @@ async function loadAnimals(){
     const token = localStorage.getItem('token');
     console.log(Email);
     const response = await fetch("http://localhost:8081/animals/", {
-        method: "GET",
+        method: "POST",
         headers:{
-            'Content-Type': 'text/plain',
+            'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
         },
         body: Email
     });
     const data = await response.json();
     console.log(data);
+
+    let list = document.getElementById("animalList");
+    list.innerHTML = "";
+    for (let animal of data) {
+        let containerAnimal = document.createElement("div");
+        let animalPhoto = document.createElement("img");
+        let animalName = document.createElement("h2");
+        let animalDetailsButton = document.createElement("button");
+
+        containerAnimal.classList.add("containerAnimal");
+        animalPhoto.src = animal.photo;
+        animalName.textContent = animal.name;
+        animalDetailsButton.textContent = "Details";
+        animalDetailsButton.addEventListener("click", () => openAnimalDescription(animal));
+
+        containerAnimal.appendChild(animalPhoto);
+        containerAnimal.appendChild(animalName);
+        containerAnimal.appendChild(animalDetailsButton);
+        list.appendChild(containerAnimal);
+    }
 }
 
 loadAnimals();
