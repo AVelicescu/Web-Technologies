@@ -101,6 +101,8 @@ whiteBtn.addEventListener('click', (event) => {
     filterBubble.style.display = 'none';
 });
 
+decodedToken= decodeToken(token);
+const Email = decodedToken.email;
 async function loadAnimals(){
     const token = localStorage.getItem('token');
     console.log(Email);
