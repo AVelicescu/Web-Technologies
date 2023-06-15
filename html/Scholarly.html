@@ -60,6 +60,7 @@
                 <li><a href="#softwareAttributes">Atribute de calitate a software-ului </a></li>
             </ol>
         </li>
+        <li><a href="#technologies">Tehnologii folosite</a>
     </ol>
     <!-- ------------------------------  Introducere ------------------------------------------------------------------------------>
     <section id="introduction" role="doc-introduction">
@@ -97,7 +98,8 @@
                 folosite cu moderatie pentru a evita crearea unui aspect haotic.
             </p>
             <p>
-                Textul din document va fi de culoare neagra (in general), iar fontul utilizat va fi usor de citit si va respecta
+                Textul din document va fi de culoare neagra (in general), iar fontul utilizat va fi usor de citit si va
+                respecta
                 specificatiile propuse.
                 Pentru elementele interactive, cum ar fi butoanele sau linkurile, se va folosi o culoare distincta
                 pentru a le evidenția.
@@ -197,7 +199,8 @@
                     modul de inmultire.
                 </li>
                 <li>
-                    Vizualizare informatii fictive despre: tichete, news, contact, servicii oferite si o rubrica de about us.
+                    Vizualizare informatii fictive despre: tichete, news, contact, servicii oferite si o rubrica de
+                    about us.
                 </li>
                 <li>
                     Vizualizare si modificare informatii personale - utilizatorii vor putea vedea la rubrica profil
@@ -260,11 +263,13 @@
                     <figcaption>Exemplu de schema pentru mobil.</figcaption>
                 </figure>
                 <figure>
-                    <img src="../Images/Scholarly/SchemaTableta.jpg" alt="Schema pentru tableta" width="600" height="800">
+                    <img src="../Images/Scholarly/SchemaTableta.jpg" alt="Schema pentru tableta" width="600"
+                         height="800">
                     <figcaption>Exemplu de schema pentru tableta.</figcaption>
                 </figure>
                 <figure>
-                    <img src="../Images/Scholarly/SchemaLaptop.jpg" alt="Schema pentru desktop" width="600" height="800">
+                    <img src="../Images/Scholarly/SchemaLaptop.jpg" alt="Schema pentru desktop" width="600"
+                         height="800">
                     <figcaption>Exemplu de schema pentru desktop.</figcaption>
                 </figure>
             </div>
@@ -396,6 +401,68 @@
                 </li>
             </ul>
         </section>
+    </section>
+    <!---------------------------------------------- Tehnologii utilizate ------------------------------------------------------------------>
+    <section id="technologies">
+        <h2>6. Tehnologii utilizate</h2>
+        <ul>
+            <li>
+                Pentru: Login/ Sign Up <br>
+                <ul>
+                    <li>
+                        Endpoint: http://localhost:8081/auth<br>
+                        Metoda folosită: POST<br>
+                        Justificare: trimitem ce completează userul (datele de conectare + "login"/"sign up" in functie
+                        de ceea
+                        ce incearca utilizatorul sa faca) și primim înapoi un token dacă logarea/sign up ul e reușit. In
+                        caz contrar avem mesaje de eroare.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Pentru: Profil<br>
+                <ul>
+                    <li>
+                        Endpoint: http://localhost:8081/profile/ <br>
+                        Metoda: POST <br>
+                        Justificare: pentru a încărca datele utilizatorului. Trimitem emailul salvat în local storage și
+                        primim
+                        datele lui pentru a le afișa. <br><br>
+                    </li>
+
+                    <li> Endpoint: http://localhost:8081/profileEdit/ <br>
+                        Metoda: PUT <br>
+                        Justificare: pentru a trimite către server ce date dorește userul sa modifice la profilul lui.
+                        Serverul
+                        modifica baza de date cu noile informatii. <br><br>
+                    </li>
+                    <li>
+                        Endpoint: http://localhost:8081/profilePassword/ <br>
+                        Metoda: PUT <br>
+                        Justificare: pentru a trimite informații despre noua parola a userului. Pe partea de server se
+                        verifica
+                        daca parola veche este cea corecta, iar daca parola noua a fost introdusa de doua ori la fel ea
+                        va fi adaugata in baza de date. <br><br>
+                    </li>
+                    <li>
+                        Endpoint: http://localhost:8081/profileDelete/ <br>
+                        Metoda: DELETE <br>
+                        Justificare: pentru a trimite cererea ca userul să fie șters din baza de date.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Pentru: Animale<br>
+                <ul>
+                    <li>
+                        Endpoint: http://localhost:8081/animals/ <br>
+                        Metoda: POST <br>
+                        Justificare: pentru a încărca datele despre animale (poza si numele) pe pagina cu toate
+                        animalele. <br><br>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </section>
 </main>
 </body>
