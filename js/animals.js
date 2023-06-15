@@ -101,8 +101,22 @@ whiteBtn.addEventListener('click', (event) => {
     filterBubble.style.display = 'none';
 });
 
+const token = sessionStorage.getItem('token');
+function decodeToken(token) {
+    const [, payloadBase64] = token.split('.');
+    try {
+        const payload = JSON.parse(atob(payloadBase64));
+        return payload;
+    } catch (error) {
+        // Handle any errors that occur during decoding
+        console.error('Error decoding token:', error);
+        return null;
+    }
+}
+
 decodedToken= decodeToken(token);
 const Email = decodedToken.email;
+
 async function loadAnimals(){
     const token = localStorage.getItem('token');
     console.log(Email);
