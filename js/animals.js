@@ -101,3 +101,20 @@ whiteBtn.addEventListener('click', (event) => {
     filterBubble.style.display = 'none';
 });
 
+async function loadAnimals(){
+    const token = localStorage.getItem('token');
+    console.log(Email);
+    const response = await fetch("http://localhost:8081/animals/", {
+        method: "GET",
+        headers:{
+            'Content-Type': 'text/plain',
+            'Authorization': `Bearer ${token}`
+        },
+        body: Email
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+loadAnimals();
+
