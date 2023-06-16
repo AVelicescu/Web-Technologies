@@ -1,5 +1,6 @@
 let menuContainer = document.getElementById("Menu_Container");
 let settingsContainer = document.getElementById("Settings_Container");
+let details = document.getElementById("animalDetails");
 document.getElementById("profile").addEventListener("click", function () {
     window.location.href = "profile.html";
 });
@@ -101,6 +102,42 @@ whiteBtn.addEventListener('click', (event) => {
     filterBubble.style.display = 'none';
 });
 
+async function loadAnimals(){
+    const token = localStorage.getItem('token');
+    console.log(Email);
+    const response = await fetch("http://localhost:8081/animals/", {
+        method: "POST",
+        headers:{
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: Email
+    });
+    const data = await response.json();
+    console.log(data);
+
+    let list = document.getElementById("animalList");
+    list.innerHTML = "";
+    for (let animal of data) {
+        let containerAnimal = document.createElement("div");
+        let animalPhoto = document.createElement("img");
+        let animalName = document.createElement("h2");
+        let animalDetailsButton = document.createElement("button");
+
+        containerAnimal.classList.add("containerAnimal");
+        animalPhoto.src = animal.photo;
+        animalName.textContent = animal.name;
+        animalDetailsButton.textContent = "Details";
+        animalDetailsButton.addEventListener("click", () => openAnimalDescription(animal));
+
+        containerAnimal.appendChild(animalPhoto);
+        containerAnimal.appendChild(animalName);
+        containerAnimal.appendChild(animalDetailsButton);
+        list.appendChild(containerAnimal);
+    }
+}
+
+loadAnimals();
 const token = sessionStorage.getItem('token');
 function decodeToken(token) {
     const [, payloadBase64] = token.split('.');
@@ -155,6 +192,54 @@ async function loadAnimals(){
         list.appendChild(containerAnimal);
     }
 }
+async function openAnimalDescription(id) {
+    details.style.display = "flex";
+    const token = localStorage.getItem('token');
+    console.log(Email);
+    const response = await fetch("http://localhost:8081/animals/" + id, {
+        method: "POST",
+        headers:{
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: Email
+    });
+    const animal = await response.json();
+    console.log(animal);
 
+    details.innerHTML = "";
+
+    let photo = document.getElementById("photo");
+    let description = document.getElementById("description");
+    let name = document.getElementById("name");
+    let category = document.getElementById("category");
+    //let popularName = document.getElementById("popularName");
+    //let scientificName = document.getElementById("scientificName");
+    //let type = document.getElementById("type");
+    //let originLocation = document.getElementById("origin");
+    //let diet = document.getElementById("diet");
+    //let status = document.getElementById("status");
+    //let relatedSpecies = document.getElementById("relatedSpecies");
+    //let naturalEnemies = document.getElementById("naturalEnemies");
+    //let characteristic = document.getElementById("characteristic");
+
+    photo.src = animal.photo;
+    description.textContent = `Description: ${animal.description}`;
+    name.textContent = `Name: ${animal.name}`;
+    category.textContent = `Name: ${animal.category}`;
+    //popularName.textContent = `Popular name: ${animal.popularName}`;
+    //scientificName.textContent = `Scientific name: ${animal.scientificName}`;
+    //type.textContent = `Type: ${animal.type}`;
+    //originLocation.textContent = `Origin location: ${animal.originLocation}`;
+    //diet.textContent = `Diet: ${animal.diet}`;
+    //status.textContent = `Status: ${animal.status}`;
+    //relatedSpecies.textContent = `Related species: ${animal.relatedSpecies.join(", ")}`;
+    //naturalEnemies.textContent = `Natural enemies: ${animal.naturalEnemies.join(", ")}`;
+    //characteristic.textContent = `Characteristic: ${animal.characteristic.join(", ")}`;
+}
+
+function closeAnimalDescription() {
+    details.style.display = "none";
+}
 loadAnimals();
 
