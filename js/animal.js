@@ -77,8 +77,71 @@ function changeTheme() {
         document.querySelector('body').style.backgroundImage = "url('../Images/Wallpaper/animals_white.jpg')";
     }
 }
+const token = sessionStorage.getItem('token');
+function decodeToken(token) {
+    const [, payloadBase64] = token.split('.');
+    try {
+        const payload = JSON.parse(atob(payloadBase64));
+        return payload;
+    } catch (error) {
+        // Handle any errors that occur during decoding
+        console.error('Error decoding token:', error);
+        return null;
+    }
+}
+
+decodedToken= decodeToken(token);
+const Email = decodedToken.email;
+
+async function openAnimalDescription(id) {
+
+    const token = localStorage.getItem('token');
+    console.log(Email);
+    const response = await fetch("http://localhost:8081/animal/" + id, {
+        method: "POST",
+        headers:{
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: Email
+    });
+    const animal = await response.json();
+    console.log(animal);
+
+
+    let photo = document.getElementById("photo");
+    let description = document.getElementById("description");
+    let name = document.getElementById("name");
+    let category = document.getElementById("category");
+    //let popularName = document.getElementById("popularName");
+    //let scientificName = document.getElementById("scientificName");
+    //let type = document.getElementById("type");
+    //let originLocation = document.getElementById("origin");
+    //let diet = document.getElementById("diet");
+    //let status = document.getElementById("status");
+    //let relatedSpecies = document.getElementById("relatedSpecies");
+    //let naturalEnemies = document.getElementById("naturalEnemies");
+    //let characteristic = document.getElementById("characteristic");
+
+    photo.src = animal.photo;
+    description.textContent = `Description: ${animal.description}`;
+    name.textContent = `Name: ${animal.name}`;
+    category.textContent = `Name: ${animal.category}`;
+    //popularName.textContent = `Popular name: ${animal.popularName}`;
+    //scientificName.textContent = `Scientific name: ${animal.scientificName}`;
+    //type.textContent = `Type: ${animal.type}`;
+    //originLocation.textContent = `Origin location: ${animal.originLocation}`;
+    //diet.textContent = `Diet: ${animal.diet}`;
+    //status.textContent = `Status: ${animal.status}`;
+    //relatedSpecies.textContent = `Related species: ${animal.relatedSpecies.join(", ")}`;
+    //naturalEnemies.textContent = `Natural enemies: ${animal.naturalEnemies.join(", ")}`;
+    //characteristic.textContent = `Characteristic: ${animal.characteristic.join(", ")}`;
+}
 
 function logout() {
     sessionStorage.clear();
     window.location.href = 'index.html';
 }
+
+let params = new URLSearchParams(window.location.search);
+openAnimalDescription(params.get("id"));
