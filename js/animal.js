@@ -125,8 +125,22 @@ async function openAnimalDescription(id) {
 
     photo.src = animal.photo;
     description.textContent = `Description: ${animal.description}`;
+    var text = `${animal.description}`;
+    console.log(text);
+    //---------------------------- Pentru aranjarea textului ---------------------
+    var keywords = ["General information:", "Distribution:", "Habitat:", "Diet:", "Reproduction:", "Adaptation:", "Threats to Survival:"];
+    var pattern = new RegExp(keywords.join("|"), "g");
+    var sections = text.split(pattern);
+    sections = sections.filter(function(section) {
+        return section.trim() !== "";
+    });
+    document.getElementById("description").innerHTML = sections.map(function (section, index) {
+        var category = keywords[index];
+        return "<p><strong>" + category + "</strong><br>" + section.trim() + "</p>";
+    }).join("");
+
     name.textContent = `Name: ${animal.name}`;
-    category.textContent = `Name: ${animal.category}`;
+    category.textContent = `Location of origin: ${animal.category}`;
     //popularName.textContent = `Popular name: ${animal.popularName}`;
     //scientificName.textContent = `Scientific name: ${animal.scientificName}`;
     //type.textContent = `Type: ${animal.type}`;
