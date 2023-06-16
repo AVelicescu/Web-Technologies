@@ -184,7 +184,7 @@ async function loadAnimals(){
         animalPhoto.src = animal.photo;
         animalName.textContent = animal.name;
         animalDetailsButton.textContent = "Details";
-        animalDetailsButton.addEventListener("click", () => openAnimalDescription(animal));
+        animalDetailsButton.addEventListener("click", () => openAnimalDescription(animal.id));
 
         containerAnimal.appendChild(animalPhoto);
         containerAnimal.appendChild(animalName);
@@ -193,6 +193,7 @@ async function loadAnimals(){
     }
 }
 async function openAnimalDescription(id) {
+    window.location.href = "animal.js";
     details.style.display = "flex";
     const token = localStorage.getItem('token');
     console.log(Email);
