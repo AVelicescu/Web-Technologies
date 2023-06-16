@@ -27,8 +27,8 @@
             <span class="Label_Nav">Contact</span>
         </button>
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button type="submit">
+            <input id="searchTerm" type="text" placeholder="Search...">
+            <button type="submit" onclick="loadSearchedAnimals(document.getElementById('searchTerm').value)">
                 <img src="../Images/Icons/Search.png" alt="Search">
             </button>
         </div>
@@ -107,12 +107,6 @@
 <section class="animals">
     <h1 class="heading"> our <span>animals</span></h1>
     <div id="animalList"></div>
-    <div id="animalDetails" style="display: none">
-        <div id="photo"></div>
-        <div id="name"></div>
-        <div id="category"></div>
-        <div id="description"></div>
-    </div>
 </section>
 <script src="../js/animals.js"></script>
 </body>
