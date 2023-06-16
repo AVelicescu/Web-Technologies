@@ -196,7 +196,7 @@ async function openAnimalDescription(id) {
     details.style.display = "flex";
     const token = localStorage.getItem('token');
     console.log(Email);
-    const response = await fetch("http://localhost:8081/animals/" + id, {
+    const response = await fetch("http://localhost:8081/animal/" + id, {
         method: "POST",
         headers:{
             'Content-Type': 'application/json',
