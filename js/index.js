@@ -58,6 +58,12 @@ loginForm.addEventListener('submit', async (event) => {
         }
         const data = await response.json();
         const token = data.token;
+        console.log(data.role);
+        if(data.role === "admin") {
+            window.location.href = 'admin.html';
+            sessionStorage.setItem('token', token);
+            return;
+        }
         sessionStorage.setItem('token', token);
         if (token != null) {
             window.location.href = 'home.html';
