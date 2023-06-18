@@ -209,7 +209,6 @@ async function loadFilteredAnimals(){
     console.log(Email);
     let url = new URLSearchParams(window.location.search);
     let term = url.get("filters");
-    console.log(term);
     const response = await fetch("http://localhost:8081/filter/" + term, {
         method: "POST",
         headers:{
@@ -252,4 +251,8 @@ loadAnimals();
 
 if(window.location.href.includes("search")){
     loadSearchedAnimals();
+}
+
+if(window.location.href.includes("filters")){
+    loadFilteredAnimals();
 }
