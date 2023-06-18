@@ -27,8 +27,8 @@
             <span class="Label_Nav">Contact</span>
         </button>
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button type="submit" >
+            <input id="searchTerm" type="text" placeholder="Search...">
+            <button type="submit" onclick="window.location.href = 'animals.html?search=' + document.getElementById('searchTerm').value;">
                 <img src="../Images/Icons/Search.png" alt="Search">
             </button>
         </div>
@@ -409,5 +409,6 @@
     </section>
 </div>
 <script src="../js/script.js"></script>
+<script src="../js/animals.js"></script>
 </body>
 </html>
