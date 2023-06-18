@@ -25,17 +25,17 @@ html {
     scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar {
-    width: .8rem;
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-html::-webkit-scrollbar-track {
-    background: transparent;
+::-webkit-scrollbar-track {
+    background-color: #e6733e;
 }
 
-html::-webkit-scrollbar-thumb {
-    background: #fff;
-    border-radius: 5rem;
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #BE4B16;
 }
 
 body {
@@ -67,7 +67,7 @@ section {
 }
 
 button {
-    width: 9vw;
+    width: 11vw;
     height: 6vh;
     margin-top: 1rem;
     display: inline-block;
@@ -116,6 +116,15 @@ button:hover {
     font-size: 3rem;
 }
 
+.addAnimal
+{
+    margin-top: 20vh;
+}
+#jsonFileInput
+{
+    border: 2px solid var(--black);
+    padding: 0.9rem 3rem;
+}
 
 .home {
     min-height: 100vh;
@@ -123,25 +132,8 @@ button:hover {
     align-items: center;
     background-size: cover;
     background-position: center;
-    margin-top: 20vh;
+    margin-top: 10vh;
 
-}
-
-
-.footer {
-    background: var(--black);
-    text-align: center;
-}
-
-.footer .credit {
-    font-size: 2rem;
-    color: #fff;
-    font-weight: lighter;
-    padding: 1.5rem;
-}
-
-.footer .credit span {
-    color: var(--main-orange);
 }
 
 #logout{
@@ -203,46 +195,34 @@ th {
     font-weight: bold;
 }
 
-/* media queries  */
-@media (max-width:1024px) {
 
+
+
+@media (max-width: 1024px) and (min-width: 501px) {
     button{
-
-        width: 9vw;
+        width: 25vw;
         font-size: 15px;
         font-weight: bold;
         word-wrap:normal;
-    }
-}
-
-
-@media (max-width:991px) {
-    .btn {
-        width: 10vw;
     }
 
     html {
         font-size: 55%;
     }
 
-    .home {
-        margin-top: 23vh;
-    }
-
     .header {
         padding: 1.5rem 2rem;
     }
 
+    .header #logo {
+        height: 4rem;
+        margin-right: 2rem;
+    }
+
+
     section {
         padding: 2rem;
     }
-    button{
-        width: 11rem;
-    }
-
-}
-
-@media (max-width:768px) {
 
     table {
         font-size: 0.8rem;
@@ -254,7 +234,7 @@ th {
     }
 
 
-    .btn {
+    button {
         width: 12vw;
     }
 
@@ -262,31 +242,6 @@ th {
         display: inline-block;
     }
 
-    .header .navbar {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        background: #fff;
-        width: 30rem;
-        height: calc(100vh - 9.5rem);
-    }
-
-    .header .navbar.active {
-        right: 0;
-    }
-
-    .header .navbar a {
-        color: var(--black);
-        display: block;
-        margin: 1.5rem;
-        padding: .5rem;
-        font-size: 2rem;
-    }
-
-    .header .search-form {
-        width: 90%;
-        right: 2rem;
-    }
 
     .home {
         background-position: left;
@@ -305,11 +260,18 @@ th {
 }
 
 
-@media (max-width:540px) {
+
+@media (max-width: 500px)  {
     #logout{
         width: 17vw;
         padding:0;
     }
+    .header #logo {
+        height: 3rem;
+        margin-right: 2rem;
+    }
+
+
     .header h1{
         font-size: 1.4rem;
         margin-left: 2vw;
@@ -358,8 +320,3 @@ th {
 
 }
 
-@media (max-width:300px) {
-    .btn {
-        width: 70vw;
-    }
-}

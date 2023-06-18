@@ -24,10 +24,13 @@
     </div>
 </header>
 
+<section class="addAnimal">
+    <h1>Add an animal:</h1>
+    <input type="file" id="jsonFileInput">
+    <button onclick="handleFile()" >Read JSON</button>
+</section>
 
 <section class="home" id="home">
-
-
     <table id="animalTable">
         <thead>
         <tr>
@@ -39,7 +42,7 @@
             <th>Actions</th>
         </tr>
         </thead>
-        <tbody id="userList"></tbody>
+        <tbody id="animalList"></tbody>
     </table>
 
 </section>

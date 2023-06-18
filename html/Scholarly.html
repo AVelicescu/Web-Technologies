@@ -206,13 +206,73 @@
                     Vizualizare si modificare informatii personale - utilizatorii vor putea vedea la rubrica profil
                     informatiile personale si le vor putea actualiza.
                 </li>
+                <li>
+                    Adăugarea unui animal nou: Administratorul poate adăuga un animal nou în sistem uploadand un fisier
+                    de format json. După introducerea acestuia, apasă
+                    butonul "Read JSON" pentru a trimite informațiile către backend și a înregistra noul animal.
+                </li>
+                <li>
+                    Editarea informațiilor unui animal: Administratorul poate edita informațiile unui animal existent.
+                    Prin apăsarea butonului "Edit" corespunzător animalului, câmpurile de informații devin editabile,
+                    permițând actualizarea numelui, fotografiei, descrierii sau categoriei. După finalizarea
+                    modificărilor, apasă butonul "Save" pentru a salva schimbările în backend.
+                </li>
+                <li>
+                    Ștergerea unui animal: Administratorul poate șterge un animal existent din sistem. Prin apăsarea
+                    butonului "Delete" corespunzător animalului, se afișează o fereastră de confirmare a acțiunii. Dacă
+                    administratorul confirmă, animalul este eliminat definitiv din aplicație.
+                </li>
             </ul>
         </section>
         <section id="userClasses">
             <h3>2.2 Clasele și caracteristicile utilizatorilor: </h3>
             <p>
-                In aplicatie va fi un singur tip de login/cont. Astfel, toti utilizatorii aplicatiei vor avea acces la
-                toate functiile mentionate mai sus si nu vor exista utilizatori cu alte drepturi/ drepturi speciale.
+                În aplicația noastră, există două tipuri de conturi: contul utilizatorului obișnuit și contul de
+                administrator. Aceste conturi au caracteristici și privilegii diferite în aplicație.
+            </p>
+            <p>
+                Contul utilizatorului obișnuit:
+            </p>
+            <ul>
+                <li>
+                    Utilizatorii obișnuiți pot accesa aplicația și pot vizualiza lista de animale disponibile.
+                </li>
+                <li>
+                    Ei pot vizualiza informații detaliate despre fiecare animal, cum ar fi numele, fotografia,
+                    descrierea
+                    și categoria.
+                </li>
+                <li>
+                    Utilizatorii obișnuiți nu au dreptul de a adăuga, edita sau șterge animale din sistem.
+                </li>
+            </ul>
+            <p>
+                Contul de administrator:
+            </p>
+            <ul>
+                <li>
+                    Administratorul are acces la toate funcționalitățile aplicației și are privilegii suplimentare.
+                </li>
+                <li>
+                    Administratorul poate adăuga animale noi în sistem, completând informațiile necesare.
+                </li>
+                <li>
+                    Are posibilitatea de a edita informațiile despre animalele existente, inclusiv numele, fotografia,
+                    descrierea și categoria.
+                </li>
+                <li>
+                    Administratorul poate șterge animalele din sistem. Înainte de ștergere, se va afișa o fereastră de
+                    confirmare a acțiunii.
+                </li>
+                <li>
+                    Administratorul poate gestiona întregul conținut al aplicației și are control total asupra
+                    animalelor.
+                </li>
+            </ul>
+            <p>
+                Această separare între utilizatorul obișnuit și administrator asigură că funcționalitățile de
+                administrare și modificare a conținutului sunt restricționate doar pentru utilizatorul cu privilegii
+                speciale, în acest caz, administratorul.
             </p>
         </section>
         <section id="operatingEnvironment">
@@ -285,15 +345,17 @@
         <section id="softwareInterfaces">
             <h3>3.3 Interfețe software </h3>
             <p>
-                Vom folosi o baza de date pentru a retine informatiile despre utilizatori. Aceasta va fi folosita la:
+                Vom folosi o baza de date pentru a retine informatiile despre utilizatori. Aceasta este folosita la:
             </p>
             <ul>
                 <li> Sign up - cand se adauga un user nou in baza de date</li>
                 <li> Login - cand se va cauta utilizatorul in baza de date pentru a se verifica faptul ca exista</li>
                 <li> Logout - pentru a stii ca utilizatorul nu mai este logat.</li>
+                <li> Profil - pentru a face toate functionalitatile posibile pe pagina de profil.</li>
             </ul>
             <p>
-                Pentru animale vom folosi un fisier de tip JSON.
+                Pentru animale vom folosi tot baza de date. Avem un tabel unde am adaugat datele despre animale. Pe baza
+                acestuia facem toate functionalitatile necesare ce tin de animale.
             </p>
         </section>
     </section>
@@ -478,7 +540,34 @@
                     <li>
                         Endpoint: "http://localhost:8081/search/" + term <br>
                         Metoda: POST <br>
-                        Justificare: pentru a încărca datele despre animale care contin in nume/in descriere ceea ce scriem noi la search. <br><br>
+                        Justificare: pentru a încărca datele despre animale care contin in nume/in descriere ceea ce
+                        scriem noi la search. <br><br>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Pentru: Admin<br>
+                <ul>
+                    <li>
+                        Endpoint: "http://localhost:8081/admin/addAnimal/" <br>
+                        Metoda: POST <br>
+                        Justificare: pentru a adauga un nou animal in baza de date. <br><br>
+                    </li>
+                    <li>
+                        Endpoint: "http://localhost:8081/admin/deleteAnimal/" <br>
+                        Metoda: DELETE <br>
+                        Justificare: pentru a sterge un animal din baza de date. <br><br>
+                    </li>
+                    <li>
+                        Endpoint: "http://localhost:8081/admin/editAnimal/" <br>
+                        Metoda: PUT <br>
+                        Justificare: pentru a edita datele despre un animal din baza de date. <br><br>
+                    </li>
+                    <li>
+                        Endpoint: "http://localhost:8081/admin/animals/" <br>
+                        Metoda: POST <br>
+                        Justificare: pentru a primi toate datele despre animale din baza de date (care sunt folosite la
+                        a le afisa). <br><br>
                     </li>
                 </ul>
             </li>

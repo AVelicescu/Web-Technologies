@@ -4,12 +4,14 @@ logoutButton.addEventListener('click', () => {
     window.location.href = "index.html";
 });
 const table = document.getElementById('animalTable');
-const tbody = document.getElementById('userList');
+const tbody = document.getElementById('animalList');
 const token = sessionStorage.getItem('token');
 let contor = 0;
 if (token == null) {
     window.location.href = "index.html";
 }
+table.appendChild(tbody);
+
 
 function decodeToken(token) {
     const [, payloadBase64] = token.split('.');
@@ -26,7 +28,33 @@ function decodeToken(token) {
 decodedToken = decodeToken(token);
 const Email = decodedToken.email;
 
-table.appendChild(tbody);
+
+function handleFile() {
+    const fileInput = document.getElementById('jsonFileInput');
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+
+    reader.onload = async function (e) {
+        const contents = e.target.result;
+        const data = JSON.parse(contents);
+        console.log(data)
+        const response = await fetch("http://localhost:8081/admin/addAnimal/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(data)
+        });
+        if (!response.ok) {
+            console.log('An error occurred:', response.statusText);
+            return;
+        }
+    };
+
+    reader.readAsText(file);
+}
+
 
 async function loadAnimals() {
     const token = localStorage.getItem('token');
@@ -47,12 +75,12 @@ async function loadAnimals() {
         tr.setAttribute('data-id', contor);
         contor++;
 
-        //id
+        //celula id
         const idTd = document.createElement('td');
         idTd.textContent = animal.id;
         tr.appendChild(idTd);
 
-        //name
+        //celula name
         const nameTd = document.createElement('td');
         nameTd.textContent = animal.name;
         tr.appendChild(nameTd);
@@ -99,8 +127,7 @@ async function loadAnimals() {
             const id = idTd.textContent.trim();
             const confirmed = confirm('Are you sure you want to delete this animal?');
             if (confirmed) {
-                const row2 = deleteBtn.parentNode.parentNode.parentNode;
-                /*const userId2 = row2.getAttribute('data-id');*/
+                const row = deleteBtn.parentNode.parentNode.parentNode;
                 fetch('http://localhost:8081/admin/deleteAnimal/', {
                     method: 'DELETE',
                     headers: {
@@ -113,17 +140,17 @@ async function loadAnimals() {
                 })
                     .then(response => {
                         if (response.ok) {
-                            row2.remove();
+                            row.remove();
                         } else {
                             const errorMsg = document.createElement('span');
-                            errorMsg.textContent = 'Error deleting user.';
+                            errorMsg.textContent = 'Error deleting animal.';
                             errorMsg.classList.add('error');
                             buttonContainer.appendChild(errorMsg);
                         }
 
                     }).catch(error => {
                     const errorMsg = document.createElement('span');
-                    errorMsg.textContent = 'Error deleting user.';
+                    errorMsg.textContent = 'Error deleting animal.';
                     errorMsg.classList.add('error');
                     buttonContainer.appendChild(errorMsg);
                 });
@@ -139,9 +166,9 @@ async function loadAnimals() {
             if (editBtn.textContent === 'Edit') {
                 editBtn.textContent = 'Save';
                 editBtn.classList.add('saveBtn');
-                const idIndex=0;
-                cells.forEach((cell,index) => {
-                    if (index!==idIndex &&!cell.contains(editBtn) && !cell.contains(deleteBtn)) {
+                const idIndex = 0;
+                cells.forEach((cell, index) => {
+                    if (index !== idIndex && !cell.contains(editBtn) && !cell.contains(deleteBtn)) {
                         cell.setAttribute('contenteditable', 'true');
                         cell.classList.add('editable');
                     }
@@ -151,7 +178,8 @@ async function loadAnimals() {
                 editBtn.classList.remove('saveBtn');
 
                 cells.forEach(cell => {
-                    cell.removeEventListener('click', () => { });
+                    cell.removeEventListener('click', () => {
+                    });
                     cell.removeAttribute('contenteditable');
                     cell.classList.remove('editable');
                 });
@@ -162,13 +190,13 @@ async function loadAnimals() {
                 const category = categoryTd.textContent.trim();
 
                 const editAnimal =
-                {
-                    "id" : id,
-                    "name": name,
-                    "photo": photo,
-                    "description": description,
-                    "category": category
-                }
+                    {
+                        "id": id,
+                        "name": name,
+                        "photo": photo,
+                        "description": description,
+                        "category": category
+                    }
                 console.log(editAnimal)
                 fetch('http://localhost:8081/admin/editAnimal/', {
                     method: 'PUT',
@@ -196,9 +224,8 @@ async function loadAnimals() {
                             errorMsg.classList.add('error');
                             buttonContainer.appendChild(errorMsg);
                         }
-                        response.json()
                     })
-                    .then(data=>console.log(data))
+                    .then(data => console.log(data))
                     .catch(error => {
                         const errorMsg = document.createElement('span');
                         errorMsg.textContent = 'Error saving changes.';
@@ -212,4 +239,4 @@ async function loadAnimals() {
     });
 }
 
-    loadAnimals()
+loadAnimals();
