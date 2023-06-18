@@ -32,7 +32,7 @@
             <button type="submit" onclick="window.location.href = 'animals.html?search=' + document.getElementById('searchTerm').value;">
                 <img src="../Images/Icons/Search.png" alt="Search">
             </button>
-            <button type="submit" onclick="window.location.href = 'animals.html?filters=' + document.getElementById('searchTerm').value;">
+            <button type="submit" onclick="window.location.href = 'animals.html?mcsearch=' + document.getElementById('searchTerm').value;">
                 <img src="../Images/Icons/multicriterial.png" alt="Multicriterial Search">
             </button>
         </div>
@@ -79,31 +79,31 @@
                 </div>
                 <h3 style="font-size: 2.5rem">Categories:</h3>
                 <div class="category-options" id="category-options">
-                    <input type="checkbox" name="category" value="africa" id="africa">
+                    <input class="filter-checkbox" type="checkbox" name="category" value="africa" id="africa">
                     <label for="africa">Africa</label>
 
-                    <input type="checkbox" name="category" value="americas" id="americas">
+                    <input class="filter-checkbox" type="checkbox" name="category" value="americas" id="americas">
                     <label for="americas">Americas</label>
 
-                    <input type="checkbox" name="category" value="australasia" id="australasia">
+                    <input class="filter-checkbox" type="checkbox" name="category" value="australasia" id="australasia">
                     <label for="australasia">Australasia</label>
 
-                    <input type="checkbox" name="category" value="canadian-domain" id="canadian-domain">
+                    <input class="filter-checkbox" type="checkbox" name="category" value="canadian domain" id="canadian-domain">
                     <label for="canadian-domain">Canadian Domain</label>
 
-                    <input type="checkbox" name="category" value="discovery-zone" id="discovery-zone">
+                    <input class="filter-checkbox" type="checkbox" name="category" value="discovery zone" id="discovery-zone">
                     <label for="discovery-zone">Discovery Zone</label>
 
-                    <input type="checkbox" name="category" value="eurasia-wilds" id="eurasia-wilds">
+                    <input class="filter-checkbox" type="checkbox" name="category" value="eurasia wilds" id="eurasia-wilds">
                     <label for="eurasia-wilds">Eurasia Wilds</label>
 
-                    <input type="checkbox" name="category" value="indo-malaya" id="indo-malaya">
+                    <input class="filter-checkbox" type="checkbox" name="category" value="indo malaya" id="indo-malaya">
                     <label for="indo-malaya">Indo-Malaya</label>
 
-                    <input type="checkbox" name="category" value="tundra-trek" id="tundra-trek">
+                    <input class="filter-checkbox" type="checkbox" name="category" value="tundra trek" id="tundra-trek">
                     <label for="tundra-trek">Tundra Trek</label>
                 </div>
-                <button class="btn" id="apply-button">Apply</button>
+                <button class="btn" id="apply-button" onclick="window.location.href = 'animals.html?filter=' + getFilters();">Apply</button>
             </div>
         </div>
     </div>
