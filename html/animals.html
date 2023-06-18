@@ -28,7 +28,7 @@
         </button>
         <div class="search-bar">
             <input id="searchTerm" type="text" placeholder="Search...">
-            <button type="submit" onclick="loadSearchedAnimals(document.getElementById('searchTerm').value)">
+            <button type="submit" onclick="window.location.href = 'animals.html?search=' + document.getElementById('searchTerm').value;">
                 <img src="../Images/Icons/Search.png" alt="Search">
             </button>
         </div>
