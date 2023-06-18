@@ -306,7 +306,8 @@
     }
 
     #logo {
-        height: 50px;
+        margin-top: 5px;
+        height: 40px;
     }
 
     #Home_Nav {
@@ -396,7 +397,7 @@
     .search-bar {
         display: flex;
         justify-content: center;
-        left: 50px;
+        left: 40px;
         position: relative;
         margin-top: -45px;
     }
