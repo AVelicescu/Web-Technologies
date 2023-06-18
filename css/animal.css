@@ -52,34 +52,17 @@
     transition: 0.2s;
 }
 
-#animalDetails {
+.btn{
+    margin-top: 1rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-}
-
-#animalDetails #photo
-{
-    max-width: 30rem;
-    max-height: 30rem;
-    margin-top: 4rem;
-}
-
-#animalDetails #name, #category
-{
-    text-align: center;
-    font-size: 2rem;
-    color: var(--main-orange);
-}
-
-#animalDetails #description p
-{
-    text-align: left;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    align-items: center;
+    padding: 0.9rem 2rem;
+    font-size: 0.8rem;
+    color:#fff;
+    background: var(--main-orange);
+    cursor: pointer;
+    border-radius: 35px;
 }
 
 /* ----------------------------- For mobile -----------------------------------------------------*/
@@ -248,6 +231,37 @@
             visibility: hidden;
         }
     }
+
+    #animalDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #animalDetails #photo
+    {
+        max-width: 20rem;
+        max-height: 20rem;
+        margin-top: 3rem;
+    }
+
+    #animalDetails #name, #category
+    {
+        text-align: center;
+        font-size: 1.2rem;
+        color: var(--main-orange);
+    }
+
+    #animalDetails #description p
+    {
+        text-align: left;
+        font-size: 0.8rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
 
 }
 
@@ -424,6 +438,36 @@
             transform: translateX(100%);
             visibility: hidden;
         }
+    }
+
+    #animalDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #animalDetails #photo
+    {
+        max-width: 30rem;
+        max-height: 30rem;
+        margin-top: 4rem;
+    }
+
+    #animalDetails #name, #category
+    {
+        text-align: center;
+        font-size: 1.8rem;
+        color: var(--main-orange);
+    }
+
+    #animalDetails #description p
+    {
+        text-align: left;
+        font-size: 1rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
 }
@@ -625,6 +669,37 @@
             visibility: hidden
         }
     }
+
+    #animalDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #animalDetails #photo
+    {
+        max-width: 30rem;
+        max-height: 30rem;
+        margin-top: 4rem;
+    }
+
+    #animalDetails #name, #category
+    {
+        text-align: center;
+        font-size: 2rem;
+        color: var(--main-orange);
+    }
+
+    #animalDetails #description p
+    {
+        text-align: left;
+        font-size: 1.2rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
 }
 
 
