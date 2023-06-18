@@ -93,6 +93,7 @@ function decodeToken(token) {
 decodedToken= decodeToken(token);
 const Email = decodedToken.email;
 
+let animal;
 async function openAnimalDescription(id) {
 
     const token = localStorage.getItem('token');
@@ -105,9 +106,9 @@ async function openAnimalDescription(id) {
         },
         body: Email
     });
-    const animal = await response.json();
+    animal = await response.json();
     console.log(animal);
-
+    download();
 
     let photo = document.getElementById("photo");
     let description = document.getElementById("description");
@@ -159,3 +160,12 @@ function logout() {
 
 let params = new URLSearchParams(window.location.search);
 openAnimalDescription(params.get("id"));
+
+function download(){
+    let button = document.getElementById("downloadButton");
+    button.setAttribute("href", "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(animal)));
+    button.setAttribute("download", animal.name + ".json");
+}
+
+
+
