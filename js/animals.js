@@ -159,9 +159,12 @@ async function loadAnimals(){
         list.appendChild(containerAnimal);
     }
 }
-async function loadSearchedAnimals(term){
+async function loadSearchedAnimals(){
     const token = localStorage.getItem('token');
     console.log(Email);
+    let url = new URLSearchParams(window.location.search);
+    let term = url.get("search");
+    console.log(term);
     const response = await fetch("http://localhost:8081/search/" + term, {
         method: "POST",
         headers:{
@@ -202,3 +205,6 @@ async function loadSearchedAnimals(term){
 
 loadAnimals();
 
+if(window.location.href.includes("search")){
+    loadSearchedAnimals();
+}
