@@ -203,6 +203,51 @@ async function loadSearchedAnimals(){
     }
 }
 
+
+async function loadFilteredAnimals(){
+    const token = localStorage.getItem('token');
+    console.log(Email);
+    let url = new URLSearchParams(window.location.search);
+    let term = url.get("filters");
+    console.log(term);
+    const response = await fetch("http://localhost:8081/filter/" + term, {
+        method: "POST",
+        headers:{
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: Email
+    });
+    const data = await response.json();
+    console.log(data);
+
+    let list = document.getElementById("animalList");
+    list.innerHTML = "";
+    for (let animal of data) {
+        let containerAnimal = document.createElement("div");
+        let animalPhoto = document.createElement("img");
+        let animalName = document.createElement("h2");
+        let animalDetailsButton = document.createElement("button");
+
+        animalPhoto.id = "animalPhoto";
+        animalName.id = "animalName";
+        animalDetailsButton.id = "animalDetailsButton";
+
+        containerAnimal.classList.add("containerAnimal");
+        animalPhoto.src = animal.photo;
+        animalName.textContent = animal.name;
+        animalDetailsButton.textContent = "Details";
+        animalDetailsButton.addEventListener("click", () => {
+            window.location.href = "animal.html?id=" + animal.id;
+        });
+
+        containerAnimal.appendChild(animalPhoto);
+        containerAnimal.appendChild(animalName);
+        containerAnimal.appendChild(animalDetailsButton);
+        list.appendChild(containerAnimal);
+    }
+}
+
 loadAnimals();
 
 if(window.location.href.includes("search")){
